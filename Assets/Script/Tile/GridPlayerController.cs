@@ -6,6 +6,14 @@ public class GridPlayerController : MonoBehaviour
     [Header("References")]
     [SerializeField] private GridBoard _board;
 
+    [Header("Visual References")]
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator _animator;
+
+    [Header("Animation State Names")]
+    [SerializeField] private string _idleStateName = "Idle";
+    [SerializeField] private string _walkStateName = "Walk";
+
     [Header("Player Settings")]
     [SerializeField] private Vector2Int _startGridPos;
     [SerializeField] private float _moveDuration = 0.1f;
@@ -26,6 +34,9 @@ public class GridPlayerController : MonoBehaviour
     private bool _isMoving;
     private Coroutine _moveRoutine;
 
+    private int _idleStateHash;
+    private int _walkStateHash;
+
     public Vector2Int GridPos => _gridPos;
     public Vector2Int FacingDir => _facingDir;
     public bool IsMoving => _isMoving;
@@ -38,6 +49,12 @@ public class GridPlayerController : MonoBehaviour
         Vector2Int.right
     };
 
+    private void Awake()
+    {
+        _idleStateHash = Animator.StringToHash(_idleStateName);
+        _walkStateHash = Animator.StringToHash(_walkStateName);
+    }
+
     private void Start()
     {
         _gridPos = _startGridPos;
@@ -45,6 +62,8 @@ public class GridPlayerController : MonoBehaviour
 
         SetInteractionIconVisible(false);
         UpdateInteractionIconVisibility();
+
+        PlayIdleAnimation();
     }
 
     private void Update()
@@ -97,6 +116,8 @@ public class GridPlayerController : MonoBehaviour
             return false;
 
         _facingDir = dir;
+
+        UpdateSpriteFlip(dir);
 
         Vector2Int targetPos = _gridPos + dir;
 
@@ -160,11 +181,12 @@ public class GridPlayerController : MonoBehaviour
         _isMoving = true;
 
         SetInteractionIconVisible(false);
+        PlayWalkAnimation();
 
         Vector2Int previousGridPos = _gridPos;
 
-        // 플레이어의 논리 좌표를 먼저 갱신한다.
-        // 이후 높이 판정은 이 _gridPos 기준으로 처리된다.
+        // 현재 위치를 먼저 갱신.
+        // 높이 판정은 _gridPos 기준으로 처리된다.
         _gridPos = targetGridPos;
 
         Vector3 startWorldPos = _board.GridToWorld(previousGridPos);
@@ -198,7 +220,10 @@ public class GridPlayerController : MonoBehaviour
         bool continuedMove = TryContinueHeldMove();
 
         if (!continuedMove)
+        {
+            PlayIdleAnimation();
             UpdateInteractionIconVisibility();
+        }
     }
 
     private bool TryContinueHeldMove()
@@ -251,8 +276,8 @@ public class GridPlayerController : MonoBehaviour
 
     private GridInteractable FindNearbyInteractable()
     {
-        // 키 UI 표시 기준.
-        // 현재 칸 또는 상하좌우 한 칸 안에 있으면서,
+        // UI 표시 기준:
+        // 현재 칸 또는 상하좌우 한 칸에 있으면서,
         // 플레이어와 같은 높이인 Interactable만 감지한다.
 
         if (_board.TryGetInteractableAt(_gridPos, out GridInteractable currentInteractable) &&
@@ -302,5 +327,39 @@ public class GridPlayerController : MonoBehaviour
             return;
 
         _interactionIconObject.SetActive(visible);
+    }
+
+    private void UpdateSpriteFlip(Vector2Int dir)
+    {
+        if (_spriteRenderer == null)
+            return;
+
+        if (dir == Vector2Int.left)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else if (dir == Vector2Int.right)
+        {
+            _spriteRenderer.flipX = true;
+        }
+
+        // 위/아래 이동 시에는 flip 상태를 유지한다.
+        // 위/아래 전용 애니메이션이 없으므로 마지막 좌우 방향을 유지하는 편이 자연스럽다.
+    }
+
+    private void PlayIdleAnimation()
+    {
+        if (_animator == null)
+            return;
+
+        _animator.Play(_idleStateHash);
+    }
+
+    private void PlayWalkAnimation()
+    {
+        if (_animator == null)
+            return;
+
+        _animator.Play(_walkStateHash);
     }
 }
