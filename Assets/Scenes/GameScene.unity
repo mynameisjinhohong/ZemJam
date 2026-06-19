@@ -298,10 +298,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1642452930108472403, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1783680695584612955, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -342,30 +338,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4359343765119597039, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359343765119597039, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359343765119597039, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359343765119597039, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359343765119597039, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359343765119597039, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5046203914481037558, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
       propertyPath: m_Name
       value: Player
@@ -375,105 +347,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 609806052}
     - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: _animator
-      value: 
-      objectReference: {fileID: 523452121}
-    - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: _idleStateName
-      value: CatIdle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: _walkStateName
-      value: CatWalk
-      objectReference: {fileID: 0}
-    - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: _spriteRenderer
-      value: 
-      objectReference: {fileID: 523452123}
-    - target: {fileID: 8762950138121977215, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: orthographic size
-      value: 5
+      propertyPath: _jumpAnimationFallbackDuration
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5046203914481037558, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 523452121}
-    - targetCorrespondingSourceObject: {fileID: 3913164485567543532, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 523452124}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
---- !u!1 &523452120 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5046203914481037558, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-  m_PrefabInstance: {fileID: 523452119}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &523452121
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523452120}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 54c0604f7e034494bb9efdb25d9dec1c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!1 &523452122 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3913164485567543532, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-  m_PrefabInstance: {fileID: 523452119}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &523452123 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1642452930108472403, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-  m_PrefabInstance: {fileID: 523452119}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &523452124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523452122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
-  ShowDebugText: 0
-  ShowCameraFrustum: 1
-  IgnoreTimeScale: 0
-  WorldUpOverride: {fileID: 0}
-  ChannelMask: -1
-  UpdateMethod: 2
-  BlendUpdateMethod: 1
-  LensModeOverride:
-    Enabled: 0
-    DefaultMode: 2
-  DefaultBlend:
-    Style: 1
-    Time: 2
-    CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  CustomBlends: {fileID: 0}
 --- !u!1 &609806051
 GameObject:
   m_ObjectHideFlags: 0
