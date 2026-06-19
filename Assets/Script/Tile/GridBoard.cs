@@ -104,6 +104,12 @@ public class GridBoard : MonoBehaviour
         if (IsBlocked(pos))
             return false;
 
+        if (_interactableMap.TryGetValue(pos, out GridInteractable interactable) &&
+            interactable.BlocksMovement)
+        {
+            return false;
+        }
+
         return true;
     }
 
