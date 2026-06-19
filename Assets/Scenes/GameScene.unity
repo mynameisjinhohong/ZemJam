@@ -337,30 +337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5276628556825156833, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7976547510102717955, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -9197614001361547850, guid: 4c12c044bae430a458367fece91dfa3d, type: 3}
     - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
       propertyPath: _board
       value: 
       objectReference: {fileID: 609806052}
-    - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: _moveDuration
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: _startGridPos.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8661600693286573226, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
-      propertyPath: _startGridPos.y
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -397,176 +377,339 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GridBoard
   _boardSize: {x: 20, y: 20}
   _cellSize: 1
-  _blockedCells:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
-  - {x: 2, y: 0}
-  - {x: 7, y: 0}
-  - {x: 8, y: 0}
-  - {x: 9, y: 0}
-  - {x: 10, y: 0}
-  - {x: 11, y: 0}
-  - {x: 12, y: 0}
-  - {x: 13, y: 0}
-  - {x: 14, y: 0}
-  - {x: 15, y: 1}
-  - {x: 14, y: 1}
-  - {x: 13, y: 1}
-  - {x: 12, y: 1}
-  - {x: 11, y: 1}
-  - {x: 10, y: 1}
-  - {x: 9, y: 1}
-  - {x: 8, y: 1}
-  - {x: 7, y: 1}
-  - {x: 6, y: 1}
-  - {x: 6, y: 0}
-  - {x: 15, y: 0}
-  - {x: 15, y: 2}
-  - {x: 14, y: 2}
-  - {x: 13, y: 2}
-  - {x: 12, y: 2}
-  - {x: 11, y: 2}
-  - {x: 10, y: 2}
-  - {x: 9, y: 2}
-  - {x: 8, y: 2}
-  - {x: 7, y: 2}
-  - {x: 6, y: 2}
-  - {x: 8, y: 3}
-  - {x: 9, y: 3}
-  - {x: 10, y: 3}
-  - {x: 11, y: 3}
-  - {x: 12, y: 3}
-  - {x: 13, y: 3}
-  - {x: 14, y: 3}
-  - {x: 13, y: 4}
-  - {x: 13, y: 5}
-  - {x: 13, y: 6}
-  - {x: 13, y: 7}
-  - {x: 13, y: 8}
-  - {x: 14, y: 7}
-  - {x: 14, y: 5}
-  - {x: 17, y: 0}
-  - {x: 18, y: 0}
-  - {x: 19, y: 0}
-  - {x: 19, y: 1}
-  - {x: 18, y: 1}
-  - {x: 17, y: 1}
-  - {x: 17, y: 2}
-  - {x: 18, y: 2}
-  - {x: 19, y: 2}
-  - {x: 19, y: 3}
-  - {x: 18, y: 3}
-  - {x: 17, y: 3}
-  - {x: 17, y: 4}
-  - {x: 18, y: 4}
-  - {x: 19, y: 4}
-  - {x: 18, y: 9}
-  - {x: 18, y: 8}
-  - {x: 19, y: 8}
-  - {x: 19, y: 9}
-  - {x: 17, y: 11}
-  - {x: 16, y: 11}
-  - {x: 15, y: 11}
-  - {x: 14, y: 11}
-  - {x: 13, y: 11}
-  - {x: 12, y: 11}
-  - {x: 12, y: 12}
-  - {x: 12, y: 13}
-  - {x: 12, y: 14}
-  - {x: 13, y: 14}
-  - {x: 14, y: 14}
-  - {x: 15, y: 14}
-  - {x: 16, y: 14}
-  - {x: 16, y: 13}
-  - {x: 17, y: 13}
-  - {x: 17, y: 14}
-  - {x: 17, y: 12}
-  - {x: 16, y: 12}
-  - {x: 15, y: 12}
-  - {x: 14, y: 12}
-  - {x: 13, y: 12}
-  - {x: 13, y: 13}
-  - {x: 14, y: 13}
-  - {x: 15, y: 13}
-  - {x: 6, y: 12}
-  - {x: 6, y: 13}
-  - {x: 6, y: 14}
-  - {x: 6, y: 15}
-  - {x: 5, y: 15}
-  - {x: 4, y: 15}
-  - {x: 3, y: 15}
-  - {x: 3, y: 14}
-  - {x: 3, y: 13}
-  - {x: 4, y: 13}
-  - {x: 5, y: 13}
-  - {x: 5, y: 14}
-  - {x: 4, y: 14}
-  - {x: 0, y: 18}
-  - {x: 1, y: 18}
-  - {x: 2, y: 18}
-  - {x: 3, y: 18}
-  - {x: 4, y: 18}
-  - {x: 5, y: 18}
-  - {x: 6, y: 18}
-  - {x: 7, y: 18}
-  - {x: 8, y: 18}
-  - {x: 8, y: 19}
-  - {x: 7, y: 19}
-  - {x: 6, y: 19}
-  - {x: 5, y: 19}
-  - {x: 4, y: 19}
-  - {x: 3, y: 19}
-  - {x: 2, y: 19}
-  - {x: 1, y: 19}
-  - {x: 0, y: 19}
-  - {x: 12, y: 19}
-  - {x: 12, y: 18}
-  - {x: 13, y: 18}
-  - {x: 14, y: 18}
-  - {x: 15, y: 18}
-  - {x: 16, y: 18}
-  - {x: 17, y: 18}
-  - {x: 18, y: 18}
-  - {x: 19, y: 18}
-  - {x: 19, y: 19}
-  - {x: 18, y: 19}
-  - {x: 17, y: 19}
-  - {x: 16, y: 19}
-  - {x: 15, y: 19}
-  - {x: 14, y: 19}
-  - {x: 13, y: 19}
-  - {x: 6, y: 8}
-  - {x: 5, y: 8}
-  - {x: 4, y: 8}
-  - {x: 3, y: 8}
-  - {x: 2, y: 8}
-  - {x: 1, y: 8}
-  - {x: 0, y: 8}
-  - {x: 0, y: 7}
-  - {x: 0, y: 6}
-  - {x: 0, y: 5}
-  - {x: 0, y: 4}
-  - {x: 1, y: 4}
-  - {x: 2, y: 4}
-  - {x: 3, y: 4}
-  - {x: 3, y: 3}
-  - {x: 0, y: 3}
-  - {x: 3, y: 5}
-  - {x: 2, y: 5}
-  - {x: 1, y: 5}
-  - {x: 3, y: 6}
-  - {x: 3, y: 7}
-  - {x: 2, y: 7}
-  - {x: 1, y: 7}
-  - {x: 1, y: 6}
-  - {x: 2, y: 6}
-  - {x: 0, y: 9}
-  - {x: 1, y: 9}
-  - {x: 2, y: 9}
-  - {x: 3, y: 9}
-  - {x: 4, y: 9}
-  - {x: 5, y: 9}
-  - {x: 6, y: 9}
+  _cellHeights:
+  - GridPos: {x: 4, y: 4}
+    Height: 1
+  - GridPos: {x: 15, y: 2}
+    Height: 1
+  - GridPos: {x: 15, y: 1}
+    Height: 1
+  - GridPos: {x: 14, y: 3}
+    Height: 2
+  - GridPos: {x: 14, y: 2}
+    Height: 2
+  - GridPos: {x: 13, y: 3}
+    Height: 2
+  - GridPos: {x: 12, y: 3}
+    Height: 2
+  - GridPos: {x: 11, y: 3}
+    Height: 2
+  - GridPos: {x: 11, y: 2}
+    Height: 2
+  - GridPos: {x: 10, y: 2}
+    Height: 2
+  - GridPos: {x: 9, y: 2}
+    Height: 2
+  - GridPos: {x: 8, y: 2}
+    Height: 2
+  - GridPos: {x: 7, y: 2}
+    Height: 2
+  - GridPos: {x: 13, y: 4}
+    Height: 2
+  - GridPos: {x: 13, y: 5}
+    Height: 2
+  - GridPos: {x: 13, y: 6}
+    Height: 2
+  - GridPos: {x: 13, y: 7}
+    Height: 2
+  - GridPos: {x: 14, y: 7}
+    Height: 1
+  - GridPos: {x: 13, y: 8}
+    Height: 2
+  - GridPos: {x: 0, y: 5}
+    Height: 100
+  - GridPos: {x: 1, y: 5}
+    Height: 100
+  - GridPos: {x: 2, y: 5}
+    Height: 100
+  - GridPos: {x: 3, y: 5}
+    Height: 100
+  - GridPos: {x: 3, y: 4}
+    Height: 100
+  - GridPos: {x: 2, y: 4}
+    Height: 100
+  - GridPos: {x: 1, y: 4}
+    Height: 100
+  - GridPos: {x: 0, y: 4}
+    Height: 100
+  - GridPos: {x: 0, y: 3}
+    Height: 100
+  - GridPos: {x: 3, y: 3}
+    Height: 100
+  - GridPos: {x: 0, y: 6}
+    Height: 100
+  - GridPos: {x: 1, y: 6}
+    Height: 100
+  - GridPos: {x: 2, y: 6}
+    Height: 100
+  - GridPos: {x: 3, y: 6}
+    Height: 100
+  - GridPos: {x: 3, y: 7}
+    Height: 100
+  - GridPos: {x: 2, y: 7}
+    Height: 100
+  - GridPos: {x: 1, y: 7}
+    Height: 100
+  - GridPos: {x: 0, y: 7}
+    Height: 100
+  - GridPos: {x: 0, y: 8}
+    Height: 100
+  - GridPos: {x: 1, y: 8}
+    Height: 100
+  - GridPos: {x: 2, y: 8}
+    Height: 100
+  - GridPos: {x: 3, y: 8}
+    Height: 100
+  - GridPos: {x: 0, y: 9}
+    Height: 100
+  - GridPos: {x: 1, y: 9}
+    Height: 100
+  - GridPos: {x: 2, y: 9}
+    Height: 100
+  - GridPos: {x: 3, y: 9}
+    Height: 100
+  - GridPos: {x: 4, y: 9}
+    Height: 100
+  - GridPos: {x: 5, y: 9}
+    Height: 100
+  - GridPos: {x: 6, y: 9}
+    Height: 100
+  - GridPos: {x: 6, y: 8}
+    Height: 100
+  - GridPos: {x: 5, y: 8}
+    Height: 100
+  - GridPos: {x: 4, y: 8}
+    Height: 100
+  - GridPos: {x: 3, y: 15}
+    Height: 1
+  - GridPos: {x: 4, y: 15}
+    Height: 1
+  - GridPos: {x: 5, y: 15}
+    Height: 1
+  - GridPos: {x: 6, y: 15}
+    Height: 1
+  - GridPos: {x: 6, y: 14}
+    Height: 1
+  - GridPos: {x: 6, y: 13}
+    Height: 1
+  - GridPos: {x: 3, y: 14}
+    Height: 100
+  - GridPos: {x: 4, y: 14}
+    Height: 100
+  - GridPos: {x: 5, y: 14}
+    Height: 100
+  - GridPos: {x: 5, y: 13}
+    Height: 100
+  - GridPos: {x: 4, y: 13}
+    Height: 100
+  - GridPos: {x: 3, y: 13}
+    Height: 100
+  - GridPos: {x: 0, y: 19}
+    Height: 100
+  - GridPos: {x: 0, y: 18}
+    Height: 100
+  - GridPos: {x: 1, y: 18}
+    Height: 100
+  - GridPos: {x: 2, y: 18}
+    Height: 100
+  - GridPos: {x: 3, y: 18}
+    Height: 100
+  - GridPos: {x: 4, y: 18}
+    Height: 100
+  - GridPos: {x: 5, y: 18}
+    Height: 100
+  - GridPos: {x: 6, y: 18}
+    Height: 100
+  - GridPos: {x: 7, y: 18}
+    Height: 100
+  - GridPos: {x: 8, y: 18}
+    Height: 100
+  - GridPos: {x: 8, y: 19}
+    Height: 100
+  - GridPos: {x: 7, y: 19}
+    Height: 100
+  - GridPos: {x: 6, y: 19}
+    Height: 100
+  - GridPos: {x: 5, y: 19}
+    Height: 100
+  - GridPos: {x: 4, y: 19}
+    Height: 100
+  - GridPos: {x: 3, y: 19}
+    Height: 100
+  - GridPos: {x: 2, y: 19}
+    Height: 100
+  - GridPos: {x: 1, y: 19}
+    Height: 100
+  - GridPos: {x: 13, y: 19}
+    Height: 100
+  - GridPos: {x: 13, y: 18}
+    Height: 100
+  - GridPos: {x: 14, y: 18}
+    Height: 1
+  - GridPos: {x: 15, y: 18}
+    Height: 1
+  - GridPos: {x: 14, y: 19}
+    Height: 100
+  - GridPos: {x: 15, y: 19}
+    Height: 100
+  - GridPos: {x: 16, y: 19}
+    Height: 100
+  - GridPos: {x: 17, y: 19}
+    Height: 100
+  - GridPos: {x: 18, y: 19}
+    Height: 100
+  - GridPos: {x: 19, y: 19}
+    Height: 100
+  - GridPos: {x: 16, y: 18}
+    Height: 1
+  - GridPos: {x: 17, y: 18}
+    Height: 1
+  - GridPos: {x: 19, y: 18}
+    Height: 1
+  - GridPos: {x: 12, y: 15}
+    Height: 100
+  - GridPos: {x: 13, y: 15}
+    Height: 100
+  - GridPos: {x: 14, y: 15}
+    Height: 100
+  - GridPos: {x: 15, y: 15}
+    Height: 100
+  - GridPos: {x: 16, y: 15}
+    Height: 100
+  - GridPos: {x: 17, y: 15}
+    Height: 100
+  - GridPos: {x: 17, y: 14}
+    Height: 100
+  - GridPos: {x: 17, y: 13}
+    Height: 100
+  - GridPos: {x: 17, y: 12}
+    Height: 100
+  - GridPos: {x: 17, y: 11}
+    Height: 100
+  - GridPos: {x: 16, y: 11}
+    Height: 100
+  - GridPos: {x: 15, y: 11}
+    Height: 100
+  - GridPos: {x: 14, y: 11}
+    Height: 100
+  - GridPos: {x: 13, y: 11}
+    Height: 100
+  - GridPos: {x: 13, y: 12}
+    Height: 100
+  - GridPos: {x: 12, y: 12}
+    Height: 100
+  - GridPos: {x: 12, y: 11}
+    Height: 100
+  - GridPos: {x: 12, y: 13}
+    Height: 100
+  - GridPos: {x: 13, y: 14}
+    Height: 100
+  - GridPos: {x: 12, y: 14}
+    Height: 100
+  - GridPos: {x: 14, y: 14}
+    Height: 100
+  - GridPos: {x: 15, y: 14}
+    Height: 100
+  - GridPos: {x: 16, y: 14}
+    Height: 100
+  - GridPos: {x: 16, y: 13}
+    Height: 100
+  - GridPos: {x: 16, y: 12}
+    Height: 100
+  - GridPos: {x: 15, y: 12}
+    Height: 100
+  - GridPos: {x: 14, y: 12}
+    Height: 100
+  - GridPos: {x: 14, y: 13}
+    Height: 100
+  - GridPos: {x: 15, y: 13}
+    Height: 100
+  - GridPos: {x: 13, y: 13}
+    Height: 100
+  - GridPos: {x: 17, y: 6}
+    Height: 100
+  - GridPos: {x: 17, y: 5}
+    Height: 100
+  - GridPos: {x: 17, y: 4}
+    Height: 100
+  - GridPos: {x: 17, y: 3}
+    Height: 100
+  - GridPos: {x: 17, y: 2}
+    Height: 100
+  - GridPos: {x: 17, y: 1}
+    Height: 100
+  - GridPos: {x: 17, y: 0}
+    Height: 100
+  - GridPos: {x: 18, y: 0}
+    Height: 100
+  - GridPos: {x: 19, y: 0}
+    Height: 100
+  - GridPos: {x: 19, y: 1}
+    Height: 100
+  - GridPos: {x: 19, y: 2}
+    Height: 100
+  - GridPos: {x: 19, y: 3}
+    Height: 100
+  - GridPos: {x: 19, y: 4}
+    Height: 100
+  - GridPos: {x: 19, y: 5}
+    Height: 100
+  - GridPos: {x: 18, y: 5}
+    Height: 100
+  - GridPos: {x: 18, y: 4}
+    Height: 100
+  - GridPos: {x: 18, y: 3}
+    Height: 100
+  - GridPos: {x: 18, y: 2}
+    Height: 100
+  - GridPos: {x: 18, y: 1}
+    Height: 100
+  - GridPos: {x: 14, y: 5}
+    Height: 1
+  - GridPos: {x: 14, y: 1}
+    Height: 100
+  - GridPos: {x: 14, y: 0}
+    Height: 100
+  - GridPos: {x: 13, y: 0}
+    Height: 100
+  - GridPos: {x: 13, y: 1}
+    Height: 100
+  - GridPos: {x: 13, y: 2}
+    Height: 100
+  - GridPos: {x: 12, y: 2}
+    Height: 100
+  - GridPos: {x: 15, y: 0}
+    Height: 100
+  - GridPos: {x: 12, y: 0}
+    Height: 100
+  - GridPos: {x: 11, y: 0}
+    Height: 100
+  - GridPos: {x: 11, y: 1}
+    Height: 100
+  - GridPos: {x: 12, y: 1}
+    Height: 100
+  - GridPos: {x: 10, y: 1}
+    Height: 100
+  - GridPos: {x: 9, y: 1}
+    Height: 100
+  - GridPos: {x: 8, y: 1}
+    Height: 100
+  - GridPos: {x: 7, y: 1}
+    Height: 100
+  - GridPos: {x: 7, y: 0}
+    Height: 100
+  - GridPos: {x: 8, y: 0}
+    Height: 100
+  - GridPos: {x: 9, y: 0}
+    Height: 100
+  - GridPos: {x: 10, y: 0}
+    Height: 100
+  - GridPos: {x: 2, y: 0}
+    Height: 100
+  - GridPos: {x: 1, y: 0}
+    Height: 100
+  - GridPos: {x: 0, y: 0}
+    Height: 100
   _interactables:
   - {fileID: 427221284}
   - {fileID: 726993431}
@@ -705,7 +848,7 @@ Transform:
   m_GameObject: {fileID: 726993429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: 1, z: 0}
+  m_LocalPosition: {x: 7, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -723,7 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06aa024aab85474469f6fcfe37fc23a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
-  _gridPos: {x: 16, y: 1}
+  _gridPos: {x: 7, y: 2}
   _triggerOnEnter: 0
   _blocksMovement: 1
   _onInteracted:

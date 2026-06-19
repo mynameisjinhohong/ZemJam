@@ -10,6 +10,9 @@ public class GridPlayerController : MonoBehaviour
     [SerializeField] private Vector2Int _startGridPos;
     [SerializeField] private float _moveDuration = 0.1f;
 
+    [Header("Jump Settings")]
+    [SerializeField] private KeyCode _jumpKey = KeyCode.Space;
+
     [Header("Interaction")]
     [SerializeField] private bool _interactOnEnter = true;
     [SerializeField] private KeyCode _interactKey = KeyCode.E;
@@ -49,9 +52,6 @@ public class GridPlayerController : MonoBehaviour
         if (_isMoving)
             return;
 
-        // 핵심 변경:
-        // 이동 중이 아닐 때는 매 프레임 현재 위치 기준으로 아이콘 상태를 갱신한다.
-        // 이제 바라보는 방향과 무관하게 주변 1칸에 Interactable이 있으면 켜진다.
         UpdateInteractionIconVisibility();
 
         HandleMoveInput();
@@ -62,10 +62,18 @@ public class GridPlayerController : MonoBehaviour
     {
         Vector2Int dir = GetPressedDirection();
 
+        // 방향키를 누르고 있는 상태에서 점프키만 새로 눌러도 점프 시도
+        if (dir == Vector2Int.zero && Input.GetKeyDown(_jumpKey))
+        {
+            dir = GetHeldDirection();
+        }
+
         if (dir == Vector2Int.zero)
             return;
 
-        TryMove(dir);
+        bool allowJump = Input.GetKey(_jumpKey);
+
+        TryMove(dir, allowJump);
     }
 
     private void HandleInteractInput()
@@ -83,7 +91,7 @@ public class GridPlayerController : MonoBehaviour
         UpdateInteractionIconVisibility();
     }
 
-    private bool TryMove(Vector2Int dir)
+    private bool TryMove(Vector2Int dir, bool allowJump)
     {
         if (dir == Vector2Int.zero)
             return false;
@@ -92,10 +100,8 @@ public class GridPlayerController : MonoBehaviour
 
         Vector2Int targetPos = _gridPos + dir;
 
-        if (!_board.CanMoveTo(targetPos))
+        if (!_board.CanMoveTo(_gridPos, targetPos, allowJump))
         {
-            // 이동은 못 해도 방향은 바뀌었으므로,
-            // 상호작용 대상 선택 우선순위에는 영향을 줄 수 있다.
             UpdateInteractionIconVisibility();
             return false;
         }
@@ -103,6 +109,7 @@ public class GridPlayerController : MonoBehaviour
         _board.TryGetInteractableAt(targetPos, out GridInteractable targetInteractable);
 
         MoveTo(targetPos, targetInteractable);
+
         return true;
     }
 
@@ -155,6 +162,9 @@ public class GridPlayerController : MonoBehaviour
         SetInteractionIconVisible(false);
 
         Vector2Int previousGridPos = _gridPos;
+
+        // 플레이어의 논리 좌표를 먼저 갱신한다.
+        // 이후 높이 판정은 이 _gridPos 기준으로 처리된다.
         _gridPos = targetGridPos;
 
         Vector3 startWorldPos = _board.GridToWorld(previousGridPos);
@@ -179,7 +189,8 @@ public class GridPlayerController : MonoBehaviour
 
         if (_interactOnEnter &&
             targetInteractable != null &&
-            targetInteractable.TriggerOnEnter)
+            targetInteractable.TriggerOnEnter &&
+            IsSameHeightAsPlayer(targetInteractable))
         {
             targetInteractable.Interact(this);
         }
@@ -197,28 +208,30 @@ public class GridPlayerController : MonoBehaviour
         if (heldDir == Vector2Int.zero)
             return false;
 
-        // 핵심 변경:
-        // 키가 눌려 있어도 실제 이동에 실패하면 false를 반환한다.
-        return TryMove(heldDir);
+        bool allowJump = Input.GetKey(_jumpKey);
+
+        return TryMove(heldDir, allowJump);
     }
 
     private GridInteractable GetAvailableInteractable()
     {
-        // E를 눌렀을 때 상호작용할 대상.
-        // 여러 개가 주변에 있을 수 있으므로 우선순위는 유지한다.
-        //
         // 1. 현재 밟고 있는 칸
-        // 2. 바라보고 있는 앞 칸
-        // 3. 나머지 상하좌우 한 칸
-
-        if (_board.TryGetInteractableAt(_gridPos, out GridInteractable currentInteractable))
+        if (_board.TryGetInteractableAt(_gridPos, out GridInteractable currentInteractable) &&
+            IsSameHeightAsPlayer(currentInteractable))
+        {
             return currentInteractable;
+        }
 
+        // 2. 바라보고 있는 앞 칸 우선
         Vector2Int frontPos = _gridPos + _facingDir;
 
-        if (_board.TryGetInteractableAt(frontPos, out GridInteractable frontInteractable))
+        if (_board.TryGetInteractableAt(frontPos, out GridInteractable frontInteractable) &&
+            IsSameHeightAsPlayer(frontInteractable))
+        {
             return frontInteractable;
+        }
 
+        // 3. 나머지 상하좌우 한 칸
         foreach (Vector2Int dir in AdjacentDirs)
         {
             if (dir == _facingDir)
@@ -226,8 +239,11 @@ public class GridPlayerController : MonoBehaviour
 
             Vector2Int checkPos = _gridPos + dir;
 
-            if (_board.TryGetInteractableAt(checkPos, out GridInteractable adjacentInteractable))
+            if (_board.TryGetInteractableAt(checkPos, out GridInteractable adjacentInteractable) &&
+                IsSameHeightAsPlayer(adjacentInteractable))
+            {
                 return adjacentInteractable;
+            }
         }
 
         return null;
@@ -235,22 +251,39 @@ public class GridPlayerController : MonoBehaviour
 
     private GridInteractable FindNearbyInteractable()
     {
-        // 아이콘 표시 기준.
-        // 이 함수는 바라보는 방향을 전혀 보지 않는다.
-        // 현재 칸 또는 상하좌우 한 칸에 Interactable이 있으면 반환한다.
+        // 키 UI 표시 기준.
+        // 현재 칸 또는 상하좌우 한 칸 안에 있으면서,
+        // 플레이어와 같은 높이인 Interactable만 감지한다.
 
-        if (_board.TryGetInteractableAt(_gridPos, out GridInteractable currentInteractable))
+        if (_board.TryGetInteractableAt(_gridPos, out GridInteractable currentInteractable) &&
+            IsSameHeightAsPlayer(currentInteractable))
+        {
             return currentInteractable;
+        }
 
         foreach (Vector2Int dir in AdjacentDirs)
         {
             Vector2Int checkPos = _gridPos + dir;
 
-            if (_board.TryGetInteractableAt(checkPos, out GridInteractable adjacentInteractable))
+            if (_board.TryGetInteractableAt(checkPos, out GridInteractable adjacentInteractable) &&
+                IsSameHeightAsPlayer(adjacentInteractable))
+            {
                 return adjacentInteractable;
+            }
         }
 
         return null;
+    }
+
+    private bool IsSameHeightAsPlayer(GridInteractable interactable)
+    {
+        if (interactable == null)
+            return false;
+
+        int playerHeight = _board.GetHeight(_gridPos);
+        int interactableHeight = _board.GetHeight(interactable.GridPos);
+
+        return playerHeight == interactableHeight;
     }
 
     private void UpdateInteractionIconVisibility()
