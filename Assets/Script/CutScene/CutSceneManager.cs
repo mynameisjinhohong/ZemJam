@@ -850,7 +850,10 @@ public class CutSceneManager : MonoBehaviour
             yield break;
         }
 
+        blackScreenImage.gameObject.SetActive(true);
         Color c = blackScreenImage.color;
+        c.a = 1f;
+        blackScreenImage.color = c;
         float elapsed = 0f;
 
         while (elapsed < duration)

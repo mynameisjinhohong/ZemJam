@@ -9,7 +9,7 @@ public class SimpleCutSceneStarter : MonoBehaviour
 
     private void Start()
     {
-        CutSceneManager.Instance.ShowUISequence("GuideE1", "GuideE2", "GuideE3");
+        
     }
 
     public void ShowE0Bubble()
@@ -30,5 +30,6 @@ public class SimpleCutSceneStarter : MonoBehaviour
     private void ShowSelectImage()
     {
         _selectImage.SetActive(true);   
+        CutSceneManager.Instance.ShowUISequence("GuideE1", "GuideE2", "GuideE3");
     }
 }
