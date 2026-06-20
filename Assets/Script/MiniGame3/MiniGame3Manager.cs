@@ -84,6 +84,9 @@ public sealed class MiniGame3Manager : MonoBehaviour
     private void Start()
     {
         Initialize();
+
+        if(CutSceneManager.Instance != null) 
+            CutSceneManager.Instance.ShowUIOnly("Guide2");
     }
 
     private void Update()

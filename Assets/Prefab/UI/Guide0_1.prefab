@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3051682696509441332}
   - component: {fileID: 1598265783348314368}
   m_Layer: 5
-  m_Name: Guide0
+  m_Name: Guide0_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6219217318133598067, guid: 23bd0938b20de0346a25636e31abd34f, type: 3}
+  m_Sprite: {fileID: 6899934080529559405, guid: 8c285b16eea2e834293eb5da3c04417a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -22,6 +22,8 @@ public class MiniGame1Scene : MonoBehaviour
     private void Start()
     {
         StartCoroutine(PlayIntro());
+        if(CutSceneManager.Instance != null) 
+            CutSceneManager.Instance.ShowUIOnly("Guide1");
     }
 
     private void Update()

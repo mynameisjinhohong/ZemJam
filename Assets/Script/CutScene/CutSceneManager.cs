@@ -506,35 +506,42 @@ public class CutSceneManager : MonoBehaviour
     // ==========================================
     public void ShowUIOnly(string uiKey)
     {
-        StartCoroutine(ShowUIOnlyRoutine(uiKey));
+        StartCoroutine(ShowUISequenceRoutine(new[] { uiKey }));
     }
 
-    private IEnumerator ShowUIOnlyRoutine(string uiKey)
+    public void ShowUISequence(params string[] uiKeys)
     {
-        if (!customUIMap.TryGetValue(uiKey, out GameObject prefab))
-        {
-            Debug.LogWarning($"등록되지 않은 Custom UI Key입니다: {uiKey}");
-            yield break;
-        }
+        StartCoroutine(ShowUISequenceRoutine(uiKeys));
+    }
 
-        GameObject spawnedUI = customUIParent != null 
-            ? Instantiate(prefab, customUIParent, false) 
-            : Instantiate(prefab);
-
+    private IEnumerator ShowUISequenceRoutine(string[] uiKeys)
+    {
         if (onBlockMovement != null) onBlockMovement.Invoke();
 
-        yield return null; 
+        foreach (string uiKey in uiKeys)
+        {
+            if (!customUIMap.TryGetValue(uiKey, out GameObject prefab))
+            {
+                Debug.LogWarning($"등록되지 않은 Custom UI Key입니다: {uiKey}");
+                continue;
+            }
 
-        yield return new WaitUntil(() => 
-            Mouse.current.leftButton.wasPressedThisFrame || 
-            Keyboard.current.spaceKey.wasPressedThisFrame
-        );
+            GameObject spawnedUI = customUIParent != null
+                ? Instantiate(prefab, customUIParent, false)
+                : Instantiate(prefab);
 
-        // 💡 [추가] 단독 UI 팝업이 꺼질 때도 삭제 전 페이드 아웃 연출 실행
-        yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, defaultFadeOutDuration));
+            yield return null;
+
+            yield return new WaitUntil(() =>
+                Mouse.current.leftButton.wasPressedThisFrame ||
+                Keyboard.current.spaceKey.wasPressedThisFrame
+            );
+
+            yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, defaultFadeOutDuration));
+            Destroy(spawnedUI);
+        }
 
         if (onUnblockMovement != null) onUnblockMovement.Invoke();
-        Destroy(spawnedUI);
     }
 
     // ==========================================

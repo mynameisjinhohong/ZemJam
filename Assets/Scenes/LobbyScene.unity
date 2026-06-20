@@ -1287,23 +1287,6 @@ MonoBehaviour:
         \uC62C\uB77C\uAC00\uC9C0 \uB9C8? \uBABB \uB9D0\uB824 \uC815\uB9D0~"
       choices: []
       swayImages: []
-    - sprite: {fileID: 1320481435402747707, guid: 56cd5b79c876a79469d9667583870b27, type: 3}
-      frameType: 0
-      fadeStyle: 1
-      fadeInDuration: 0
-      fadeOutDuration: 3
-      customUIKey: 
-      overrideUIPosSize: 0
-      customUIPosition: {x: 0, y: 0}
-      customUISize: {x: 0, y: 0}
-      dialogues:
-      - "\uAC70\uAE38 \uC5B4\uB5BB\uAC8C \uC62C\uB77C\uAC04 \uAC70\uC57C?!"
-      - "\uD558\uC5EC\uD2BC \uC548 \uC62C\uB77C\uAC00\uB294 \uACF3\uC774 \uC5C6\uB2E4\uB2C8\uAE4C?"
-      - "\uC5BC\uB978 \uB0B4\uB824\uAC00\uC790."
-      - "\uB180\uB790\uAD6C\uB098. \uC704\uD5D8\uD574 \uC5EC\uAE30\uB294! \uC774\uC81C
-        \uC62C\uB77C\uAC00\uC9C0 \uB9C8? \uBABB \uB9D0\uB824 \uC815\uB9D0~"
-      choices: []
-      swayImages: []
     onEndEvent:
       m_PersistentCalls:
         m_Calls:
@@ -1354,10 +1337,18 @@ MonoBehaviour:
           m_CallState: 2
   customUIParent: {fileID: 0}
   customUIEntries:
-  - key: Guide0
+  - key: Guide0_1
     uiPrefab: {fileID: 6461516795149845539, guid: 727b86a7d8394a843a6108a00e58ce2f, type: 3}
+  - key: Guide0_2
+    uiPrefab: {fileID: 6461516795149845539, guid: fb86fadb951d26745ac5d377d6785954, type: 3}
+  - key: Guide1
+    uiPrefab: {fileID: 6461516795149845539, guid: 39dac845d966a9046b64f586a2acd902, type: 3}
   - key: Guide2
-    uiPrefab: {fileID: 6461516795149845539, guid: 8d9681826621dda49969ff052fdb711a, type: 3}
+    uiPrefab: {fileID: 6461516795149845539, guid: 46b45af4a9ee9b948a6a14fd26c00a57, type: 3}
+  - key: Guide3
+    uiPrefab: {fileID: 6461516795149845539, guid: 4a18b72f7f6b86a4d8b28e9e644b026b, type: 3}
+  - key: Guide4
+    uiPrefab: {fileID: 6461516795149845539, guid: e9f2c4db156f01c4898f43471751f393, type: 3}
   onBlockMovement:
     m_PersistentCalls:
       m_Calls:

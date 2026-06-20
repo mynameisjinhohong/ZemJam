@@ -2319,6 +2319,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4720668522741270385, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: _button
+      value: 
+      objectReference: {fileID: 634156813}
+    - target: {fileID: 4720668522741270385, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
       propertyPath: _gridPosition.x
       value: 11
       objectReference: {fileID: 0}

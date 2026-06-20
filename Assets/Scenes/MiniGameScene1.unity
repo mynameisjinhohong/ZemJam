@@ -198,7 +198,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5462411889929461820, guid: f4432081fd4c00e43aa7a8778c56b1f3, type: 3}
   m_Color: {r: 0.8160377, g: 0.8160377, b: 0.8160377, a: 1}
@@ -4601,7 +4601,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 0.8537736, g: 0.8537736, b: 0.8537736, a: 1}
@@ -6132,7 +6132,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 0.8537736, g: 0.8537736, b: 0.8537736, a: 1}
@@ -6560,7 +6560,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5860379431007949907, guid: f4432081fd4c00e43aa7a8778c56b1f3, type: 3}
   m_Color: {r: 0.8156863, g: 0.8156863, b: 0.8156863, a: 1}
@@ -6637,7 +6637,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6775,7 +6775,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7156,7 +7156,7 @@ MonoBehaviour:
   - {x: 2.8, y: 3.87}
   - {x: 4.5, y: -0.5}
   - {x: -5.2, y: 1}
-  _maxTotalError: 2.6
+  _maxTotalError: 60
   _snapDuration: 5
   _resultImage1Obj: {fileID: 323529635}
   _resultImage2Obj: {fileID: 350495943}

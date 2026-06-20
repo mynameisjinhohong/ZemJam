@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
         if (CutSceneManager.Instance != null)
         {
-            CutSceneManager.Instance.ShowUIOnly("Guide0");
+            CutSceneManager.Instance.ShowUISequence("Guide0_1", "Guide0_2");
         }
         else
         {
