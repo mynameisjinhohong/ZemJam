@@ -1441,7 +1441,7 @@ MonoBehaviour:
   - GridPos: {x: 13, y: 26}
     Height: 100
   - GridPos: {x: 11, y: 27}
-    Height: 1
+    Height: 2
   - GridPos: {x: 11, y: 15}
     Height: 1
   - GridPos: {x: 11, y: 17}
@@ -1887,31 +1887,31 @@ MonoBehaviour:
   - GridPos: {x: 15, y: 7}
     Height: 100
   - GridPos: {x: 10, y: 30}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 29}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 28}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 27}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 30}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 29}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 27}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 28}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 8, y: 31}
     Height: 100
   - GridPos: {x: 9, y: 31}
-    Height: 100
+    Height: 4
   - GridPos: {x: 10, y: 31}
-    Height: 100
+    Height: 4
   - GridPos: {x: 8, y: 30}
     Height: 100
   - GridPos: {x: 8, y: 29}
@@ -2281,9 +2281,9 @@ MonoBehaviour:
   - GridPos: {x: 11, y: 32}
     Height: 100
   - GridPos: {x: 10, y: 32}
-    Height: 100
+    Height: 4
   - GridPos: {x: 9, y: 32}
-    Height: 100
+    Height: 4
   - GridPos: {x: 8, y: 32}
     Height: 100
   - GridPos: {x: 7, y: 32}
@@ -2719,7 +2719,7 @@ MonoBehaviour:
   - GridPos: {x: 40, y: 13}
     Height: 100
   - GridPos: {x: 12, y: 28}
-    Height: 1
+    Height: 2
   - GridPos: {x: 10, y: 23}
     Height: 1
   - GridPos: {x: 11, y: 24}
@@ -2730,6 +2730,8 @@ MonoBehaviour:
     Height: 2
   - GridPos: {x: 11, y: 25}
     Height: 2
+  - GridPos: {x: 29, y: 24}
+    Height: 100
   _interactables:
   - {fileID: 427221284}
   - {fileID: 726993431}
@@ -3036,7 +3038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06aa024aab85474469f6fcfe37fc23a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
-  _gridPos: {x: 38, y: 33}
+  _gridPos: {x: 27, y: 24}
   _interactableId: 2
   _interactableIndex: 1
   _triggerOnEnter: 0
@@ -3887,7 +3889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06aa024aab85474469f6fcfe37fc23a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
-  _gridPos: {x: 9, y: 28}
+  _gridPos: {x: 9, y: 32}
   _interactableId: 4
   _interactableIndex: 3
   _triggerOnEnter: 0
@@ -4067,12 +4069,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7bfb8099c2b1b364687b62fdd80dbb4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7995ad822f939214b922654c722e43fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 17.9, y: 13.42}
+  m_Size: {x: 35.809982, y: 26.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4115,8 +4117,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 17.9, y: 13.42}
-    newSize: {x: 17.9, y: 13.42}
+    oldSize: {x: 17.904991, y: 13.42}
+    newSize: {x: 35.809982, y: 26.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
