@@ -1710,29 +1710,29 @@ MonoBehaviour:
   - GridPos: {x: 21, y: 23}
     Height: 2
   - GridPos: {x: 25, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 27}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 24}
     Height: 100
   - GridPos: {x: 25, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 25, y: 26}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 31}
     Height: 100
   - GridPos: {x: 26, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 27, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 31}
     Height: 100
   - GridPos: {x: 27, y: 31}
@@ -1740,27 +1740,27 @@ MonoBehaviour:
   - GridPos: {x: 26, y: 31}
     Height: 100
   - GridPos: {x: 26, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 27, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 27, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 26, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 31}
     Height: 100
   - GridPos: {x: 30, y: 31}
     Height: 100
   - GridPos: {x: 30, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 31, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 31, y: 31}
     Height: 100
   - GridPos: {x: 32, y: 31}
@@ -1776,15 +1776,15 @@ MonoBehaviour:
   - GridPos: {x: 31, y: 27}
     Height: 100
   - GridPos: {x: 31, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 31, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 30, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 30, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 30, y: 27}
     Height: 100
   - GridPos: {x: 29, y: 27}
@@ -2102,17 +2102,17 @@ MonoBehaviour:
   - GridPos: {x: 26, y: 24}
     Height: 100
   - GridPos: {x: 26, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 27, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 28, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 29, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 30, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 31, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 30, y: 23}
     Height: 1
   - GridPos: {x: 31, y: 23}
@@ -2785,6 +2785,10 @@ MonoBehaviour:
     Height: 100
   - GridPos: {x: 13, y: 28}
     Height: 1
+  - GridPos: {x: 12, y: 29}
+    Height: 100
+  - GridPos: {x: 12, y: 30}
+    Height: 100
   _interactables:
   - {fileID: 427221284}
   - {fileID: 726993431}
