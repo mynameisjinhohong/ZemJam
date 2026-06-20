@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: d2a00dfc9d1a82d49a41673e06e448da
+guid: 3d276e07789669f468b6b7930c84a8d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5215997393310531135
-    second: Cat_jump_0
+      213: -5610122939552404790
+    second: Ribborn_B_0
   - first:
-      213: -2976846565807322115
-    second: Cat_jump_1
+      213: -2368224043323204997
+    second: Ribborn_B_1
   - first:
-      213: -1386434273439873855
-    second: Cat_jump_2
+      213: -303683710447629420
+    second: Ribborn_B_2
   - first:
-      213: 995232364185346459
-    second: Cat_jump_3
+      213: 9133306903642611331
+    second: Ribborn_B_3
+  - first:
+      213: 5049173220318871410
+    second: Ribborn_B_4
+  - first:
+      213: 2671643264672261766
+    second: Ribborn_B_5
+  - first:
+      213: -4119797307467362179
+    second: Ribborn_B_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +64,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,89 +118,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat_jump_0
+      name: Ribborn_B_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 43
-        height: 41
+        y: 79
+        width: 66
+        height: 71
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 680e4147fb08e9b46b4e2939083f2cd1
-      internalID: 5215997393310531135
+      spriteID: aca65b109e6d422b0800000000000000
+      internalID: -5610122939552404790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_jump_1
+      name: Ribborn_B_1
       rect:
         serializedVersion: 2
-        x: 46
+        x: 20
         y: 0
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a5e2da7c0622fd0800000000000000
+      internalID: -2368224043323204997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ribborn_B_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 77
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b42ba364919cbf0800000000000000
+      internalID: -303683710447629420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ribborn_B_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 83
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e9d301d3600ce70800000000000000
+      internalID: 9133306903642611331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ribborn_B_4
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 68
+        width: 64
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f758eca44421640800000000000000
+      internalID: 5049173220318871410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ribborn_B_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 20
         width: 41
-        height: 41
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 31ccc0bf9d1d39541a3fcffaf6da9da8
-      internalID: -2976846565807322115
+      spriteID: 686ea5de465931520800000000000000
+      internalID: 2671643264672261766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_jump_2
+      name: Ribborn_B_6
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 51
-        height: 41
+        x: 110
+        y: 64
+        width: 54
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81a90efb712fcf24da4ff9913dad378c
-      internalID: -1386434273439873855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_jump_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 802a0636319781846b3e4266603d4af5
-      internalID: 995232364185346459
+      spriteID: d701ccd2d2a83d6c0800000000000000
+      internalID: -4119797307467362179
       vertices: []
       indices: 
       edges: []
@@ -200,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3bc7216107efc8642b0349c092b28e70
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +283,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":36.0,"y":41.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Cat_jump_0: 5215997393310531135
-      Cat_jump_1: -2976846565807322115
-      Cat_jump_2: -1386434273439873855
-      Cat_jump_3: 995232364185346459
+      Ribborn_B_0: -5610122939552404790
+      Ribborn_B_1: -2368224043323204997
+      Ribborn_B_2: -303683710447629420
+      Ribborn_B_3: 9133306903642611331
+      Ribborn_B_4: 5049173220318871410
+      Ribborn_B_5: 2671643264672261766
+      Ribborn_B_6: -4119797307467362179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
