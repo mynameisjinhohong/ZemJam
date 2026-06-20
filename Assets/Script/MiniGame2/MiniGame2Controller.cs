@@ -14,29 +14,22 @@ public class MiniGame2Controller : MonoBehaviour
 {
     [Header("Scene References")]
     [SerializeField] private RectTransform _sun;
-    [SerializeField] private RectTransform _moon;
-    [SerializeField] private CanvasGroup _moonGroup;
-    [SerializeField] private CanvasGroup _nightOverlayGroup;
-    [SerializeField] private CanvasGroup _catEyesGroup;
-    [SerializeField] private MiniGame2ClockPuzzleController _clockPuzzle;
 
-    [Header("Puzzle Settings")]
+    [Header("Background Groups")]
+    [SerializeField] private CanvasGroup _dayBGGroup;
+    [SerializeField] private CanvasGroup _nightBGGroup;
+
+    [Header("Puzzle")]
+    [SerializeField] private MiniGame2ClockPuzzleController _clockPuzzle;
     [SerializeField, Range(1, 12)] private int _answerHour = 7;
 
     [Header("Transition Settings")]
-    [SerializeField] private float _transitionDuration = 1.5f;
-    [SerializeField] private float _catEyesFadeDuration = 0.5f;
-    [SerializeField, Range(0f, 1f)] private float _nightOverlayAlpha = 0.65f;
+    [SerializeField] private float _transitionDuration = 2f;
 
     [Header("Sun Arc Movement")]
-    [SerializeField] private Vector2 _sunStartPosition = new Vector2(500f, 300f);
-    [SerializeField] private Vector2 _sunEndPosition = new Vector2(-500f, -250f);
-    [SerializeField] private float _sunArcHeight = 250f;
-
-    [Header("Moon Arc Movement")]
-    [SerializeField] private Vector2 _moonStartPosition = new Vector2(500f, -250f);
-    [SerializeField] private Vector2 _moonEndPosition = new Vector2(350f, 250f);
-    [SerializeField] private float _moonArcHeight = 120f;
+    [SerializeField] private Vector2 _sunStartPosition = new Vector2(500f, 250f);
+    [SerializeField] private Vector2 _sunEndPosition = new Vector2(-500f, -300f);
+    [SerializeField] private float _sunArcHeight = 180f;
 
     [Header("Events")]
     [SerializeField] private UnityEvent _onClear;
@@ -55,6 +48,8 @@ public class MiniGame2Controller : MonoBehaviour
             _clockPuzzle.SetAnswer(_answerHour);
             _clockPuzzle.SetInteractable(false);
         }
+        if(CutSceneManager.Instance != null) 
+            CutSceneManager.Instance.ShowUIOnly("Guide2");
     }
 
     private void OnEnable()
@@ -81,15 +76,8 @@ public class MiniGame2Controller : MonoBehaviour
             _sun.gameObject.SetActive(true);
         }
 
-        if (_moon != null)
-        {
-            _moon.anchoredPosition = _moonStartPosition;
-            _moon.gameObject.SetActive(true);
-        }
-
-        SetCanvasGroupAlpha(_moonGroup, 0f);
-        SetCanvasGroupAlpha(_nightOverlayGroup, 0f);
-        SetCanvasGroupAlpha(_catEyesGroup, 0f);
+        SetCanvasGroupAlpha(_dayBGGroup, 1f);
+        SetCanvasGroupAlpha(_nightBGGroup, 0f);
     }
 
     /// <summary>
@@ -110,6 +98,11 @@ public class MiniGame2Controller : MonoBehaviour
     {
         _state = MiniGame2State.TransitionToNight;
 
+        if (_clockPuzzle != null)
+        {
+            _clockPuzzle.SetInteractable(false);
+        }
+
         float time = 0f;
 
         while (time < _transitionDuration)
@@ -120,22 +113,18 @@ public class MiniGame2Controller : MonoBehaviour
             float easedT = Mathf.SmoothStep(0f, 1f, normalizedTime);
 
             UpdateSunMovement(easedT);
-            UpdateMoonMovement(easedT);
-            UpdateNightFade(easedT);
+            UpdateBackgroundFade(easedT);
 
             yield return null;
         }
 
         UpdateSunMovement(1f);
-        UpdateMoonMovement(1f);
-        UpdateNightFade(1f);
+        UpdateBackgroundFade(1f);
 
         if (_sun != null)
         {
             _sun.gameObject.SetActive(false);
         }
-
-        yield return FadeCanvasGroup(_catEyesGroup, 0f, 1f, _catEyesFadeDuration);
 
         _state = MiniGame2State.Night;
         _transitionCoroutine = null;
@@ -159,31 +148,18 @@ public class MiniGame2Controller : MonoBehaviour
         );
     }
 
-    private void UpdateMoonMovement(float t)
+    private void UpdateBackgroundFade(float t)
     {
-        if (_moon == null)
-            return;
-
-        _moon.anchoredPosition = EvaluateArcPosition(
-            _moonStartPosition,
-            _moonEndPosition,
-            _moonArcHeight,
-            t
-        );
-
-        SetCanvasGroupAlpha(_moonGroup, t);
-    }
-
-    private void UpdateNightFade(float t)
-    {
-        SetCanvasGroupAlpha(_nightOverlayGroup, Mathf.Lerp(0f, _nightOverlayAlpha, t));
+        SetCanvasGroupAlpha(_dayBGGroup, 1f - t);
+        SetCanvasGroupAlpha(_nightBGGroup, t);
     }
 
     private Vector2 EvaluateArcPosition(Vector2 start, Vector2 end, float arcHeight, float t)
     {
         Vector2 linearPosition = Vector2.Lerp(start, end, t);
 
-        // t = 0 또는 1에서는 0, t = 0.5에서 최대값이 되는 포물선
+        // t = 0, 1에서는 0
+        // t = 0.5에서 최대 높이
         float arc = 4f * arcHeight * t * (1f - t);
 
         linearPosition.y += arc;
@@ -208,38 +184,11 @@ public class MiniGame2Controller : MonoBehaviour
             _clockPuzzle.SetInteractable(false);
         }
 
-        yield return FadeCanvasGroup(_catEyesGroup, 1f, 0.35f, 0.15f);
-        yield return FadeCanvasGroup(_catEyesGroup, 0.35f, 1f, 0.15f);
-
         _onClear?.Invoke();
 
         Debug.Log("MiniGame2 Clear");
-    }
 
-    private IEnumerator FadeCanvasGroup(CanvasGroup group, float from, float to, float duration)
-    {
-        if (group == null)
-            yield break;
-
-        if (duration <= 0f)
-        {
-            SetCanvasGroupAlpha(group, to);
-            yield break;
-        }
-
-        float time = 0f;
-
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-
-            float t = Mathf.Clamp01(time / duration);
-            group.alpha = Mathf.Lerp(from, to, t);
-
-            yield return null;
-        }
-
-        group.alpha = to;
+        yield break;
     }
 
     private void SetCanvasGroupAlpha(CanvasGroup group, float alpha)
@@ -255,7 +204,6 @@ public class MiniGame2Controller : MonoBehaviour
     {
         _answerHour = Mathf.Clamp(_answerHour, 1, 12);
         _transitionDuration = Mathf.Max(0f, _transitionDuration);
-        _catEyesFadeDuration = Mathf.Max(0f, _catEyesFadeDuration);
     }
 #endif
 }

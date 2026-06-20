@@ -573,6 +573,8 @@ MonoBehaviour:
   customUIEntries:
   - key: Guide0
     uiPrefab: {fileID: 6461516795149845539, guid: 727b86a7d8394a843a6108a00e58ce2f, type: 3}
+  - key: Guide2
+    uiPrefab: {fileID: 6461516795149845539, guid: 8d9681826621dda49969ff052fdb711a, type: 3}
   onBlockMovement:
     m_PersistentCalls:
       m_Calls:

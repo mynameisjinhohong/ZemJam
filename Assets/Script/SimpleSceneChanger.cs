@@ -8,6 +8,7 @@ public class SimpleSceneChanger : MonoBehaviour
         if (GameManager.Instance == null)
         {
             Debug.LogError("GameManager.Instance is null.");
+            SceneManager.LoadScene("GameScene");
             return;
         }
 

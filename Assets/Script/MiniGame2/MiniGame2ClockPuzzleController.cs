@@ -8,6 +8,10 @@ public class MiniGame2ClockPuzzleController : MonoBehaviour, IPointerDownHandler
     [SerializeField] private RectTransform _clockArea;
     [SerializeField] private RectTransform _hourHand;
 
+    [Header("Hand Rotation Settings")]
+    [Tooltip("시침 이미지가 12시 방향을 가리키기 위해 필요한 Z 회전값입니다. 현재 시침 UI가 가로 이미지라면 90으로 둡니다.")]
+    [SerializeField] private float _handBaseZRotation = 90f;
+
     [Header("Settings")]
     [SerializeField] private bool _snapOnRelease = true;
 
@@ -19,6 +23,11 @@ public class MiniGame2ClockPuzzleController : MonoBehaviour, IPointerDownHandler
 
     public int CurrentHour => _currentHour;
     public bool IsInteractable => _interactable;
+
+    private void Awake()
+    {
+        ApplyHourRotation(12);
+    }
 
     public void SetInteractable(bool value)
     {
@@ -88,13 +97,41 @@ public class MiniGame2ClockPuzzleController : MonoBehaviour, IPointerDownHandler
 
         float rawAngle = Mathf.Atan2(localPoint.y, localPoint.x) * Mathf.Rad2Deg;
 
-        // 12시 방향을 0도로 보기 위한 보정
+        // 12시 방향을 0도로 보기 위한 보정값
         float clockAngle = NormalizeAngle(90f - rawAngle);
 
-        // UI에서 시계방향 회전은 보통 z축 음수 방향
-        _hourHand.localEulerAngles = new Vector3(0f, 0f, -clockAngle);
+        ApplyClockAngle(clockAngle);
 
         _currentHour = AngleToHour(clockAngle);
+    }
+
+    private void ApplyClockAngle(float clockAngle)
+    {
+        if (_hourHand == null)
+            return;
+
+        // clockAngle 기준:
+        // 0도   = 12시
+        // 30도  = 1시
+        // 60도  = 2시
+        // 90도  = 3시
+        //
+        // 시침 이미지가 가로 방향이고, 12시를 가리키기 위해 Z 90이 필요하므로
+        // 최종 회전값 = 기준 회전값 - 시계 각도
+        float finalZRotation = _handBaseZRotation - clockAngle;
+
+        _hourHand.localEulerAngles = new Vector3(0f, 0f, finalZRotation);
+    }
+
+    private void ApplyHourRotation(int hour)
+    {
+        hour = Mathf.Clamp(hour, 1, 12);
+
+        float clockAngle = HourToClockAngle(hour);
+
+        ApplyClockAngle(clockAngle);
+
+        _currentHour = hour;
     }
 
     private int AngleToHour(float clockAngle)
@@ -109,16 +146,19 @@ public class MiniGame2ClockPuzzleController : MonoBehaviour, IPointerDownHandler
         return Mathf.Clamp(hour, 1, 12);
     }
 
+    private float HourToClockAngle(int hour)
+    {
+        hour = Mathf.Clamp(hour, 1, 12);
+
+        if (hour == 12)
+            return 0f;
+
+        return hour * 30f;
+    }
+
     private void SnapHandToCurrentHour()
     {
-        if (_hourHand == null)
-            return;
-
-        float snappedAngle = _currentHour == 12
-            ? 0f
-            : _currentHour * 30f;
-
-        _hourHand.localEulerAngles = new Vector3(0f, 0f, -snappedAngle);
+        ApplyHourRotation(_currentHour);
     }
 
     private void CheckAnswer()
