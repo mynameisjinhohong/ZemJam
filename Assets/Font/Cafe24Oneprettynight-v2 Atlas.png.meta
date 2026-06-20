@@ -1,0 +1,3341 @@
+fileFormatVersion: 2
+guid: 3d7231dc20269dd42aad57165eb3f941
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3278041028023562040
+    second: Cafe24Oneprettynight-v2 Atlas_0
+  - first:
+      213: -4661495439232567098
+    second: Cafe24Oneprettynight-v2 Atlas_1
+  - first:
+      213: 7723761044637713398
+    second: Cafe24Oneprettynight-v2 Atlas_2
+  - first:
+      213: 4150823817842498880
+    second: Cafe24Oneprettynight-v2 Atlas_3
+  - first:
+      213: -7200507936319693947
+    second: Cafe24Oneprettynight-v2 Atlas_4
+  - first:
+      213: -5273029052553147569
+    second: Cafe24Oneprettynight-v2 Atlas_5
+  - first:
+      213: 9129081576303830316
+    second: Cafe24Oneprettynight-v2 Atlas_6
+  - first:
+      213: 2670991530830215944
+    second: Cafe24Oneprettynight-v2 Atlas_7
+  - first:
+      213: -4174606392897297552
+    second: Cafe24Oneprettynight-v2 Atlas_8
+  - first:
+      213: -3235848942933097020
+    second: Cafe24Oneprettynight-v2 Atlas_9
+  - first:
+      213: 6162873010391173836
+    second: Cafe24Oneprettynight-v2 Atlas_10
+  - first:
+      213: -6585284641497813286
+    second: Cafe24Oneprettynight-v2 Atlas_11
+  - first:
+      213: 5467491208640337239
+    second: Cafe24Oneprettynight-v2 Atlas_12
+  - first:
+      213: -5681857080291708907
+    second: Cafe24Oneprettynight-v2 Atlas_13
+  - first:
+      213: 1192184713572224101
+    second: Cafe24Oneprettynight-v2 Atlas_14
+  - first:
+      213: 6103503102846729340
+    second: Cafe24Oneprettynight-v2 Atlas_15
+  - first:
+      213: -418653219109303567
+    second: Cafe24Oneprettynight-v2 Atlas_16
+  - first:
+      213: 3592414184953356860
+    second: Cafe24Oneprettynight-v2 Atlas_17
+  - first:
+      213: 3236965561521654667
+    second: Cafe24Oneprettynight-v2 Atlas_18
+  - first:
+      213: 9110985207296463689
+    second: Cafe24Oneprettynight-v2 Atlas_19
+  - first:
+      213: 1447407614532443283
+    second: Cafe24Oneprettynight-v2 Atlas_20
+  - first:
+      213: 8602632821334139252
+    second: Cafe24Oneprettynight-v2 Atlas_21
+  - first:
+      213: 689291631594226915
+    second: Cafe24Oneprettynight-v2 Atlas_22
+  - first:
+      213: -748063579023877277
+    second: Cafe24Oneprettynight-v2 Atlas_23
+  - first:
+      213: 116736189771781953
+    second: Cafe24Oneprettynight-v2 Atlas_24
+  - first:
+      213: 7320714197316510037
+    second: Cafe24Oneprettynight-v2 Atlas_25
+  - first:
+      213: -1640466054372403150
+    second: Cafe24Oneprettynight-v2 Atlas_26
+  - first:
+      213: -8247538635910298655
+    second: Cafe24Oneprettynight-v2 Atlas_27
+  - first:
+      213: -7871806152086372254
+    second: Cafe24Oneprettynight-v2 Atlas_28
+  - first:
+      213: 1919662346510980284
+    second: Cafe24Oneprettynight-v2 Atlas_29
+  - first:
+      213: -211948029517880412
+    second: Cafe24Oneprettynight-v2 Atlas_30
+  - first:
+      213: 2515058469866937357
+    second: Cafe24Oneprettynight-v2 Atlas_31
+  - first:
+      213: -8071642591615211432
+    second: Cafe24Oneprettynight-v2 Atlas_32
+  - first:
+      213: -7661098126025810260
+    second: Cafe24Oneprettynight-v2 Atlas_33
+  - first:
+      213: 3593283678501935248
+    second: Cafe24Oneprettynight-v2 Atlas_34
+  - first:
+      213: -6290744316568672825
+    second: Cafe24Oneprettynight-v2 Atlas_35
+  - first:
+      213: 3033708319469592358
+    second: Cafe24Oneprettynight-v2 Atlas_36
+  - first:
+      213: -2346046566964009097
+    second: Cafe24Oneprettynight-v2 Atlas_37
+  - first:
+      213: -4330897558011777726
+    second: Cafe24Oneprettynight-v2 Atlas_38
+  - first:
+      213: 4845707257731119897
+    second: Cafe24Oneprettynight-v2 Atlas_39
+  - first:
+      213: 7810073465376255815
+    second: Cafe24Oneprettynight-v2 Atlas_40
+  - first:
+      213: -3922924920671901341
+    second: Cafe24Oneprettynight-v2 Atlas_41
+  - first:
+      213: 3393198316224275644
+    second: Cafe24Oneprettynight-v2 Atlas_42
+  - first:
+      213: 1821319125196998255
+    second: Cafe24Oneprettynight-v2 Atlas_43
+  - first:
+      213: -2911424829976617647
+    second: Cafe24Oneprettynight-v2 Atlas_44
+  - first:
+      213: 2512420801724095065
+    second: Cafe24Oneprettynight-v2 Atlas_45
+  - first:
+      213: -8294367848628659657
+    second: Cafe24Oneprettynight-v2 Atlas_46
+  - first:
+      213: 3070697791270130779
+    second: Cafe24Oneprettynight-v2 Atlas_47
+  - first:
+      213: -3490603464048095795
+    second: Cafe24Oneprettynight-v2 Atlas_48
+  - first:
+      213: -322990544459470739
+    second: Cafe24Oneprettynight-v2 Atlas_49
+  - first:
+      213: -8437905980575646637
+    second: Cafe24Oneprettynight-v2 Atlas_50
+  - first:
+      213: -8948959412016035863
+    second: Cafe24Oneprettynight-v2 Atlas_51
+  - first:
+      213: -6483248244630011573
+    second: Cafe24Oneprettynight-v2 Atlas_52
+  - first:
+      213: 2348289017624970398
+    second: Cafe24Oneprettynight-v2 Atlas_53
+  - first:
+      213: 6951931379108427930
+    second: Cafe24Oneprettynight-v2 Atlas_54
+  - first:
+      213: 8369367717180584780
+    second: Cafe24Oneprettynight-v2 Atlas_55
+  - first:
+      213: 2684086587093755869
+    second: Cafe24Oneprettynight-v2 Atlas_56
+  - first:
+      213: -3603225426425600833
+    second: Cafe24Oneprettynight-v2 Atlas_57
+  - first:
+      213: -5352723045854452747
+    second: Cafe24Oneprettynight-v2 Atlas_58
+  - first:
+      213: -7222684089975698511
+    second: Cafe24Oneprettynight-v2 Atlas_59
+  - first:
+      213: 9165515572264396718
+    second: Cafe24Oneprettynight-v2 Atlas_60
+  - first:
+      213: -6048254415034524655
+    second: Cafe24Oneprettynight-v2 Atlas_61
+  - first:
+      213: 8707519379500067850
+    second: Cafe24Oneprettynight-v2 Atlas_62
+  - first:
+      213: 3666655943865896994
+    second: Cafe24Oneprettynight-v2 Atlas_63
+  - first:
+      213: 9165729455792733589
+    second: Cafe24Oneprettynight-v2 Atlas_64
+  - first:
+      213: 5242122399989221897
+    second: Cafe24Oneprettynight-v2 Atlas_65
+  - first:
+      213: -7833646120952867059
+    second: Cafe24Oneprettynight-v2 Atlas_66
+  - first:
+      213: -4558941339245597867
+    second: Cafe24Oneprettynight-v2 Atlas_67
+  - first:
+      213: 184604432985395623
+    second: Cafe24Oneprettynight-v2 Atlas_68
+  - first:
+      213: 3407757873105739752
+    second: Cafe24Oneprettynight-v2 Atlas_69
+  - first:
+      213: -5839706644410451034
+    second: Cafe24Oneprettynight-v2 Atlas_70
+  - first:
+      213: 5093198594565393091
+    second: Cafe24Oneprettynight-v2 Atlas_71
+  - first:
+      213: 4618800420825412752
+    second: Cafe24Oneprettynight-v2 Atlas_72
+  - first:
+      213: 4487641784494615338
+    second: Cafe24Oneprettynight-v2 Atlas_73
+  - first:
+      213: -1338363869245907108
+    second: Cafe24Oneprettynight-v2 Atlas_74
+  - first:
+      213: -87792023128129250
+    second: Cafe24Oneprettynight-v2 Atlas_75
+  - first:
+      213: -638801501635350774
+    second: Cafe24Oneprettynight-v2 Atlas_76
+  - first:
+      213: 999932188964701340
+    second: Cafe24Oneprettynight-v2 Atlas_77
+  - first:
+      213: -6078552295267596381
+    second: Cafe24Oneprettynight-v2 Atlas_78
+  - first:
+      213: 2981329210060865462
+    second: Cafe24Oneprettynight-v2 Atlas_79
+  - first:
+      213: -5417492416217598564
+    second: Cafe24Oneprettynight-v2 Atlas_80
+  - first:
+      213: -4540395255051423049
+    second: Cafe24Oneprettynight-v2 Atlas_81
+  - first:
+      213: -3445126267796882695
+    second: Cafe24Oneprettynight-v2 Atlas_82
+  - first:
+      213: -4211827997014082712
+    second: Cafe24Oneprettynight-v2 Atlas_83
+  - first:
+      213: -7544805214945002115
+    second: Cafe24Oneprettynight-v2 Atlas_84
+  - first:
+      213: 5095212473853214696
+    second: Cafe24Oneprettynight-v2 Atlas_85
+  - first:
+      213: -4600754584905114034
+    second: Cafe24Oneprettynight-v2 Atlas_86
+  - first:
+      213: 7096962744192416169
+    second: Cafe24Oneprettynight-v2 Atlas_87
+  - first:
+      213: -3926454455456687111
+    second: Cafe24Oneprettynight-v2 Atlas_88
+  - first:
+      213: 6478752898930023989
+    second: Cafe24Oneprettynight-v2 Atlas_89
+  - first:
+      213: -655443409192033710
+    second: Cafe24Oneprettynight-v2 Atlas_90
+  - first:
+      213: 4867375879981495151
+    second: Cafe24Oneprettynight-v2 Atlas_91
+  - first:
+      213: 4835944054242197092
+    second: Cafe24Oneprettynight-v2 Atlas_92
+  - first:
+      213: -5614609957849722458
+    second: Cafe24Oneprettynight-v2 Atlas_93
+  - first:
+      213: -5524705281686379270
+    second: Cafe24Oneprettynight-v2 Atlas_94
+  - first:
+      213: 4463468240706641451
+    second: Cafe24Oneprettynight-v2 Atlas_95
+  - first:
+      213: 5607815316624883199
+    second: Cafe24Oneprettynight-v2 Atlas_96
+  - first:
+      213: 8661332870627825569
+    second: Cafe24Oneprettynight-v2 Atlas_97
+  - first:
+      213: -8776242914093306328
+    second: Cafe24Oneprettynight-v2 Atlas_98
+  - first:
+      213: -1594458163390894013
+    second: Cafe24Oneprettynight-v2 Atlas_99
+  - first:
+      213: 5407593048217076469
+    second: Cafe24Oneprettynight-v2 Atlas_100
+  - first:
+      213: 4525770979554105682
+    second: Cafe24Oneprettynight-v2 Atlas_101
+  - first:
+      213: -3415540373841355101
+    second: Cafe24Oneprettynight-v2 Atlas_102
+  - first:
+      213: -1176447338707615220
+    second: Cafe24Oneprettynight-v2 Atlas_103
+  - first:
+      213: 8940898276139795333
+    second: Cafe24Oneprettynight-v2 Atlas_104
+  - first:
+      213: -5019842202599707886
+    second: Cafe24Oneprettynight-v2 Atlas_105
+  - first:
+      213: 7976704760821119725
+    second: Cafe24Oneprettynight-v2 Atlas_106
+  - first:
+      213: 3773951825619108910
+    second: Cafe24Oneprettynight-v2 Atlas_107
+  - first:
+      213: 367186426851391610
+    second: Cafe24Oneprettynight-v2 Atlas_108
+  - first:
+      213: 431574502227112027
+    second: Cafe24Oneprettynight-v2 Atlas_109
+  - first:
+      213: 8588068890047862248
+    second: Cafe24Oneprettynight-v2 Atlas_110
+  - first:
+      213: -6036715724385925324
+    second: Cafe24Oneprettynight-v2 Atlas_111
+  - first:
+      213: 2039352689677795742
+    second: Cafe24Oneprettynight-v2 Atlas_112
+  - first:
+      213: -7953563149840931484
+    second: Cafe24Oneprettynight-v2 Atlas_113
+  - first:
+      213: 4437952392257970601
+    second: Cafe24Oneprettynight-v2 Atlas_114
+  - first:
+      213: 4519472168291679039
+    second: Cafe24Oneprettynight-v2 Atlas_115
+  - first:
+      213: -3979770389238124210
+    second: Cafe24Oneprettynight-v2 Atlas_116
+  - first:
+      213: -6098559953363006450
+    second: Cafe24Oneprettynight-v2 Atlas_117
+  - first:
+      213: -3720979754529630953
+    second: Cafe24Oneprettynight-v2 Atlas_118
+  - first:
+      213: 7472242842254984998
+    second: Cafe24Oneprettynight-v2 Atlas_119
+  - first:
+      213: 2007453889950315141
+    second: Cafe24Oneprettynight-v2 Atlas_120
+  - first:
+      213: 8750348975851766108
+    second: Cafe24Oneprettynight-v2 Atlas_121
+  - first:
+      213: 3155903970528674100
+    second: Cafe24Oneprettynight-v2 Atlas_122
+  - first:
+      213: -5717917186567546916
+    second: Cafe24Oneprettynight-v2 Atlas_123
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 468
+        width: 15
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0df758d0f0282d0800000000000000
+      internalID: -3278041028023562040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c8707e789a0f4fb0800000000000000
+      internalID: -4661495439232567098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 468
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f381a37fbf403b60800000000000000
+      internalID: 7723761044637713398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 468
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d9bb33540ba9930800000000000000
+      internalID: 4150823817842498880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 416
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b984d8e28a21c90800000000000000
+      internalID: -7200507936319693947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 468
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b4140b30072d6b0800000000000000
+      internalID: -5273029052553147569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 416
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c252721635301be70800000000000000
+      internalID: 9129081576303830316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 468
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b363155a4411520800000000000000
+      internalID: 2670991530830215944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 416
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073284a8a91d016c0800000000000000
+      internalID: -4174606392897297552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 468
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c546a9d784f713d0800000000000000
+      internalID: -3235848942933097020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 461
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca4534c95ce68550800000000000000
+      internalID: 6162873010391173836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 459
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adeefa6428e5c94a0800000000000000
+      internalID: -6585284641497813286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 459
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7551497494e60eb40800000000000000
+      internalID: 5467491208640337239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 459
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510bca8d61df521b0800000000000000
+      internalID: -5681857080291708907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 456
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c8f173ead7b8010800000000000000
+      internalID: 1192184713572224101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 456
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c7caafbbff3b450800000000000000
+      internalID: 6103503102846729340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 364
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa8ae68d15a03af0800000000000000
+      internalID: -418653219109303567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 364
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c322834faa1dad130800000000000000
+      internalID: 3592414184953356860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 364
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bcbac27030cec20800000000000000
+      internalID: 3236965561521654667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 364
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9439eb226c8b07e70800000000000000
+      internalID: 9110985207296463689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 410
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cd6658e89361410800000000000000
+      internalID: 1447407614532443283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 359
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471ecb8e8f0b26770800000000000000
+      internalID: 8602632821334139252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 408
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4c2df361bd09900800000000000000
+      internalID: 689291631594226915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 408
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bdfd663285e95f0800000000000000
+      internalID: -748063579023877277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 408
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14797c332fabe9100800000000000000
+      internalID: 116736189771781953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 406
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551a53196c6689560800000000000000
+      internalID: 7320714197316510037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 406
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 238db0ba0d4eb39e0800000000000000
+      internalID: -1640466054372403150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3c147de4bda8d80800000000000000
+      internalID: -8247538635910298655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 312
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2604824e20ab1c290800000000000000
+      internalID: -7871806152086372254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 312
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4da7cbbb204aa10800000000000000
+      internalID: 1919662346510980284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 308
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a32ebdd3620f0df0800000000000000
+      internalID: -211948029517880412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 306
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c91cd5a5847e220800000000000000
+      internalID: 2515058469866937357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 357
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858acdc04d3cbff80800000000000000
+      internalID: -8071642591615211432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 306
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae12d838df4ea590800000000000000
+      internalID: -7661098126025810260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 357
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0981152b778edd130800000000000000
+      internalID: 3593283678501935248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 306
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5ed16bf59c2b8a0800000000000000
+      internalID: -6290744316568672825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 357
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fd12ea4a5e91a20800000000000000
+      internalID: 3033708319469592358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 356
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777e595c31b217fd0800000000000000
+      internalID: -2346046566964009097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 319
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24de918fd9f85e3c0800000000000000
+      internalID: -4330897558011777726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 356
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b7896c3196f3340800000000000000
+      internalID: 4845707257731119897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 327
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fa47def64f26c60800000000000000
+      internalID: 7810073465376255815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 315
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369e2d6b198fe89c0800000000000000
+      internalID: -3922924920671901341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 327
+        width: 43
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4600304ef071f20800000000000000
+      internalID: 3393198316224275644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 289
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f660ef73810a64910800000000000000
+      internalID: 1821319125196998255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15dddf2ea8a8897d0800000000000000
+      internalID: -2911424829976617647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 260
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a11156869edd220800000000000000
+      internalID: 2512420801724095065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 257
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a511a136c74ec80800000000000000
+      internalID: -8294367848628659657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 255
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b549b353f5f4d9a20800000000000000
+      internalID: 3070697791270130779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 255
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd4aa9b4a2ee8fc0800000000000000
+      internalID: -3490603464048095795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 255
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68eea3afc1848bf0800000000000000
+      internalID: -322990544459470739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 255
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35cf4a3773986ea80800000000000000
+      internalID: -8437905980575646637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 265
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7456114d8eec380800000000000000
+      internalID: -8948959412016035863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 265
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41472c3210e606a0800000000000000
+      internalID: -6483248244630011573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 281
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94cc757b6cc69020800000000000000
+      internalID: 2348289017624970398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_54
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 243
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9836a2a1c83a7060800000000000000
+      internalID: 6951931379108427930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_55
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 242
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c43bb219897f52470800000000000000
+      internalID: 8369367717180584780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_56
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 265
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd72d12b78acf3520800000000000000
+      internalID: 2684086587093755869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb42f3cb095cefdc0800000000000000
+      internalID: -3603225426425600833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_58
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 206
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f36cceefbe47b5b0800000000000000
+      internalID: -5352723045854452747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 204
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb022c661fd3cb90800000000000000
+      internalID: -7222684089975698511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 204
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7612c1ad3723f70800000000000000
+      internalID: 9165515572264396718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 204
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cdda097a8401ca0800000000000000
+      internalID: -6048254415034524655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 204
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c6ee1cdb257d870800000000000000
+      internalID: 8707519379500067850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 204
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22093b7772492e230800000000000000
+      internalID: 3666655943865896994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_64
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 242
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d3cdfb066333f70800000000000000
+      internalID: 9165729455792733589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_65
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 227
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ac9708c82cfb840800000000000000
+      internalID: 5242122399989221897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_66
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 196
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07dc708b5c494390800000000000000
+      internalID: -7833646120952867059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_67
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 195
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b2c6a91036bb0c0800000000000000
+      internalID: -4558941339245597867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_68
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 235
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a19e04f0c8df8200800000000000000
+      internalID: 184604432985395623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_69
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 222
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef12030bb9ca4f20800000000000000
+      internalID: 3407757873105739752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_70
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 175
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab3d6b3fb135fea0800000000000000
+      internalID: -5839706644410451034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 196
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cac697032daea640800000000000000
+      internalID: 5093198594565393091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_72
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 204
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09439b3e286491040800000000000000
+      internalID: 4618800420825412752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b600c2d6e474e30800000000000000
+      internalID: 4487641784494615338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_74
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 155
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f5161e62d2d6de0800000000000000
+      internalID: -1338363869245907108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_75
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 153
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11c55fbe9918cef0800000000000000
+      internalID: -87792023128129250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_76
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 153
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0fe9053b658227f0800000000000000
+      internalID: -638801501635350774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_77
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 153
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9448ba270970ed00800000000000000
+      internalID: 999932188964701340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_78
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 153
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a780fb94e4a4aba0800000000000000
+      internalID: -6078552295267596381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_79
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 153
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf7c2cee1fcf5920800000000000000
+      internalID: 2981329210060865462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_80
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 149
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c953afdb95331d4b0800000000000000
+      internalID: -5417492416217598564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_81
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 148
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b27ac252964df0c0800000000000000
+      internalID: -4540395255051423049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_82
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 147
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa799999e37030d0800000000000000
+      internalID: -3445126267796882695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_83
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 191
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b3eee70c49c85c0800000000000000
+      internalID: -4211827997014082712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_84
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 162
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d30bf81a77b4790800000000000000
+      internalID: -7544805214945002115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eff827dfb4d5b640800000000000000
+      internalID: 5095212473853214696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_86
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 104
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e1bf3b416d620c0800000000000000
+      internalID: -4600754584905114034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_87
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 102
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a935c7b30a7d7260800000000000000
+      internalID: 7096962744192416169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_88
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 102
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb11cbd97e6289c0800000000000000
+      internalID: -3926454455456687111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_89
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 102
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e91488f6729e950800000000000000
+      internalID: 6478752898930023989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_90
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 102
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252ecb821b567e6f0800000000000000
+      internalID: -655443409192033710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_91
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 102
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63f99a03946c8340800000000000000
+      internalID: 4867375879981495151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_92
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 127
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46eb4c2de79bc1340800000000000000
+      internalID: 4835944054242197092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_93
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 100
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a11ff5adf5e412b0800000000000000
+      internalID: -5614609957849722458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_94
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 99
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4eb5441dd4453b0800000000000000
+      internalID: -5524705281686379270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_95
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 99
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e9e8967bc61fd30800000000000000
+      internalID: 4463468240706641451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_96
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 131
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdbb69a156f2dd40800000000000000
+      internalID: 5607815316624883199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_97
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 87
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a79f2b2b5c333870800000000000000
+      internalID: 8661332870627825569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82eede27195843680800000000000000
+      internalID: -8776242914093306328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_99
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 52
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3403dd98fb85fd9e0800000000000000
+      internalID: -1594458163390894013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_100
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 51
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2c9d80a31ab0b40800000000000000
+      internalID: 5407593048217076469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_101
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 51
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25918133ab4cece30800000000000000
+      internalID: 4525770979554105682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_102
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 51
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae5e2550209990d0800000000000000
+      internalID: -3415540373841355101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_103
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 51
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c020167e06b6cafe0800000000000000
+      internalID: -1176447338707615220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_104
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 51
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583073a7c93741c70800000000000000
+      internalID: 8940898276139795333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_105
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 78
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ba78dec10f55ab0800000000000000
+      internalID: -5019842202599707886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_106
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 39
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaf8e2b7b2f2be60800000000000000
+      internalID: 7976704760821119725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_107
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 50
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24c67da035cf5430800000000000000
+      internalID: 3773951825619108910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_108
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 50
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7872da1c12881500800000000000000
+      internalID: 367186426851391610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_109
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 50
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50fc5329b24df500800000000000000
+      internalID: 431574502227112027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_110
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 56
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5d2e96723fe2770800000000000000
+      internalID: 8588068890047862248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43746f55807493ca0800000000000000
+      internalID: -6036715724385925324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_112
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e918bff577c3d4c10800000000000000
+      internalID: 2039352689677795742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_113
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465281b74744f9190800000000000000
+      internalID: -7953563149840931484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_114
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1a1aeff26c69d30800000000000000
+      internalID: 4437952392257970601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_115
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 0
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b3a4bedf368be30800000000000000
+      internalID: 4519472168291679039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_116
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 0
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41f7ddaae305c8c0800000000000000
+      internalID: -3979770389238124210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_117
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c0062b8009d5ba0800000000000000
+      internalID: -6098559953363006450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_118
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71557dab0ac6c5cc0800000000000000
+      internalID: -3720979754529630953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_119
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 0
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6274010864db2b760800000000000000
+      internalID: 7472242842254984998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_120
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 0
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582f67d4da8ebdb10800000000000000
+      internalID: 2007453889950315141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_121
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51095e380c7f6970800000000000000
+      internalID: 8750348975851766108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_122
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 17
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4314b94c0f50ccb20800000000000000
+      internalID: 3155903970528674100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe24Oneprettynight-v2 Atlas_123
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 0
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd75a871d90e5a0b0800000000000000
+      internalID: -5717917186567546916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cafe24Oneprettynight-v2 Atlas_0: -3278041028023562040
+      Cafe24Oneprettynight-v2 Atlas_1: -4661495439232567098
+      Cafe24Oneprettynight-v2 Atlas_10: 6162873010391173836
+      Cafe24Oneprettynight-v2 Atlas_100: 5407593048217076469
+      Cafe24Oneprettynight-v2 Atlas_101: 4525770979554105682
+      Cafe24Oneprettynight-v2 Atlas_102: -3415540373841355101
+      Cafe24Oneprettynight-v2 Atlas_103: -1176447338707615220
+      Cafe24Oneprettynight-v2 Atlas_104: 8940898276139795333
+      Cafe24Oneprettynight-v2 Atlas_105: -5019842202599707886
+      Cafe24Oneprettynight-v2 Atlas_106: 7976704760821119725
+      Cafe24Oneprettynight-v2 Atlas_107: 3773951825619108910
+      Cafe24Oneprettynight-v2 Atlas_108: 367186426851391610
+      Cafe24Oneprettynight-v2 Atlas_109: 431574502227112027
+      Cafe24Oneprettynight-v2 Atlas_11: -6585284641497813286
+      Cafe24Oneprettynight-v2 Atlas_110: 8588068890047862248
+      Cafe24Oneprettynight-v2 Atlas_111: -6036715724385925324
+      Cafe24Oneprettynight-v2 Atlas_112: 2039352689677795742
+      Cafe24Oneprettynight-v2 Atlas_113: -7953563149840931484
+      Cafe24Oneprettynight-v2 Atlas_114: 4437952392257970601
+      Cafe24Oneprettynight-v2 Atlas_115: 4519472168291679039
+      Cafe24Oneprettynight-v2 Atlas_116: -3979770389238124210
+      Cafe24Oneprettynight-v2 Atlas_117: -6098559953363006450
+      Cafe24Oneprettynight-v2 Atlas_118: -3720979754529630953
+      Cafe24Oneprettynight-v2 Atlas_119: 7472242842254984998
+      Cafe24Oneprettynight-v2 Atlas_12: 5467491208640337239
+      Cafe24Oneprettynight-v2 Atlas_120: 2007453889950315141
+      Cafe24Oneprettynight-v2 Atlas_121: 8750348975851766108
+      Cafe24Oneprettynight-v2 Atlas_122: 3155903970528674100
+      Cafe24Oneprettynight-v2 Atlas_123: -5717917186567546916
+      Cafe24Oneprettynight-v2 Atlas_13: -5681857080291708907
+      Cafe24Oneprettynight-v2 Atlas_14: 1192184713572224101
+      Cafe24Oneprettynight-v2 Atlas_15: 6103503102846729340
+      Cafe24Oneprettynight-v2 Atlas_16: -418653219109303567
+      Cafe24Oneprettynight-v2 Atlas_17: 3592414184953356860
+      Cafe24Oneprettynight-v2 Atlas_18: 3236965561521654667
+      Cafe24Oneprettynight-v2 Atlas_19: 9110985207296463689
+      Cafe24Oneprettynight-v2 Atlas_2: 7723761044637713398
+      Cafe24Oneprettynight-v2 Atlas_20: 1447407614532443283
+      Cafe24Oneprettynight-v2 Atlas_21: 8602632821334139252
+      Cafe24Oneprettynight-v2 Atlas_22: 689291631594226915
+      Cafe24Oneprettynight-v2 Atlas_23: -748063579023877277
+      Cafe24Oneprettynight-v2 Atlas_24: 116736189771781953
+      Cafe24Oneprettynight-v2 Atlas_25: 7320714197316510037
+      Cafe24Oneprettynight-v2 Atlas_26: -1640466054372403150
+      Cafe24Oneprettynight-v2 Atlas_27: -8247538635910298655
+      Cafe24Oneprettynight-v2 Atlas_28: -7871806152086372254
+      Cafe24Oneprettynight-v2 Atlas_29: 1919662346510980284
+      Cafe24Oneprettynight-v2 Atlas_3: 4150823817842498880
+      Cafe24Oneprettynight-v2 Atlas_30: -211948029517880412
+      Cafe24Oneprettynight-v2 Atlas_31: 2515058469866937357
+      Cafe24Oneprettynight-v2 Atlas_32: -8071642591615211432
+      Cafe24Oneprettynight-v2 Atlas_33: -7661098126025810260
+      Cafe24Oneprettynight-v2 Atlas_34: 3593283678501935248
+      Cafe24Oneprettynight-v2 Atlas_35: -6290744316568672825
+      Cafe24Oneprettynight-v2 Atlas_36: 3033708319469592358
+      Cafe24Oneprettynight-v2 Atlas_37: -2346046566964009097
+      Cafe24Oneprettynight-v2 Atlas_38: -4330897558011777726
+      Cafe24Oneprettynight-v2 Atlas_39: 4845707257731119897
+      Cafe24Oneprettynight-v2 Atlas_4: -7200507936319693947
+      Cafe24Oneprettynight-v2 Atlas_40: 7810073465376255815
+      Cafe24Oneprettynight-v2 Atlas_41: -3922924920671901341
+      Cafe24Oneprettynight-v2 Atlas_42: 3393198316224275644
+      Cafe24Oneprettynight-v2 Atlas_43: 1821319125196998255
+      Cafe24Oneprettynight-v2 Atlas_44: -2911424829976617647
+      Cafe24Oneprettynight-v2 Atlas_45: 2512420801724095065
+      Cafe24Oneprettynight-v2 Atlas_46: -8294367848628659657
+      Cafe24Oneprettynight-v2 Atlas_47: 3070697791270130779
+      Cafe24Oneprettynight-v2 Atlas_48: -3490603464048095795
+      Cafe24Oneprettynight-v2 Atlas_49: -322990544459470739
+      Cafe24Oneprettynight-v2 Atlas_5: -5273029052553147569
+      Cafe24Oneprettynight-v2 Atlas_50: -8437905980575646637
+      Cafe24Oneprettynight-v2 Atlas_51: -8948959412016035863
+      Cafe24Oneprettynight-v2 Atlas_52: -6483248244630011573
+      Cafe24Oneprettynight-v2 Atlas_53: 2348289017624970398
+      Cafe24Oneprettynight-v2 Atlas_54: 6951931379108427930
+      Cafe24Oneprettynight-v2 Atlas_55: 8369367717180584780
+      Cafe24Oneprettynight-v2 Atlas_56: 2684086587093755869
+      Cafe24Oneprettynight-v2 Atlas_57: -3603225426425600833
+      Cafe24Oneprettynight-v2 Atlas_58: -5352723045854452747
+      Cafe24Oneprettynight-v2 Atlas_59: -7222684089975698511
+      Cafe24Oneprettynight-v2 Atlas_6: 9129081576303830316
+      Cafe24Oneprettynight-v2 Atlas_60: 9165515572264396718
+      Cafe24Oneprettynight-v2 Atlas_61: -6048254415034524655
+      Cafe24Oneprettynight-v2 Atlas_62: 8707519379500067850
+      Cafe24Oneprettynight-v2 Atlas_63: 3666655943865896994
+      Cafe24Oneprettynight-v2 Atlas_64: 9165729455792733589
+      Cafe24Oneprettynight-v2 Atlas_65: 5242122399989221897
+      Cafe24Oneprettynight-v2 Atlas_66: -7833646120952867059
+      Cafe24Oneprettynight-v2 Atlas_67: -4558941339245597867
+      Cafe24Oneprettynight-v2 Atlas_68: 184604432985395623
+      Cafe24Oneprettynight-v2 Atlas_69: 3407757873105739752
+      Cafe24Oneprettynight-v2 Atlas_7: 2670991530830215944
+      Cafe24Oneprettynight-v2 Atlas_70: -5839706644410451034
+      Cafe24Oneprettynight-v2 Atlas_71: 5093198594565393091
+      Cafe24Oneprettynight-v2 Atlas_72: 4618800420825412752
+      Cafe24Oneprettynight-v2 Atlas_73: 4487641784494615338
+      Cafe24Oneprettynight-v2 Atlas_74: -1338363869245907108
+      Cafe24Oneprettynight-v2 Atlas_75: -87792023128129250
+      Cafe24Oneprettynight-v2 Atlas_76: -638801501635350774
+      Cafe24Oneprettynight-v2 Atlas_77: 999932188964701340
+      Cafe24Oneprettynight-v2 Atlas_78: -6078552295267596381
+      Cafe24Oneprettynight-v2 Atlas_79: 2981329210060865462
+      Cafe24Oneprettynight-v2 Atlas_8: -4174606392897297552
+      Cafe24Oneprettynight-v2 Atlas_80: -5417492416217598564
+      Cafe24Oneprettynight-v2 Atlas_81: -4540395255051423049
+      Cafe24Oneprettynight-v2 Atlas_82: -3445126267796882695
+      Cafe24Oneprettynight-v2 Atlas_83: -4211827997014082712
+      Cafe24Oneprettynight-v2 Atlas_84: -7544805214945002115
+      Cafe24Oneprettynight-v2 Atlas_85: 5095212473853214696
+      Cafe24Oneprettynight-v2 Atlas_86: -4600754584905114034
+      Cafe24Oneprettynight-v2 Atlas_87: 7096962744192416169
+      Cafe24Oneprettynight-v2 Atlas_88: -3926454455456687111
+      Cafe24Oneprettynight-v2 Atlas_89: 6478752898930023989
+      Cafe24Oneprettynight-v2 Atlas_9: -3235848942933097020
+      Cafe24Oneprettynight-v2 Atlas_90: -655443409192033710
+      Cafe24Oneprettynight-v2 Atlas_91: 4867375879981495151
+      Cafe24Oneprettynight-v2 Atlas_92: 4835944054242197092
+      Cafe24Oneprettynight-v2 Atlas_93: -5614609957849722458
+      Cafe24Oneprettynight-v2 Atlas_94: -5524705281686379270
+      Cafe24Oneprettynight-v2 Atlas_95: 4463468240706641451
+      Cafe24Oneprettynight-v2 Atlas_96: 5607815316624883199
+      Cafe24Oneprettynight-v2 Atlas_97: 8661332870627825569
+      Cafe24Oneprettynight-v2 Atlas_98: -8776242914093306328
+      Cafe24Oneprettynight-v2 Atlas_99: -1594458163390894013
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
