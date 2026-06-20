@@ -15,12 +15,13 @@ public class GridInteractable : MonoBehaviour
     [SerializeField] private UnityEvent _onInteracted;
 
     [Header("Scene Transition")]
-    [SerializeField] private bool _loadSceneOnInteract;
+    [SerializeField] private bool _loadSceneOnInteract = true;
     [SerializeField] private string _targetSceneName;
     [SerializeField] private bool _disappearAfterInteract = true;
 
     [Header("Progress")]
     [SerializeField] private bool _useIndexActivation = true;
+    [SerializeField] private bool _markClearedOnInteract = true;
     [SerializeField] private bool _advanceIndexOnInteract = true;
 
     private GridBoard _board;
@@ -31,21 +32,13 @@ public class GridInteractable : MonoBehaviour
     public string InteractableId => _interactableId;
     public int InteractableIndex => _interactableIndex;
 
-    private void Awake()
-    {
-        RefreshActiveState();
-    }
-
-    public void Init(GridBoard board)
-    {
-        _board = board;
-        transform.position = _board.GridToWorld(_gridPos);
-    }
-
     public void RefreshActiveState()
     {
         if (GameManager.Instance == null)
+        {
+            Debug.LogWarning($"{name}: GameManager.Instance is null. Interactable activation was not refreshed.");
             return;
+        }
 
         if (_disappearAfterInteract &&
             GameManager.Instance.IsInteractableCleared(_interactableId))
@@ -60,7 +53,16 @@ public class GridInteractable : MonoBehaviour
                 _interactableIndex == GameManager.Instance.CurrentInteractableIndex;
 
             gameObject.SetActive(shouldBeActive);
+            return;
         }
+
+        gameObject.SetActive(true);
+    }
+
+    public void Init(GridBoard board)
+    {
+        _board = board;
+        transform.position = _board.GridToWorld(_gridPos);
     }
 
     public void Interact(GridPlayerController player)
@@ -76,28 +78,30 @@ public class GridInteractable : MonoBehaviour
 
         _onInteracted?.Invoke();
 
-        if (_disappearAfterInteract && GameManager.Instance != null)
+        if (GameManager.Instance == null)
+        {
+            Debug.LogError("GameManager.Instance is null.");
+            return;
+        }
+
+        if (_markClearedOnInteract && _disappearAfterInteract)
         {
             GameManager.Instance.MarkInteractableCleared(_interactableId);
         }
 
-        if (_advanceIndexOnInteract && GameManager.Instance != null)
+        if (_advanceIndexOnInteract)
         {
             GameManager.Instance.AdvanceInteractableIndex();
         }
 
         if (_loadSceneOnInteract)
         {
-            if (GameManager.Instance == null)
-            {
-                Debug.LogError("GameManager.Instance is null.");
-                return;
-            }
-
             GameManager.Instance.SavePlayerReturnState(player.GridPos);
             GameManager.Instance.LoadMiniGameScene(_targetSceneName);
+            return;
         }
-        else if (_disappearAfterInteract)
+
+        if (_disappearAfterInteract)
         {
             gameObject.SetActive(false);
         }
