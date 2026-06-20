@@ -758,52 +758,51 @@ public class CutSceneManager : MonoBehaviour
     // ==========================================
     // [독립 UI 팝업 전용 함수]
     // ==========================================
-
-    public void ShowUIOnly(string uiKey)
+    public void ShowUIOnly(string uiKey, Action onComplete = null)
     {
-        StartCoroutine(ShowUISequenceRoutine(new[] { uiKey }));
+        StartCoroutine(ShowUISequenceRoutine(new[] { uiKey }, onComplete));
     }
 
     public void ShowUISequence(params string[] uiKeys)
     {
-        StartCoroutine(ShowUISequenceRoutine(uiKeys));
+        StartCoroutine(ShowUISequenceRoutine(uiKeys, null));
     }
 
-    private IEnumerator ShowUISequenceRoutine(string[] uiKeys)
+    // 💡 새로운 기능: UI 팝업이 끝나면 원하는 함수 실행
+    public void ShowUISequenceWithCallback(Action onComplete, params string[] uiKeys)
     {
-        if (onBlockMovement != null)
-        {
-            onBlockMovement.Invoke();
-        }
-
-        foreach (string uiKey in uiKeys)
-        {
-            if (!customUIMap.TryGetValue(uiKey, out GameObject prefab))
-            {
-                Debug.LogWarning($"등록되지 않은 Custom UI Key입니다: {uiKey}");
-                continue;
-            }
-
-            GameObject spawnedUI = customUIParent != null
-                ? Instantiate(prefab, customUIParent, false)
-                : Instantiate(prefab);
-
-            yield return null;
-
-            yield return new WaitUntil(() =>
-                Mouse.current.leftButton.wasPressedThisFrame ||
-                Keyboard.current.spaceKey.wasPressedThisFrame
-            );
-
-            yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, customUIFadeOutDuration));
-            Destroy(spawnedUI);
-        }
-
-        if (onUnblockMovement != null)
-        {
-            onUnblockMovement.Invoke();
-        }
+        StartCoroutine(ShowUISequenceRoutine(uiKeys, onComplete));
     }
+
+    private IEnumerator ShowUISequenceRoutine(string[] uiKeys, Action onComplete)
+    {
+        if (onBlockMovement != null) onBlockMovement.Invoke();
+
+    foreach (string uiKey in uiKeys)
+    {
+        if (!customUIMap.TryGetValue(uiKey, out GameObject prefab)) continue;
+
+        GameObject spawnedUI = customUIParent != null
+            ? Instantiate(prefab, customUIParent, false)
+            : Instantiate(prefab);
+
+        yield return null;
+
+        yield return new WaitUntil(() =>
+            Mouse.current.leftButton.wasPressedThisFrame ||
+            Keyboard.current.spaceKey.wasPressedThisFrame
+        );
+
+        // UI 사라지는 시간 (변수가 없다면 defaultFadeOutDuration으로 사용하세요)
+        yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, 0.2f)); 
+        Destroy(spawnedUI);
+    }
+
+    if (onUnblockMovement != null) onUnblockMovement.Invoke();
+
+    // 💡 모든 UI가 닫힌 직후에 함수 실행
+    onComplete?.Invoke();
+}   
 
     // ==========================================
     // [씬 전환 시 암전 해제 로직]

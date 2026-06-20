@@ -38,7 +38,7 @@ public class UICharacterHoverEffect : MonoBehaviour
     }
 
     /// <summary>
-    /// EventTrigger - Pointer Enter¿¡ ¿¬°á
+    /// EventTrigger - Pointer Enterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void HoverEnter(BaseEventData eventData)
     {
@@ -46,10 +46,12 @@ public class UICharacterHoverEffect : MonoBehaviour
     }
 
     /// <summary>
-    /// ÆÄ¶ó¹ÌÅÍ ¾ø´Â È£Ãâ¿ë
+    /// ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½
     /// </summary>
     public void HoverEnter()
     {
+        if (GameManager.Instance.CanPlayerMove == false) return;
+
         if (_isHovering) return;
 
         _isHovering = true;
@@ -66,7 +68,7 @@ public class UICharacterHoverEffect : MonoBehaviour
     }
 
     /// <summary>
-    /// EventTrigger - Pointer Exit¿¡ ¿¬°á
+    /// EventTrigger - Pointer Exitï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void HoverExit(BaseEventData eventData)
     {
@@ -74,7 +76,7 @@ public class UICharacterHoverEffect : MonoBehaviour
     }
 
     /// <summary>
-    /// ÆÄ¶ó¹ÌÅÍ ¾ø´Â È£Ãâ¿ë
+    /// ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½
     /// </summary>
     public void HoverExit()
     {
