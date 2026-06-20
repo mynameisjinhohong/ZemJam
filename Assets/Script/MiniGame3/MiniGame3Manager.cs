@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
 public sealed class MiniGame3Manager : MonoBehaviour
 {
@@ -33,7 +33,6 @@ public sealed class MiniGame3Manager : MonoBehaviour
     [SerializeField] private SpriteRenderer _playerSpriteRenderer;
     [SerializeField] private Vector3 _playerVisualOffset = Vector3.zero;
     [SerializeField] private Vector3 _pushableVisualOffset = Vector3.zero;
-    [SerializeField] private Vector3 _goalVisualOffset = Vector3.zero;
 
     [Tooltip("원본 플레이어 스프라이트가 오른쪽을 보고 있으면 true, 왼쪽을 보고 있으면 false")]
     [SerializeField] private bool _playerSpriteFacesRightByDefault = true;
@@ -155,6 +154,7 @@ public sealed class MiniGame3Manager : MonoBehaviour
 
         SpawnGroundTiles();
         ApplyWallSortingOrders();
+        ApplyGoalSortingOrder();
 
         _isInitialized = true;
 
@@ -258,6 +258,9 @@ public sealed class MiniGame3Manager : MonoBehaviour
             _pushableByPosition[position] = pushable;
         }
 
+        ApplyGoalSortingOrder();
+        ApplyWallSortingOrders();
+
         CheckClear();
     }
 
@@ -332,6 +335,7 @@ public sealed class MiniGame3Manager : MonoBehaviour
         if (_goal != null)
         {
             _goal.SetWorldPosition(GoalGridToWorld(_goal.GridPosition));
+            ApplyGoalSortingOrder();
         }
 
         foreach (MiniGame3Wall wall in _walls)
@@ -361,6 +365,17 @@ public sealed class MiniGame3Manager : MonoBehaviour
         }
 
         ApplyWallSortingOrders();
+    }
+
+    [ContextMenu("Apply Goal Sorting Order")]
+    private void ApplyGoalSortingOrderByContextMenu()
+    {
+        if (_autoCollectSceneObjects)
+        {
+            CollectSceneObjects();
+        }
+
+        ApplyGoalSortingOrder();
     }
 
     private void InitializePlayerVisual()
@@ -459,6 +474,12 @@ public sealed class MiniGame3Manager : MonoBehaviour
                 continue;
             }
 
+            if (IsGoal(position))
+            {
+                Debug.LogWarning($"Pushable object is placed on goal. Position: {position}, Object: {pushable.name}");
+                continue;
+            }
+
             if (_pushableByPosition.ContainsKey(position))
             {
                 Debug.LogWarning($"Duplicated pushable object position: {position}, Object: {pushable.name}");
@@ -506,6 +527,12 @@ public sealed class MiniGame3Manager : MonoBehaviour
             isValid = false;
         }
 
+        if (_pushableByPosition.ContainsKey(goalPosition))
+        {
+            Debug.LogError($"Pushable object is placed on goal. Position: {goalPosition}");
+            isValid = false;
+        }
+
         return isValid;
     }
 
@@ -547,6 +574,9 @@ public sealed class MiniGame3Manager : MonoBehaviour
             return false;
 
         if (IsWall(position))
+            return false;
+
+        if (IsGoal(position))
             return false;
 
         if (_pushableByPosition.ContainsKey(position))
@@ -685,6 +715,9 @@ public sealed class MiniGame3Manager : MonoBehaviour
                 if (_wallPositions.Contains(gridPos))
                     continue;
 
+                if (IsGoal(gridPos))
+                    continue;
+
                 Vector3 pos = GroundGridToWorld(gridPos);
                 GameObject tile = Instantiate(_groundPrefab, pos, Quaternion.identity, transform);
 
@@ -706,12 +739,28 @@ public sealed class MiniGame3Manager : MonoBehaviour
         }
     }
 
+    private void ApplyGoalSortingOrder()
+    {
+        if (_goal == null)
+            return;
+
+        ApplyGroundSortingOrderToObject(_goal.gameObject, _goal.GridPosition);
+    }
+
     private void ApplyGroundSortingOrderToObject(GameObject target, Vector2Int gridPosition)
     {
         if (target == null)
             return;
 
         int sortingOrder = GetGroundSortingOrder(gridPosition);
+
+        SortingGroup sortingGroup = target.GetComponent<SortingGroup>();
+
+        if (sortingGroup != null)
+        {
+            sortingGroup.sortingOrder = sortingOrder;
+            return;
+        }
 
         SpriteRenderer[] renderers = target.GetComponentsInChildren<SpriteRenderer>(true);
 
@@ -738,7 +787,12 @@ public sealed class MiniGame3Manager : MonoBehaviour
     private void SnapAllObjectsToGrid()
     {
         _player.SetWorldPosition(PlayerGridToWorld(_player.GridPosition));
-        _goal.SetWorldPosition(GoalGridToWorld(_goal.GridPosition));
+
+        if (_goal != null)
+        {
+            _goal.SetWorldPosition(GoalGridToWorld(_goal.GridPosition));
+            ApplyGoalSortingOrder();
+        }
 
         foreach (MiniGame3Wall wall in _walls)
         {
@@ -808,6 +862,11 @@ public sealed class MiniGame3Manager : MonoBehaviour
         return _wallPositions.Contains(position);
     }
 
+    private bool IsGoal(Vector2Int position)
+    {
+        return _goal != null && _goal.GridPosition == position;
+    }
+
     private bool IsCardinalDirection(Vector2Int direction)
     {
         return direction == Vector2Int.up ||
@@ -838,7 +897,7 @@ public sealed class MiniGame3Manager : MonoBehaviour
 
     private Vector3 GoalGridToWorld(Vector2Int gridPosition)
     {
-        return GridToWorld(gridPosition) + _goalVisualOffset;
+        return GroundGridToWorld(gridPosition);
     }
 
     private Vector3 IsoToWorld(float x, float y)
@@ -969,10 +1028,5 @@ public sealed class MiniGame3Manager : MonoBehaviour
 #else
         return UnityEngine.Object.FindObjectsOfType<T>(true);
 #endif
-    }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

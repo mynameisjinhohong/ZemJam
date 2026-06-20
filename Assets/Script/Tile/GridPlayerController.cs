@@ -65,7 +65,15 @@ public class GridPlayerController : MonoBehaviour
 
     private void Start()
     {
-        _gridPos = _startGridPos;
+        if (GameManager.Instance != null && GameManager.Instance.HasLastPlayerGridPos)
+        {
+            _gridPos = GameManager.Instance.LastPlayerGridPos;
+        }
+        else
+        {
+            _gridPos = _startGridPos;
+        }
+
         transform.position = _board.GridToWorld(_gridPos);
 
         SetInteractionIconVisible(false);
