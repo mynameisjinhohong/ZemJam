@@ -1284,7 +1284,7 @@ MonoBehaviour:
       fadeInDuration: 0
       fadeOutDuration: 2.5
       fadeOutSfxKey: SFX_Bell
-      fadeOutSfxVolume: 1
+      fadeOutSfxVolume: 0.5
       customUIKey: 
       overrideUIPosSize: 0
       customUIPosition: {x: 0, y: 0}
@@ -1320,7 +1320,7 @@ MonoBehaviour:
       fadeInDuration: 0
       fadeOutDuration: 5
       fadeOutSfxKey: SFX_Cat
-      fadeOutSfxVolume: 1
+      fadeOutSfxVolume: 0.5
       customUIKey: 
       overrideUIPosSize: 0
       customUIPosition: {x: 0, y: 0}
@@ -1337,7 +1337,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 212441876}
           m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-          m_MethodName: ReturnToGameScene
+          m_MethodName: GoToStartScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
