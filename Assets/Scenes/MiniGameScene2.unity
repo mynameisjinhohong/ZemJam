@@ -169,8 +169,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1448519234}
         m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 5
+        m_MethodName: ReturnToGameScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

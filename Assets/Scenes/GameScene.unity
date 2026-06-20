@@ -124,7 +124,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1783680695584612955, guid: 1318317a7b10cee429fa2c9b9860ab54, type: 3}
   m_PrefabInstance: {fileID: 523452119}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &269344704
+--- !u!1 &194310356
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,37 +132,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 269344706}
-  - component: {fileID: 269344705}
+  - component: {fileID: 194310358}
+  - component: {fileID: 194310357}
   m_Layer: 0
-  m_Name: SimpleSceneChanger
+  m_Name: GameManger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &269344705
+--- !u!114 &194310357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269344704}
+  m_GameObject: {fileID: 194310356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fec3f6621d985641ae8ce236d4a1fb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ecc0904642a1c647bbbd41ea2d6bf63, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimpleSceneChanger
---- !u!4 &269344706
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  _isFirstGameSceneEnter: 1
+--- !u!4 &194310358
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269344704}
+  m_GameObject: {fileID: 194310356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -11.28411, y: 6.62194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -214,23 +215,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
   _gridPos: {x: 1, y: 1}
+  _interactableId: 1
   _triggerOnEnter: 0
   _blocksMovement: 1
   _onInteracted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 269344705}
-        m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TestPuzzelScene
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  _loadSceneOnInteract: 1
+  _targetSceneName: MiniGameScene1
+  _disappearAfterInteract: 1
 --- !u!212 &427221285
 SpriteRenderer:
   serializedVersion: 2
@@ -740,7 +733,7 @@ MonoBehaviour:
   - {fileID: 726993431}
   - {fileID: 1009835016}
   - {fileID: 1621688409}
-  - {fileID: 778939264}
+  - {fileID: 0}
 --- !u!4 &609806053
 Transform:
   m_ObjectHideFlags: 0
@@ -759,7 +752,6 @@ Transform:
   - {fileID: 726993430}
   - {fileID: 1009835015}
   - {fileID: 1621688408}
-  - {fileID: 778939263}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
@@ -892,23 +884,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
   _gridPos: {x: 7, y: 2}
+  _interactableId: 2
   _triggerOnEnter: 0
   _blocksMovement: 1
   _onInteracted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 269344705}
-        m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TestPuzzelScene
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  _loadSceneOnInteract: 1
+  _targetSceneName: MiniGameScene2
+  _disappearAfterInteract: 1
 --- !u!212 &726993432
 SpriteRenderer:
   serializedVersion: 2
@@ -1084,128 +1068,6 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
---- !u!1 &778939262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778939263}
-  - component: {fileID: 778939264}
-  - component: {fileID: 778939265}
-  m_Layer: 0
-  m_Name: TestObject (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &778939263
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778939262}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18, y: 16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 609806053}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &778939264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778939262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06aa024aab85474469f6fcfe37fc23a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
-  _gridPos: {x: 18, y: 16}
-  _triggerOnEnter: 0
-  _blocksMovement: 1
-  _onInteracted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 269344705}
-        m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TestPuzzelScene
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!212 &778939265
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778939262}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 240419887
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
 --- !u!1 &1009835014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,23 +1114,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
   _gridPos: {x: 1, y: 16}
+  _interactableId: 3
   _triggerOnEnter: 0
   _blocksMovement: 1
   _onInteracted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 269344705}
-        m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TestPuzzelScene
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  _loadSceneOnInteract: 1
+  _targetSceneName: MiniGameScene3
+  _disappearAfterInteract: 1
 --- !u!212 &1009835017
 SpriteRenderer:
   serializedVersion: 2
@@ -1374,23 +1228,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
   _gridPos: {x: 10, y: 18}
+  _interactableId: 4
   _triggerOnEnter: 0
   _blocksMovement: 1
   _onInteracted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 269344705}
-        m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TestPuzzelScene
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  _loadSceneOnInteract: 1
+  _targetSceneName: MiniGameScene4
+  _disappearAfterInteract: 1
 --- !u!212 &1621688410
 SpriteRenderer:
   serializedVersion: 2
@@ -1600,5 +1446,5 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 523452119}
   - {fileID: 609806053}
-  - {fileID: 269344706}
   - {fileID: 765823880}
+  - {fileID: 194310358}

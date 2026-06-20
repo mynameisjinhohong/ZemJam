@@ -49,6 +49,9 @@ public class GridBoard : MonoBehaviour
             if (interactable == null)
                 continue;
 
+            if (!interactable.gameObject.activeInHierarchy)
+                continue;
+
             Vector2Int pos = interactable.GridPos;
 
             if (!IsInsideBoard(pos))

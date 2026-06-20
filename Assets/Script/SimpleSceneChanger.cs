@@ -3,8 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class SimpleSceneChanger : MonoBehaviour
 {
-    public void MoveToScene(string _sceneName)
+    public void ReturnToGameScene()
     {
-        SceneManager.LoadScene( _sceneName);
+        if (GameManager.Instance == null)
+        {
+            Debug.LogError("GameManager.Instance is null.");
+            return;
+        }
+
+        GameManager.Instance.ReturnToGameScene();
     }
 }
