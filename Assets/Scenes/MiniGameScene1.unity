@@ -7156,7 +7156,7 @@ MonoBehaviour:
   - {x: 2.8, y: 3.87}
   - {x: 4.5, y: -0.5}
   - {x: -5.2, y: 1}
-  _maxTotalError: 2.6
+  _maxTotalError: 60
   _snapDuration: 5
   _resultImage1Obj: {fileID: 323529635}
   _resultImage2Obj: {fileID: 350495943}

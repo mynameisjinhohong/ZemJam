@@ -1176,16 +1176,15 @@ MonoBehaviour:
       customUIPosition: {x: 0, y: 0}
       customUISize: {x: 0, y: 0}
       dialogues:
-      - "\uD574\uBC14\uB77C\uAE30\uB294 \uADF8 \uAC1C\uC218\uB9C8\uB2E4 \uB73B\uC774
-        \uC788\uB2E8\uB2E4. \uC54C\uACE0 \uC788\uB2C8?"
-      - "\uD55C \uC1A1\uC774\uB294 \uC0AC\uB791\uD55C\uB2E4\uB294 \uB9D0\uC774\uC9C0\uB9CC,
-        \n4\uC1A1\uC774\uB294 \uB2F9\uC2E0\uB9CC\uC744 \uBC14\uB77C\uBCF8\uB2E4,
-        \n99\uC1A1\uC774\uB294 \uC601\uC6D0\uD788 \uD568\uAED8\uD558\uACE0 \uC2F6\uB2E4,
-        \n\uB2E4\uC74C \uC0DD\uC5D0\uB3C4 \uD568\uAED8 \uD558\uACE0 \uC2F6\uC73C\uB2C8,
-        \uB2F9\uC2E0\uC744 \uCC3E\uC544\uAC00\uACE0 \uC2F6\uB2E4\uB294 \uAE4A\uC740
-        \uB73B\uC774 \uC788\uB2E8\uB2E4. "
+      - "\uD574\uBC14\uB77C\uAE30\uB294 \uAC1C\uC218\uB9C8\uB2E4 \uB73B\uC774 \uC788\uB2E8\uB2E4."
+      - "\uD55C \uC1A1\uC774\uB294 \uB2F9\uC2E0\uC744 \uC0AC\uB791\uD55C\uB2E4, 4\uC1A1\uC774\uB294
+        \uB2F9\uC2E0\uB9CC\uC744 \uBC14\uB77C\uBCF8\uB2E4,"
+      - "\uADF8\uB9AC\uACE0 999\uC1A1\uC774\uB294 \uBA87 \uBC88\uC744 \uB2E4\uC2DC
+        \uD0DC\uC5B4\uB098\uB3C4 \uB2F9\uC2E0\uACFC \uD568\uAED8\uD558\uACA0\uB2E4\uB294
+        \uAE4A\uC740 \uB73B\uC774 \uC788\uB2E8\uB2E4."
       - "\uB9CC\uC57D \uB2E4\uC74C \uC0DD\uC774\uB77C\uB294 \uAC8C \uC788\uB2E4\uBA74,
-        \uC6B0\uB9AC\uB3C4 \uD568\uAED8\uD558\uBA74 \uCC38 \uC88B\uACA0\uAD6C\uB098."
+        \uB108\uB3C4 \uB098\uC5D0\uAC8C \uD574\uBC14\uB77C\uAE30\uB97C \uBB3C\uACE0
+        \uCC3E\uC544\uC640 \uC8FC\uACA0\uB2C8?"
       choices: []
       swayImages: []
     onEndEvent:
@@ -2135,7 +2134,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC624\uD504\uB2DD"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81a777ce00979334a9cd6b09cf807662, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6729cc3d7c37fe147bf05d93ea888885, type: 2}
   m_sharedMaterial: {fileID: -5705416955695420802, guid: 81a777ce00979334a9cd6b09cf807662, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2202,7 +2201,7 @@ MonoBehaviour:
   m_margin: {x: 81.45868, y: 6.1448364, z: 79.86157, w: 12.289627}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1379014994
