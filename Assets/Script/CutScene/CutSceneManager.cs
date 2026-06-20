@@ -90,7 +90,7 @@ public class CutSceneManager : MonoBehaviour
         public string key;
         public GameObject uiPrefab;
     }
-
+    [SerializeField] private string _cutSceneBGMKey;
     [Header("UI")]
     [SerializeField] private Image cutSceneImage;
     [SerializeField] private Image blackScreenImage; 
@@ -177,7 +177,7 @@ public class CutSceneManager : MonoBehaviour
         }
 
         if (isPlaying) StopAllCoroutines();
-
+        SoundManager.Instance.PlayBGM(_cutSceneBGMKey);
         _currentKey= key;
         currentFrames = frames;
         frameIndex = 0;
@@ -258,6 +258,7 @@ public class CutSceneManager : MonoBehaviour
 
         isPlaying = false;
         cutSceneImage.gameObject.SetActive(false);
+        SoundManager.Instance.StopBGM();
         OnCutSceneEnd();
     }
 

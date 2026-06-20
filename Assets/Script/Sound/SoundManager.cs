@@ -49,6 +49,7 @@ public class SoundManager : MonoBehaviour
     {
         if (_bgmDic.TryGetValue(clipName, out AudioClip clip))
         {
+            Debug.Log("Play" + clipName);
             _bgmSource.clip = clip;
             _bgmSource.volume = volume; // 이건 AudioSource 자체의 기본 볼륨입니다.
             _bgmSource.loop = true;
