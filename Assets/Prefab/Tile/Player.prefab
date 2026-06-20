@@ -284,11 +284,13 @@ MonoBehaviour:
   _idleStateName: CatIdle
   _walkStateName: CatWalk
   _jumpStateName: CatJump
-  _startGridPos: {x: 10, y: 10}
+  _waitJumpAnimationEnd: 1
+  _jumpAnimationFallbackDuration: 0.4
+  _startGridPos: {x: 23, y: 2}
   _moveDuration: 0.15
-  _jumpKey: 122
+  _jumpKey: 32
   _interactOnEnter: 0
-  _interactKey: 32
+  _interactKey: 102
   _interactionIconObject: {fileID: 7108718821463609320}
   _jumpIconObject: {fileID: 5496394818764730512}
 --- !u!95 &1314563048049413801
