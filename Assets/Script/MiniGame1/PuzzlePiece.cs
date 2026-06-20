@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour
 {
+    public bool Interactable = true;
+
     private Camera _cam;
     private SpriteRenderer _sr;
     private int _defaultSortOrder;
@@ -16,12 +18,14 @@ public class PuzzlePiece : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!Interactable) return;
         _dragOffset = transform.position - GetMouseWorldPos();
         if (_sr != null) _sr.sortingOrder = 100;
     }
 
     private void OnMouseDrag()
     {
+        if (!Interactable) return;
         transform.position = GetMouseWorldPos() + _dragOffset;
     }
 
