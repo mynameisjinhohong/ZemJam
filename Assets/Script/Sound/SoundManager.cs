@@ -64,12 +64,29 @@ public class SoundManager : MonoBehaviour
     {
         _bgmSource.Stop();
     }
-
     public void PlaySFX(string clipName, float volume = 1f)
     {
+        Debug.Log($"[SoundManager] PlaySFX 요청: {clipName}");
+
+        if (string.IsNullOrEmpty(clipName))
+        {
+            Debug.LogWarning("[SoundManager] SFX clipName이 비어 있습니다.");
+            return;
+        }
+
         if (_sfxDic.TryGetValue(clipName, out AudioClip clip))
         {
+            Debug.Log($"[SoundManager] SFX 재생 성공: {clipName}");
             _sfxSource.PlayOneShot(clip, volume);
+        }
+        else
+        {
+            Debug.LogWarning($"[SoundManager] SFX 클립을 찾을 수 없음: {clipName}");
+
+            foreach (var key in _sfxDic.Keys)
+            {
+                Debug.Log($"[SoundManager] 등록된 SFX Key: {key}");
+            }
         }
     }
 

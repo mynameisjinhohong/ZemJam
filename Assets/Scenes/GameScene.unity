@@ -2789,6 +2789,10 @@ MonoBehaviour:
     Height: 100
   - GridPos: {x: 12, y: 30}
     Height: 100
+  - GridPos: {x: 25, y: 22}
+    Height: 1
+  - GridPos: {x: 26, y: 22}
+    Height: 1
   _interactables:
   - {fileID: 427221284}
   - {fileID: 726993431}
@@ -3095,7 +3099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06aa024aab85474469f6fcfe37fc23a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
-  _gridPos: {x: 27, y: 24}
+  _gridPos: {x: 25, y: 23}
   _interactableId: 2
   _interactableIndex: 1
   _triggerOnEnter: 0
