@@ -172,14 +172,17 @@ public class MiniGame1PlayerController : MonoBehaviour
 
     private void HandleMove()
     {
-        if (GameManager.Instance != null && !GameManager.Instance.CanPlayerMove)
+        bool uiBlocked = GameManager.Instance != null && !GameManager.Instance.CanPlayerMove;
+
+        // UI가 이동을 막더라도 강제 자동이동(인트로 등)은 허용
+        if (uiBlocked && _autoMoveX == 0f)
         {
             _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
             _horizontalInput = 0f;
             return;
         }
 
-        if (_inputEnabled)
+        if (!uiBlocked && _inputEnabled)
         {
             _horizontalInput = 0f;
 

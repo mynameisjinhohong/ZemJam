@@ -1157,6 +1157,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bf6ec33ee2dac4387149922e4f8d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutSceneManager
+  defaultFadeInDuration: 2
+  defaultFadeOutDuration: 2
+  sceneLoadFadeInDuration: 2
+  customUIFadeOutDuration: 1
+  _typingSpeed: 15
   _cutSceneBGMKey: CutSceneBGM
   cutSceneImage: {fileID: 1996026358}
   blackScreenImage: {fileID: 1984073168}
@@ -1171,7 +1176,8 @@ MonoBehaviour:
     - sprite: {fileID: -2895821608431225175, guid: 6fe3d362882e31a498c440a55c84e895, type: 3}
       frameType: 0
       fadeStyle: 1
-      fadeInDuration: 0
+      preCutsceneFadeOutDuration: 2
+      fadeInDuration: 2
       fadeOutDuration: 2.5
       fadeOutSfxKey: 
       fadeOutSfxVolume: 1
@@ -1211,7 +1217,8 @@ MonoBehaviour:
     - sprite: {fileID: -4045114995007804087, guid: c5f4487639567674fb97dc2b03ca9873, type: 3}
       frameType: 0
       fadeStyle: 1
-      fadeInDuration: 0
+      preCutsceneFadeOutDuration: 2
+      fadeInDuration: 3
       fadeOutDuration: 2.5
       fadeOutSfxKey: 
       fadeOutSfxVolume: 1
@@ -1247,6 +1254,7 @@ MonoBehaviour:
     - sprite: {fileID: -8047051033378874645, guid: 12b352fdeade2f849a387527253c7d59, type: 3}
       frameType: 0
       fadeStyle: 1
+      preCutsceneFadeOutDuration: 2
       fadeInDuration: 0
       fadeOutDuration: 2.5
       fadeOutSfxKey: SFX_Ribbon
@@ -1281,6 +1289,7 @@ MonoBehaviour:
     - sprite: {fileID: 1320481435402747707, guid: 56cd5b79c876a79469d9667583870b27, type: 3}
       frameType: 0
       fadeStyle: 1
+      preCutsceneFadeOutDuration: 2
       fadeInDuration: 0
       fadeOutDuration: 2.5
       fadeOutSfxKey: SFX_Bell
@@ -1317,6 +1326,7 @@ MonoBehaviour:
     - sprite: {fileID: -2521978720720590461, guid: de3fa5be859ece046915e277d72a2c21, type: 3}
       frameType: 0
       fadeStyle: 1
+      preCutsceneFadeOutDuration: 2
       fadeInDuration: 0
       fadeOutDuration: 5
       fadeOutSfxKey: SFX_Cat
@@ -1391,9 +1401,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  defaultFadeInDuration: 0.5
-  defaultFadeOutDuration: 0.5
-  _typingSpeed: 15
 --- !u!1 &676662443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,7 +2145,7 @@ MonoBehaviour:
   m_text: "\uC624\uD504\uB2DD"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6729cc3d7c37fe147bf05d93ea888885, type: 2}
-  m_sharedMaterial: {fileID: -5705416955695420802, guid: 81a777ce00979334a9cd6b09cf807662, type: 2}
+  m_sharedMaterial: {fileID: 3540321559611603240, guid: 6729cc3d7c37fe147bf05d93ea888885, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2746,10 +2753,10 @@ RectTransform:
   - {fileID: 1379014992}
   m_Father: {fileID: 546320212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -351.6548}
-  m_SizeDelta: {x: 1820, y: 376.6904}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -354.05432}
+  m_SizeDelta: {x: -100, y: -708.3612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771414486
 MonoBehaviour:

@@ -97,7 +97,11 @@ public class GridInteractable : MonoBehaviour
         if (_loadSceneOnInteract)
         {
             GameManager.Instance.SavePlayerReturnState(player.GridPos);
-            GameManager.Instance.LoadMiniGameScene(_targetSceneName);
+
+            CutSceneManager.Instance.FadeOutToBlackScreen(2f, () => 
+            {
+                GameManager.Instance.LoadMiniGameScene(_targetSceneName);
+            });
             return;
         }
 

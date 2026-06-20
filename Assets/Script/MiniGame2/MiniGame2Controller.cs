@@ -54,6 +54,7 @@ public class MiniGame2Controller : MonoBehaviour
     {
         if(CutSceneManager.Instance != null) 
             CutSceneManager.Instance.ShowUIOnly("Guide4");
+        CutSceneManager.Instance.FadeInFromBlackScreen(2f);
     }
 
     private void OnEnable()

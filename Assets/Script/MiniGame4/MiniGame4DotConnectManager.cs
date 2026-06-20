@@ -130,6 +130,7 @@ public class MiniGame4DotConnectManager : MonoBehaviour
     {
         if(CutSceneManager.Instance != null) 
             CutSceneManager.Instance.ShowUIOnly("Guide3");
+        CutSceneManager.Instance.FadeInFromBlackScreen(2f);
     }
 
     private void Update()

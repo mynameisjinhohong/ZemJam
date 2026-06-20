@@ -65,10 +65,13 @@ public class CutSceneManager : MonoBehaviour
         public FadeStyle fadeStyle;
 
         [Header("프레임 개별 페이드 시간 설정")]
-        [Tooltip("0이면 하단의 글로벌 기본 페이드 인 시간을 따릅니다.")]
+        [Tooltip("컷신 진입 전 일반 화면이 서서히 까매지는 속도 (첫 프레임에만 동작)")]
+        public float preCutsceneFadeOutDuration = 0f;
+
+        [Tooltip("0이면 상단의 글로벌 기본 페이드 인 시간을 따릅니다.")]
         public float fadeInDuration = 0f;
 
-        [Tooltip("0이면 하단의 글로벌 기본 페이드 아웃 시간을 따릅니다.")]
+        [Tooltip("0이면 상단의 글로벌 기본 페이드 아웃 시간을 따릅니다.")]
         public float fadeOutDuration = 0f;
 
         [Header("페이드 아웃 SFX 설정")]
@@ -109,9 +112,30 @@ public class CutSceneManager : MonoBehaviour
         public GameObject uiPrefab;
     }
 
+    // ==========================================
+    // 💡 변경점: 인스펙터에서 찾기 쉽도록 [글로벌 기본 설정]을 최상단으로 올렸습니다!
+    // ==========================================
+    [Header("글로벌 기본 설정 (시간 조절)")]
+
+    [Tooltip("기본 페이드 인(나타나기) 속도")]
+    [SerializeField] private float defaultFadeInDuration = 0.5f;
+
+    [Tooltip("기본 페이드 아웃(사라지기) 속도")]
+    [SerializeField] private float defaultFadeOutDuration = 0.5f;
+
+    [Tooltip("씬 이동 후 암전에서 밝아질 때의 페이드 인 시간")]
+    [SerializeField] private float sceneLoadFadeInDuration = 1.0f;
+
+    [Tooltip("커스텀 UI가 닫힐 때 투명해지며 사라지는 속도")]
+    [SerializeField] private float customUIFadeOutDuration = 0.2f;
+
+    [Tooltip("초당 출력할 글자 수")]
+    [SerializeField] private float _typingSpeed = 30f;
+
+    [Header("오디오 설정")]
     [SerializeField] private string _cutSceneBGMKey;
 
-    [Header("UI")]
+    [Header("UI 연결")]
     [SerializeField] private Image cutSceneImage;
     [SerializeField] private Image blackScreenImage;
     [SerializeField] private TMP_Text dialogueText;
@@ -130,16 +154,6 @@ public class CutSceneManager : MonoBehaviour
     [Header("이동 제어 이벤트")]
     public UnityEvent onBlockMovement;
     public UnityEvent onUnblockMovement;
-
-    [Header("글로벌 기본 설정")]
-    [Tooltip("기본 페이드 인(나타나기) 속도")]
-    [SerializeField] private float defaultFadeInDuration = 0.5f;
-
-    [Tooltip("기본 페이드 아웃(사라지기) 속도")]
-    [SerializeField] private float defaultFadeOutDuration = 0.5f;
-
-    [Tooltip("초당 출력할 글자 수")]
-    [SerializeField] private float _typingSpeed = 30f;
 
     private Dictionary<string, CutSceneFrame[]> cutSceneMap;
     private Dictionary<string, UnityEvent> cutSceneEvents;
@@ -242,6 +256,51 @@ public class CutSceneManager : MonoBehaviour
             onBlockMovement.Invoke();
         }
 
+        // 💡 1. 컷신 시작 전: 일반 게임 화면을 서서히 검은 화면으로 페이드 아웃 (첫 프레임의 설정값 사용)
+        float preFadeDuration = currentFrames.Length > 0 ? currentFrames[0].preCutsceneFadeOutDuration : 0f;
+
+        if (blackScreenImage != null && preFadeDuration > 0f)
+        {
+            blackScreenImage.gameObject.SetActive(true);
+            Color blackColor = blackScreenImage.color;
+            blackColor.a = 0f;
+            blackScreenImage.color = blackColor;
+
+            float elapsed = 0f;
+            while (elapsed < preFadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                blackColor.a = Mathf.Lerp(0f, 1f, elapsed / preFadeDuration);
+                blackScreenImage.color = blackColor;
+                yield return null;
+            }
+            blackColor.a = 1f;
+            blackScreenImage.color = blackColor;
+        }
+
+        // 💡 2. 첫 프레임 상태 사전 세팅 (깜빡임 완벽 차단)
+        if (currentFrames.Length > 0)
+        {
+            CutSceneFrame firstFrame = currentFrames[0];
+            Color imgColor = cutSceneImage.color;
+
+            if (firstFrame.fadeStyle == FadeStyle.BlackScreen && blackScreenImage != null)
+            {
+                blackScreenImage.gameObject.SetActive(true);
+                Color blackColor = blackScreenImage.color;
+                blackColor.a = 1f;
+                blackScreenImage.color = blackColor;
+
+                imgColor.a = 1f;
+                cutSceneImage.color = imgColor;
+            }
+            else
+            {
+                imgColor.a = 0f;
+                cutSceneImage.color = imgColor;
+            }
+        }
+
         cutSceneImage.gameObject.SetActive(true);
 
         while (frameIndex < currentFrames.Length)
@@ -268,7 +327,7 @@ public class CutSceneManager : MonoBehaviour
 
                     yield return new WaitUntil(() => !waitingForCustomInput);
 
-                    yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, defaultFadeOutDuration));
+                    yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, customUIFadeOutDuration));
 
                     Destroy(spawnedUI);
                 }
@@ -312,7 +371,6 @@ public class CutSceneManager : MonoBehaviour
                 ? frame.fadeOutDuration
                 : defaultFadeOutDuration;
 
-            // 페이드 아웃이 시작되는 순간 SFX 재생
             PlayFadeOutSFX(frame);
 
             yield return StartCoroutine(FadeInOut(frame, false, currentOutDuration));
@@ -573,6 +631,9 @@ public class CutSceneManager : MonoBehaviour
             from = isFadeIn ? 1f : 0f;
             to = isFadeIn ? 0f : 1f;
 
+            blackColor.a = from;
+            blackScreenImage.color = blackColor;
+
             while (elapsed < duration)
             {
                 elapsed += Time.deltaTime;
@@ -595,6 +656,9 @@ public class CutSceneManager : MonoBehaviour
             {
                 blackScreenImage.gameObject.SetActive(false);
             }
+
+            imgColor.a = from;
+            cutSceneImage.color = imgColor;
 
             while (elapsed < duration)
             {
@@ -649,25 +713,35 @@ public class CutSceneManager : MonoBehaviour
     {
         _isTyping = true;
         _skipTyping = false;
-        dialogueText.text = "";
+
+        // 1. 전체 문장을 미리 다 적어두어 중앙 정렬 위치(틀)를 확고하게 고정합니다.
+        dialogueText.text = text;
+        
+        // 2. 처음에는 한 글자도 보이지 않게 투명 처리합니다.
+        dialogueText.maxVisibleCharacters = 0;
 
         float delay = _typingSpeed > 0f ? 1f / _typingSpeed : 0f;
 
-        foreach (char c in text)
+        // 3. 내부적으로 텍스트를 계산하여 실제 출력될 글자 수를 가져옵니다.
+        dialogueText.ForceMeshUpdate();
+        int totalCharacters = dialogueText.textInfo.characterCount;
+
+        // 4. 글자를 0개부터 1개씩 추가로 '보여주기만' 합니다.
+        for (int i = 0; i <= totalCharacters; i++)
         {
             if (_skipTyping)
             {
-                dialogueText.text = text;
+                // 클릭 시 전체 문장을 한 번에 띄웁니다.
+                dialogueText.maxVisibleCharacters = totalCharacters;
                 break;
             }
 
-            dialogueText.text += c;
+            dialogueText.maxVisibleCharacters = i;
             yield return new WaitForSeconds(delay);
         }
 
         _isTyping = false;
     }
-
     private void OnCutSceneEnd()
     {
         if (onUnblockMovement != null)
@@ -721,7 +795,7 @@ public class CutSceneManager : MonoBehaviour
                 Keyboard.current.spaceKey.wasPressedThisFrame
             );
 
-            yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, defaultFadeOutDuration));
+            yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, customUIFadeOutDuration));
             Destroy(spawnedUI);
         }
 
@@ -744,7 +818,7 @@ public class CutSceneManager : MonoBehaviour
     {
         if (blackScreenImage != null && blackScreenImage.gameObject.activeSelf)
         {
-            FadeInFromBlackScreen(1f);
+            FadeInFromBlackScreen(sceneLoadFadeInDuration);
         }
     }
 
@@ -760,15 +834,20 @@ public class CutSceneManager : MonoBehaviour
         }
     }
 
-    public void FadeInFromBlackScreen(float duration = 1f)
+    // ==========================================
+    // 💡 글로벌 콜백 페이드 함수 (다른 스크립트 씬 전환용)
+    // ==========================================
+
+    public void FadeInFromBlackScreen(float duration = 1f, Action onComplete = null)
     {
-        StartCoroutine(FadeInFromBlackScreenRoutine(duration));
+        StartCoroutine(FadeInFromBlackScreenRoutine(duration, onComplete));
     }
 
-    private IEnumerator FadeInFromBlackScreenRoutine(float duration)
+    private IEnumerator FadeInFromBlackScreenRoutine(float duration, Action onComplete)
     {
         if (blackScreenImage == null)
         {
+            onComplete?.Invoke();
             yield break;
         }
 
@@ -786,5 +865,41 @@ public class CutSceneManager : MonoBehaviour
         c.a = 0f;
         blackScreenImage.color = c;
         blackScreenImage.gameObject.SetActive(false);
+
+        onComplete?.Invoke();
+    }
+
+    public void FadeOutToBlackScreen(float duration = 1f, Action onComplete = null)
+    {
+        StartCoroutine(FadeOutToBlackScreenRoutine(duration, onComplete));
+    }
+
+    private IEnumerator FadeOutToBlackScreenRoutine(float duration, Action onComplete)
+    {
+        if (blackScreenImage == null)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
+
+        blackScreenImage.gameObject.SetActive(true);
+        Color c = blackScreenImage.color;
+        c.a = 0f;
+        blackScreenImage.color = c;
+
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            c.a = Mathf.Lerp(0f, 1f, elapsed / duration);
+            blackScreenImage.color = c;
+            yield return null;
+        }
+
+        c.a = 1f;
+        blackScreenImage.color = c;
+
+        onComplete?.Invoke();
     }
 }
