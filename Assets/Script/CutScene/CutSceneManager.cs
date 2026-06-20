@@ -185,8 +185,11 @@ public class CutSceneManager : MonoBehaviour
         StartCoroutine(PlayCutScene());
     }
 
-    private IEnumerator PlayCutScene()
+  private IEnumerator PlayCutScene()
     {
+        // 💡 [추가] 컷신 코루틴이 시작될 때 캐릭터 이동을 막습니다.
+        if (onBlockMovement != null) onBlockMovement.Invoke();
+
         cutSceneImage.gameObject.SetActive(true);
 
         while (frameIndex < currentFrames.Length)
@@ -205,15 +208,14 @@ public class CutSceneManager : MonoBehaviour
                 GameObject spawnedUI = SpawnCustomUI(frame);
                 if (spawnedUI != null)
                 {
-                    onBlockMovement.Invoke(); 
+                    // 💡 [수정] 전체 컷신에서 이미 이동을 막았으므로 여기 있던 onBlockMovement.Invoke()는 제거했습니다.
                     waitingForCustomInput = true;
                     
                     yield return new WaitUntil(() => !waitingForCustomInput);
                     
-                    // 💡 [추가] UI 삭제 전 페이드 아웃 연출
                     yield return StartCoroutine(FadeOutCanvasGroup(spawnedUI, defaultFadeOutDuration));
                     
-                    onUnblockMovement.Invoke(); 
+                    // 💡 [수정] 여기서 이동을 풀면 컷신 도중에 캐릭터가 돌아다니는 버그가 생기므로 제거했습니다.
                     Destroy(spawnedUI); 
                 }
             }
@@ -495,6 +497,7 @@ public class CutSceneManager : MonoBehaviour
 
     private void OnCutSceneEnd()
     {
+        if (onUnblockMovement != null) onUnblockMovement.Invoke();
         cutSceneEvents[_currentKey].Invoke();
     }
 

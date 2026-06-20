@@ -19,9 +19,4 @@ public class LobbyManager : MonoBehaviour
             CutSceneManager.Instance.Play(_openingKey);
         }
     }
-
-    public void LoadGameScene()
-    {
-        SceneManager.LoadScene(_gameSceneName);
-    }
 }

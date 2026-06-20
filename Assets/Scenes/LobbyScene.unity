@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &212441875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 212441877}
+  - component: {fileID: 212441876}
+  m_Layer: 0
+  m_Name: '@GameManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &212441876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212441875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ecc0904642a1c647bbbd41ea2d6bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  _isFirstGameSceneEnter: 1
+--- !u!4 &212441877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212441875}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,9 +602,109 @@ MonoBehaviour:
     onEndEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1610678154}
-          m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
-          m_MethodName: LoadGameScene
+        - m_Target: {fileID: 212441876}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ReturnToGameScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: MiniGame1_End
+    frames:
+    - sprite: {fileID: -4045114995007804087, guid: c5f4487639567674fb97dc2b03ca9873, type: 3}
+      frameType: 0
+      fadeStyle: 1
+      fadeInDuration: 0
+      fadeOutDuration: 3
+      customUIKey: 
+      overrideUIPosSize: 0
+      customUIPosition: {x: 0, y: 0}
+      customUISize: {x: 0, y: 0}
+      dialogues:
+      - "\uC5B4\uBA38, \uC774\uAC74 \uB124 \uC7A5\uB09C\uAC10\uC774 \uC544\uB2C8\uC57C."
+      - "\uC544\uBC84\uB2D8\uAED8\uC11C \uC120\uBB3C\uB85C \uC8FC\uC2E0 \uAC70\uB2C8
+        \uC18C\uC911\uD788 \uB2E4\uB904\uC57C \uD55C\uB2E8\uB2E4."
+      - "\uB180\uACE0 \uC2F6\uC73C\uB2C8? \uC7A5\uB09C\uAC10\uC744 \uAC00\uC9C0\uACE0
+        \uC640\uC57C\uACA0\uAD6C\uB098."
+      choices: []
+      swayImages: []
+    onEndEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 212441876}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ReturnToGameScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: MiniGame2_End
+    frames:
+    - sprite: {fileID: -8047051033378874645, guid: 12b352fdeade2f849a387527253c7d59, type: 3}
+      frameType: 0
+      fadeStyle: 1
+      fadeInDuration: 0
+      fadeOutDuration: 3
+      customUIKey: 
+      overrideUIPosSize: 0
+      customUIPosition: {x: 0, y: 0}
+      customUISize: {x: 0, y: 0}
+      dialogues:
+      - "\uB9AC\uBCF8\uC774 \uB9C8\uC74C\uC5D0 \uB4E4\uC5B4? \uD55C \uBC88 \uD574\uBCFC\uB798?"
+      - "\uB2E4 \uB410\uB2E4. \uC870\uAE08 \uAE38\uC9C0\uB9CC \uC798 \uC5B4\uC6B8\uB9AC\uB124.
+        \uC544\uC608 \uB611\uAC19\uC740 \uAC78 \uC0AC\uBCFC\uAE4C\uB098?"
+      choices: []
+      swayImages: []
+    onEndEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 212441876}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ReturnToGameScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: MiniGame3_End
+    frames:
+    - sprite: {fileID: 1320481435402747707, guid: 56cd5b79c876a79469d9667583870b27, type: 3}
+      frameType: 0
+      fadeStyle: 1
+      fadeInDuration: 0
+      fadeOutDuration: 3
+      customUIKey: 
+      overrideUIPosSize: 0
+      customUIPosition: {x: 0, y: 0}
+      customUISize: {x: 0, y: 0}
+      dialogues:
+      - "\uAC70\uAE38 \uC5B4\uB5BB\uAC8C \uC62C\uB77C\uAC04 \uAC70\uC57C?!"
+      - "\uD558\uC5EC\uD2BC \uC548 \uC62C\uB77C\uAC00\uB294 \uACF3\uC774 \uC5C6\uB2E4\uB2C8\uAE4C?"
+      - "\uC5BC\uB978 \uB0B4\uB824\uAC00\uC790."
+      - "\uB180\uB790\uAD6C\uB098. \uC704\uD5D8\uD574 \uC5EC\uAE30\uB294! \uC774\uC81C
+        \uC62C\uB77C\uAC00\uC9C0 \uB9C8? \uBABB \uB9D0\uB824 \uC815\uB9D0~"
+      choices: []
+      swayImages: []
+    onEndEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 212441876}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: GoToEndScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -576,13 +721,13 @@ MonoBehaviour:
   onBlockMovement:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 212441876}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: DisablePlayerMovement
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -591,13 +736,13 @@ MonoBehaviour:
   onUnblockMovement:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 212441876}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: EnablePlayerMovement
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1132,5 +1277,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 660490001}
+  - {fileID: 212441877}
   - {fileID: 1610678153}
   - {fileID: 2101149872}

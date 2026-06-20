@@ -158,6 +158,9 @@ public class GridPlayerController : MonoBehaviour
 
     private Vector2Int GetPressedDirection()
     {
+        if(!GameManager.Instance.CanPlayerMove)
+            return Vector2Int.zero;
+
         if (Input.GetKeyDown(KeyCode.W))
             return Vector2Int.up;
 

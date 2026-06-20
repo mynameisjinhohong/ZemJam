@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public const string GameSceneName = "GameScene";
+    public const string EndSceneName = "EndScene";
+
 
     public static GameManager Instance { get; private set; }
 
@@ -20,6 +22,9 @@ public class GameManager : MonoBehaviour
     public bool HasLastPlayerGridPos => _hasLastPlayerGridPos;
     public Vector2Int LastPlayerGridPos => _lastPlayerGridPos;
 
+    private bool _canPlayerMove = true;
+    public bool CanPlayerMove => _canPlayerMove;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -30,6 +35,39 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        // 씬 로드 이벤트 구독
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        // 씬 로드 이벤트 구독 해제 (메모리 누수 방지)
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // 씬이 로드될 때마다 실행되는 함수
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 로드된 씬이 GameScene인지 확인
+        if (scene.name == GameSceneName)
+        {
+            // 처음 입장한 상태라면
+            if (_isFirstGameSceneEnter)
+            {
+                MarkGameSceneEntered(); // false로 변경
+
+                // CutSceneManager를 통해 가이드 UI 출력
+                if (CutSceneManager.Instance != null)
+                {
+                    CutSceneManager.Instance.ShowUIOnly("Guide0");
+                }
+                else
+                {
+                    Debug.LogWarning("CutSceneManager 인스턴스를 찾을 수 없습니다.");
+                }
+            }
+        }
     }
 
     public void SavePlayerReturnState(Vector2Int playerGridPos)
@@ -77,6 +115,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(GameSceneName);
     }
+    public void GoToEndScene()
+    {
+        SceneManager.LoadScene(EndSceneName);
+    }
 
     public bool IsCurrentSceneGameScene()
     {
@@ -87,5 +129,14 @@ public class GameManager : MonoBehaviour
     {
         _hasLastPlayerGridPos = false;
         _lastPlayerGridPos = default;
+    }
+
+    public void DisablePlayerMovement()
+    {
+        _canPlayerMove = false;
+    }
+    public void EnablePlayerMovement()
+    {
+        _canPlayerMove = true;
     }
 }

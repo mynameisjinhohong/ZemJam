@@ -190,7 +190,7 @@ public class MiniGame1Manager : MonoBehaviour
         if (_resultImage1Obj != null)
         {
             _resultImage1Obj.transform.position = anchorPos;
-            if (sr1 != null) sr1.sortingOrder = -1;
+            if (sr1 != null) sr1.sortingOrder = -2;
         }
         SetAlpha(sr1, 1f);
 
