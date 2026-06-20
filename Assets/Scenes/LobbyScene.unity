@@ -1394,9 +1394,9 @@ MonoBehaviour:
   - key: GuideE1
     uiPrefab: {fileID: 6461516795149845539, guid: 1de8991c542c5034780de0069a6fd76d, type: 3}
   - key: GuideE2
-    uiPrefab: {fileID: 6461516795149845539, guid: 8fbe6185487db0d4692b9b5e517c7f49, type: 3}
+    uiPrefab: {fileID: 6461516795149845539, guid: 960d4e79f93fdaf48b259ac9d83a9de3, type: 3}
   - key: GuideE3
-    uiPrefab: {fileID: 6461516795149845539, guid: 986a32772511b5b48bcf9c25f6f78ad1, type: 3}
+    uiPrefab: {fileID: 6461516795149845539, guid: 4dd77a429f9ad554385f23ad4fcf3315, type: 3}
   onBlockMovement:
     m_PersistentCalls:
       m_Calls:
