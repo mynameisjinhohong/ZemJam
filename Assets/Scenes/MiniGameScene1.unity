@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 265195596}
   - component: {fileID: 265195595}
   - component: {fileID: 265195597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8537736, g: 0.8537736, b: 0.8537736, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4187,7 +4187,7 @@ GameObject:
   - component: {fileID: 977512895}
   - component: {fileID: 977512894}
   - component: {fileID: 977512896}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4244,7 +4244,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8537736, g: 0.8537736, b: 0.8537736, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6211,7 +6211,7 @@ GameObject:
   - component: {fileID: 1659614715}
   - component: {fileID: 1659614714}
   - component: {fileID: 1659614716}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6349,7 +6349,7 @@ GameObject:
   - component: {fileID: 1755312424}
   - component: {fileID: 1755312423}
   - component: {fileID: 1755312425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6490,7 +6490,7 @@ GameObject:
   - component: {fileID: 1757060022}
   - component: {fileID: 1757060021}
   - component: {fileID: 1757060024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6566,7 +6566,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.73, y: -3.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6658,7 +6658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame1PlayerController
   _moveSpeed: 5
   _jumpForce: 7
-  _coyoteTime: 0.1
   _jumpBufferTime: 0.1
   _groundCheck: {fileID: 0}
   _groundCheckRadius: 0.1
@@ -6667,6 +6666,9 @@ MonoBehaviour:
     m_Bits: 0
   _animator: {fileID: 0}
   _spriteRenderer: {fileID: 0}
+  _idleStateName: CatIdle
+  _walkStateName: CatWalk
+  _jumpStateName: CatJump
   _walkAnimThreshold: 0.05
 --- !u!95 &1757060024
 Animator:
@@ -6790,13 +6792,13 @@ MonoBehaviour:
   _resultAnchorPieceIndex: 7
   _anchorOffset: {x: -0.19699991, y: 0.09199998, z: 0}
   _fadeDuration: 2.1
-  _afterFadeDelay: 4
+  _afterFadeDelay: 3
   _beforeGroupMoveDelay: 2
   _groupMoveTargetPosition: {x: 0, y: 2, z: 0}
   _groupMoveDuration: 3
   _resultImage2FallTargetPosition: {x: 0.23, y: -4, z: 0}
   _resultImage2FallTargetRotation: {x: 0, y: 0, z: 42}
-  _resultImage2FallDelay: 3
+  _resultImage2FallDelay: 2
   _resultImage2FallDuration: 0.4
 --- !u!1 &2076432650
 GameObject:

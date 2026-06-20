@@ -160,9 +160,9 @@ MonoBehaviour:
   _onClear:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1448519234}
-        m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: ReturnToGameScene
+      - m_Target: {fileID: 5949600}
+        m_TargetAssemblyTypeName: MiniGame2Controller, Assembly-CSharp
+        m_MethodName: OnClear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

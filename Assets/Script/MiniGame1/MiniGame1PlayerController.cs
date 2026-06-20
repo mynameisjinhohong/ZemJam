@@ -7,12 +7,11 @@ public class MiniGame1PlayerController : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] private float _jumpForce = 10f;
-    [SerializeField] private float _coyoteTime = 0.1f;
     [SerializeField] private float _jumpBufferTime = 0.1f;
 
     [Header("Ground Check")]
     [SerializeField] private Transform _groundCheck;
-    [SerializeField] private float _groundCheckRadius = 0.1f;
+    [SerializeField] private float _groundCheckRadius = 0.05f; // 반지름을 조금 더 정밀하게 줄였습니다.
     [SerializeField] private LayerMask _groundLayer;
 
     [Header("Animation")]
@@ -32,7 +31,6 @@ public class MiniGame1PlayerController : MonoBehaviour
     private bool _isGrounded;
     private bool _wasGrounded;
 
-    private float _coyoteTimer;
     private float _jumpBufferTimer;
 
     private bool _inputEnabled = true;
@@ -43,6 +41,9 @@ public class MiniGame1PlayerController : MonoBehaviour
     private int _walkStateHash;
     private int _jumpStateHash;
 
+    // 주변 충돌체를 감지해 담아둘 배열 미리 선언 (가비지 컬렉터 방지)
+    private Collider2D[] _groundCheckResults = new Collider2D[5];
+
     public void SetInputEnabled(bool enabled)
     {
         _inputEnabled = enabled;
@@ -50,7 +51,6 @@ public class MiniGame1PlayerController : MonoBehaviour
         if (!enabled)
         {
             _jumpBufferTimer = 0f;
-            _coyoteTimer = 0f;
         }
     }
 
@@ -139,24 +139,46 @@ public class MiniGame1PlayerController : MonoBehaviour
     {
         LayerMask mask = _groundLayer.value == 0 ? ~0 : _groundLayer;
 
-        _isGrounded = Physics2D.OverlapCircle(
+        // 💡 [버그 수정 핵심] 단순 중첩 검사가 아닌 영역 안의 모든 충돌체를 검사합니다.
+        int count = Physics2D.OverlapCircleNonAlloc(
             _groundCheck.position,
             _groundCheckRadius,
+            _groundCheckResults,
             mask
         );
 
-        if (_isGrounded)
-            _coyoteTimer = _coyoteTime;
+        _isGrounded = false;
+
+        for (int i = 0; i < count; i++)
+        {
+            Collider2D hit = _groundCheckResults[i];
+
+            // 1. 자기 자신의 충돌체(몸통)는 무시합니다.
+            if (hit == _col) continue;
+
+            // 2. 이펙트나 트리거 전용으로 만든 충돌체는 무시합니다.
+            if (hit.isTrigger) continue;
+
+            // 위 조건들을 피해 갔다면 진짜 밟을 수 있는 '땅'입니다.
+            _isGrounded = true;
+            break;
+        }
     }
 
     private void UpdateTimers()
     {
-        _coyoteTimer -= Time.deltaTime;
         _jumpBufferTimer -= Time.deltaTime;
     }
 
     private void HandleMove()
     {
+        if (GameManager.Instance != null && !GameManager.Instance.CanPlayerMove)
+        {
+            _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
+            _horizontalInput = 0f;
+            return;
+        }
+
         if (_inputEnabled)
         {
             _horizontalInput = 0f;
@@ -185,27 +207,26 @@ public class MiniGame1PlayerController : MonoBehaviour
             return;
 
         if (horizontal < 0f)
-            _spriteRenderer.flipX = true;
-        else if (horizontal > 0f)
             _spriteRenderer.flipX = false;
+        else if (horizontal > 0f)
+            _spriteRenderer.flipX = true;
     }
 
     private void HandleJumpInput()
     {
+        if (GameManager.Instance != null && !GameManager.Instance.CanPlayerMove)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Space))
             _jumpBufferTimer = _jumpBufferTime;
 
-        if (_jumpBufferTimer > 0f && _coyoteTimer > 0f)
+        // 확실하게 바닥에 딛고 서 있는 순간에만 점프 가능하게 수정
+        if (_jumpBufferTimer > 0f && _isGrounded && Mathf.Abs(_rb.linearVelocity.y) < 0.01f)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _jumpForce);
-
             _jumpBufferTimer = 0f;
-            _coyoteTimer = 0f;
-
-            // 바로 공중 상태로 처리
             _isGrounded = false;
 
-            // 점프 순간에는 무조건 점프 애니메이션을 처음부터 재생
             PlayState(_jumpStateHash, _jumpStateName, true);
         }
     }
@@ -215,8 +236,6 @@ public class MiniGame1PlayerController : MonoBehaviour
         if (_animator == null)
             return;
 
-        // 핵심:
-        // 땅에 닿지 않은 상태에서는 Idle / Walk로 절대 넘어가지 않음
         if (!_isGrounded)
         {
             PlayState(_jumpStateHash, _jumpStateName, false);

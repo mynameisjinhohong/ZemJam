@@ -1845,9 +1845,9 @@ MonoBehaviour:
   _gameEndEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1295864547}
-        m_TargetAssemblyTypeName: SimpleSceneChanger, Assembly-CSharp
-        m_MethodName: ReturnToGameScene
+      - m_Target: {fileID: 1173389078}
+        m_TargetAssemblyTypeName: MiniGame4DotConnectManager, Assembly-CSharp
+        m_MethodName: OnClear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

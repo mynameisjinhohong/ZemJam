@@ -81,7 +81,7 @@ public class MiniGame2Controller : MonoBehaviour
     }
 
     /// <summary>
-    /// ÅÂ¾ç ÀÌ¹ÌÁö ButtonÀÇ OnClick¿¡ ¿¬°áÇÏ½Ê½Ã¿À.
+    /// ï¿½Â¾ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ Buttonï¿½ï¿½ OnClickï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ê½Ã¿ï¿½.
     /// </summary>
     public void OnClickSun()
     {
@@ -158,8 +158,8 @@ public class MiniGame2Controller : MonoBehaviour
     {
         Vector2 linearPosition = Vector2.Lerp(start, end, t);
 
-        // t = 0, 1¿¡¼­´Â 0
-        // t = 0.5¿¡¼­ ÃÖ´ë ³ôÀÌ
+        // t = 0, 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0
+        // t = 0.5ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
         float arc = 4f * arcHeight * t * (1f - t);
 
         linearPosition.y += arc;
@@ -197,6 +197,11 @@ public class MiniGame2Controller : MonoBehaviour
             return;
 
         group.alpha = alpha;
+    }
+
+    public void OnClear()
+    {
+        CutSceneManager.Instance.Play("MiniGame2_End");
     }
 
 #if UNITY_EDITOR
