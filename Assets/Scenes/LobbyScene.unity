@@ -1336,10 +1336,28 @@ MonoBehaviour:
       customUIPosition: {x: 0, y: 0}
       customUISize: {x: 0, y: 0}
       dialogues:
-      - "\u201C\uC751? \uB098... \uD55C\uD14C \uB9D0 \uAC70\uB294 \uAC74\uAC00?\u201D"
-      - "\u201C\uC65C, \uC65C \uAC00\uAE4C\uC774 \uC640?! \uC560\uAE30\uB0E5\uC778\uB370?!\u201D"
-      - "\u201C\uB098 \uC5B4\uB5A1\uD574!! \uC560\uAE30\uB0E5\uC774\uB294 \uC190
-        \uD0C0\uBA74 \uC548 \uB41C\uB2E4\uBA70!!\u201D"
+      - "\uC751? \uB098...\uD55C\uD14C \uC624\uB294 \uAC74\uAC00?"
+      - "\uC65C, \uC65C \uAC00\uAE4C\uC774 \uC640?! "
+      - "\uC0C8\uB07C\uACE0\uC591\uC778\uB370?!"
+      - "\uC560\uAE30\uB294 \uC190 \uD0C0\uBA74 \uC548 \uB41C\uB2E4\uBA70!!"
+      choices: []
+      swayImages: []
+    - sprite: {fileID: -1930368522320759692, guid: 6a48278fa16e6b545b49ac891fdb698b, type: 3}
+      frameType: 0
+      fadeStyle: 1
+      preCutsceneFadeOutDuration: 2
+      fadeInDuration: 0
+      fadeOutDuration: 5
+      fadeOutSfxKey: 
+      fadeOutSfxVolume: 0.2
+      customUIKey: 
+      overrideUIPosSize: 0
+      customUIPosition: {x: 0, y: 0}
+      customUISize: {x: 0, y: 0}
+      dialogues:
+      - "...\uD760. \uC880 \uADC0\uC5FD\uAE34 \uD558\uB124..."
+      - "\uAC08 \uACF3\uC774 \uC5C6\uC5B4?"
+      - "\uB108\uB9CC \uAD1C\uCC2E\uC73C\uBA74 \uAC19\uC774 \uAC08\uB798?"
       choices: []
       swayImages: []
     onEndEvent:
@@ -1371,6 +1389,14 @@ MonoBehaviour:
     uiPrefab: {fileID: 6461516795149845539, guid: 4a18b72f7f6b86a4d8b28e9e644b026b, type: 3}
   - key: Guide4
     uiPrefab: {fileID: 6461516795149845539, guid: e9f2c4db156f01c4898f43471751f393, type: 3}
+  - key: GuideE0
+    uiPrefab: {fileID: 6461516795149845539, guid: 05809cf7ddaa3e24c8e34e37cd67e9d1, type: 3}
+  - key: GuideE1
+    uiPrefab: {fileID: 6461516795149845539, guid: 1de8991c542c5034780de0069a6fd76d, type: 3}
+  - key: GuideE2
+    uiPrefab: {fileID: 6461516795149845539, guid: 8fbe6185487db0d4692b9b5e517c7f49, type: 3}
+  - key: GuideE3
+    uiPrefab: {fileID: 6461516795149845539, guid: 986a32772511b5b48bcf9c25f6f78ad1, type: 3}
   onBlockMovement:
     m_PersistentCalls:
       m_Calls:
