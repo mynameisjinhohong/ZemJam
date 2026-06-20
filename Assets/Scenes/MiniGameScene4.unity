@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 238681186}
   - component: {fileID: 238681185}
   - component: {fileID: 238681187}
+  - component: {fileID: 238681188}
+  - component: {fileID: 238681189}
   m_Layer: 3
   m_Name: Star (5)
   m_TagString: Untagged
@@ -272,6 +274,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame4DotNode
   _id: 5
+--- !u!95 &238681188
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238681183}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 185b7c15706ffa149a33a91610901d8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &238681189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238681183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cfd76f708dffd418f9eda4bd67b4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame4RandomStarAnimator
+  _animator: {fileID: 0}
+  _layerIndex: 0
+  _idleStateName: StarIdle
+  _twinkleStateName: Twinkle
+  _twinkleTriggerName: Twinkle
+  _initialDelayRange: {x: 0, y: 2}
+  _twinkleIntervalRange: {x: 0.5, y: 3}
+  _waitForEnterStateTimeout: 0.5
+  _twinkleFallbackDuration: 1
 --- !u!1 &285712263
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +329,8 @@ GameObject:
   - component: {fileID: 285712266}
   - component: {fileID: 285712265}
   - component: {fileID: 285712267}
+  - component: {fileID: 285712268}
+  - component: {fileID: 285712269}
   m_Layer: 3
   m_Name: Star (4)
   m_TagString: Untagged
@@ -425,6 +472,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame4DotNode
   _id: 4
+--- !u!95 &285712268
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285712263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 185b7c15706ffa149a33a91610901d8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &285712269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285712263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cfd76f708dffd418f9eda4bd67b4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame4RandomStarAnimator
+  _animator: {fileID: 0}
+  _layerIndex: 0
+  _idleStateName: StarIdle
+  _twinkleStateName: Twinkle
+  _twinkleTriggerName: Twinkle
+  _initialDelayRange: {x: 0, y: 2}
+  _twinkleIntervalRange: {x: 0.5, y: 3}
+  _waitForEnterStateTimeout: 0.5
+  _twinkleFallbackDuration: 1
 --- !u!1 &329420081
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +527,8 @@ GameObject:
   - component: {fileID: 329420084}
   - component: {fileID: 329420083}
   - component: {fileID: 329420085}
+  - component: {fileID: 329420086}
+  - component: {fileID: 329420087}
   m_Layer: 3
   m_Name: Star (6)
   m_TagString: Untagged
@@ -578,6 +670,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame4DotNode
   _id: 6
+--- !u!95 &329420086
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329420081}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 185b7c15706ffa149a33a91610901d8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &329420087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329420081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cfd76f708dffd418f9eda4bd67b4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame4RandomStarAnimator
+  _animator: {fileID: 0}
+  _layerIndex: 0
+  _idleStateName: StarIdle
+  _twinkleStateName: Twinkle
+  _twinkleTriggerName: Twinkle
+  _initialDelayRange: {x: 0, y: 2}
+  _twinkleIntervalRange: {x: 0.5, y: 3}
+  _waitForEnterStateTimeout: 0.5
+  _twinkleFallbackDuration: 1
 --- !u!1 &394136820
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +756,8 @@ GameObject:
   - component: {fileID: 635965936}
   - component: {fileID: 635965937}
   - component: {fileID: 635965938}
+  - component: {fileID: 635965939}
+  - component: {fileID: 635965940}
   m_Layer: 3
   m_Name: Star
   m_TagString: Untagged
@@ -762,6 +899,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame4DotNode
   _id: 0
+--- !u!95 &635965939
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635965934}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 185b7c15706ffa149a33a91610901d8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &635965940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635965934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cfd76f708dffd418f9eda4bd67b4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame4RandomStarAnimator
+  _animator: {fileID: 0}
+  _layerIndex: 0
+  _idleStateName: StarIdle
+  _twinkleStateName: Twinkle
+  _twinkleTriggerName: Twinkle
+  _initialDelayRange: {x: 0, y: 2}
+  _twinkleIntervalRange: {x: 0.5, y: 3}
+  _waitForEnterStateTimeout: 0.5
+  _twinkleFallbackDuration: 1
 --- !u!1 &785293746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1182,8 @@ GameObject:
   - component: {fileID: 844792754}
   - component: {fileID: 844792753}
   - component: {fileID: 844792755}
+  - component: {fileID: 844792756}
+  - component: {fileID: 844792757}
   m_Layer: 3
   m_Name: Star (2)
   m_TagString: Untagged
@@ -1143,6 +1325,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame4DotNode
   _id: 2
+--- !u!95 &844792756
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844792751}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 185b7c15706ffa149a33a91610901d8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &844792757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844792751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cfd76f708dffd418f9eda4bd67b4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame4RandomStarAnimator
+  _animator: {fileID: 0}
+  _layerIndex: 0
+  _idleStateName: StarIdle
+  _twinkleStateName: Twinkle
+  _twinkleTriggerName: Twinkle
+  _initialDelayRange: {x: 0, y: 2}
+  _twinkleIntervalRange: {x: 0.5, y: 3}
+  _waitForEnterStateTimeout: 0.5
+  _twinkleFallbackDuration: 1
 --- !u!1 &899046185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1380,8 @@ GameObject:
   - component: {fileID: 899046188}
   - component: {fileID: 899046187}
   - component: {fileID: 899046189}
+  - component: {fileID: 899046190}
+  - component: {fileID: 899046191}
   m_Layer: 3
   m_Name: Star (3)
   m_TagString: Untagged
@@ -1296,6 +1523,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame4DotNode
   _id: 3
+--- !u!95 &899046190
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899046185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 185b7c15706ffa149a33a91610901d8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &899046191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899046185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cfd76f708dffd418f9eda4bd67b4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame4RandomStarAnimator
+  _animator: {fileID: 0}
+  _layerIndex: 0
+  _idleStateName: StarIdle
+  _twinkleStateName: Twinkle
+  _twinkleTriggerName: Twinkle
+  _initialDelayRange: {x: 0, y: 2}
+  _twinkleIntervalRange: {x: 0.5, y: 3}
+  _waitForEnterStateTimeout: 0.5
+  _twinkleFallbackDuration: 1
 --- !u!1 &906037258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2459,8 @@ GameObject:
   - component: {fileID: 1941981890}
   - component: {fileID: 1941981889}
   - component: {fileID: 1941981891}
+  - component: {fileID: 1941981892}
+  - component: {fileID: 1941981893}
   m_Layer: 3
   m_Name: Star (1)
   m_TagString: Untagged
@@ -2330,6 +2602,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniGame4DotNode
   _id: 1
+--- !u!95 &1941981892
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941981887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 185b7c15706ffa149a33a91610901d8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1941981893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941981887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cfd76f708dffd418f9eda4bd67b4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame4RandomStarAnimator
+  _animator: {fileID: 0}
+  _layerIndex: 0
+  _idleStateName: StarIdle
+  _twinkleStateName: Twinkle
+  _twinkleTriggerName: Twinkle
+  _initialDelayRange: {x: 0, y: 2}
+  _twinkleIntervalRange: {x: 0.5, y: 3}
+  _waitForEnterStateTimeout: 0.5
+  _twinkleFallbackDuration: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
