@@ -6,25 +6,43 @@ public class GridPlayerController : MonoBehaviour
     [Header("References")]
     [SerializeField] private GridBoard _board;
 
+    [Header("Visual References")]
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator _animator;
+
+    [Header("Animation State Names")]
+    [SerializeField] private string _idleStateName = "Idle";
+    [SerializeField] private string _walkStateName = "Walk";
+    [SerializeField] private string _jumpStateName = "Jump";
+
+    [Header("Animation Settings")]
+    [SerializeField] private bool _waitJumpAnimationEnd = true;
+    [SerializeField] private float _jumpAnimationFallbackDuration = 0.35f;
+
     [Header("Player Settings")]
     [SerializeField] private Vector2Int _startGridPos;
     [SerializeField] private float _moveDuration = 0.1f;
 
     [Header("Jump Settings")]
-    [SerializeField] private KeyCode _jumpKey = KeyCode.Space;
+    [SerializeField] private KeyCode _jumpKey = KeyCode.Z;
 
     [Header("Interaction")]
     [SerializeField] private bool _interactOnEnter = true;
     [SerializeField] private KeyCode _interactKey = KeyCode.E;
 
-    [Header("Interaction Icon")]
+    [Header("Action Icons")]
     [SerializeField] private GameObject _interactionIconObject;
+    [SerializeField] private GameObject _jumpIconObject;
 
     private Vector2Int _gridPos;
     private Vector2Int _facingDir = Vector2Int.down;
 
     private bool _isMoving;
     private Coroutine _moveRoutine;
+
+    private int _idleStateHash;
+    private int _walkStateHash;
+    private int _jumpStateHash;
 
     public Vector2Int GridPos => _gridPos;
     public Vector2Int FacingDir => _facingDir;
@@ -38,13 +56,24 @@ public class GridPlayerController : MonoBehaviour
         Vector2Int.right
     };
 
+    private void Awake()
+    {
+        _idleStateHash = Animator.StringToHash(_idleStateName);
+        _walkStateHash = Animator.StringToHash(_walkStateName);
+        _jumpStateHash = Animator.StringToHash(_jumpStateName);
+    }
+
     private void Start()
     {
         _gridPos = _startGridPos;
         transform.position = _board.GridToWorld(_gridPos);
 
         SetInteractionIconVisible(false);
-        UpdateInteractionIconVisibility();
+        SetJumpIconVisible(false);
+
+        UpdateActionIconsVisibility();
+
+        PlayIdleAnimation();
     }
 
     private void Update()
@@ -52,7 +81,7 @@ public class GridPlayerController : MonoBehaviour
         if (_isMoving)
             return;
 
-        UpdateInteractionIconVisibility();
+        UpdateActionIconsVisibility();
 
         HandleMoveInput();
         HandleInteractInput();
@@ -88,7 +117,7 @@ public class GridPlayerController : MonoBehaviour
 
         interactable.Interact(this);
 
-        UpdateInteractionIconVisibility();
+        UpdateActionIconsVisibility();
     }
 
     private bool TryMove(Vector2Int dir, bool allowJump)
@@ -98,17 +127,23 @@ public class GridPlayerController : MonoBehaviour
 
         _facingDir = dir;
 
+        UpdateSpriteFlip(dir);
+
         Vector2Int targetPos = _gridPos + dir;
+
+        bool requiresJump = _board.RequiresJump(_gridPos, targetPos);
 
         if (!_board.CanMoveTo(_gridPos, targetPos, allowJump))
         {
-            UpdateInteractionIconVisibility();
+            UpdateActionIconsVisibility();
             return false;
         }
 
+        bool isJumpMove = requiresJump && allowJump;
+
         _board.TryGetInteractableAt(targetPos, out GridInteractable targetInteractable);
 
-        MoveTo(targetPos, targetInteractable);
+        MoveTo(targetPos, targetInteractable, isJumpMove);
 
         return true;
     }
@@ -147,42 +182,69 @@ public class GridPlayerController : MonoBehaviour
         return Vector2Int.zero;
     }
 
-    private void MoveTo(Vector2Int targetGridPos, GridInteractable targetInteractable)
+    private void MoveTo(
+        Vector2Int targetGridPos,
+        GridInteractable targetInteractable,
+        bool isJumpMove
+    )
     {
         if (_moveRoutine != null)
             StopCoroutine(_moveRoutine);
 
-        _moveRoutine = StartCoroutine(MoveRoutine(targetGridPos, targetInteractable));
+        _moveRoutine = StartCoroutine(
+            MoveRoutine(targetGridPos, targetInteractable, isJumpMove)
+        );
     }
 
-    private IEnumerator MoveRoutine(Vector2Int targetGridPos, GridInteractable targetInteractable)
+    private IEnumerator MoveRoutine(
+        Vector2Int targetGridPos,
+        GridInteractable targetInteractable,
+        bool isJumpMove
+    )
     {
         _isMoving = true;
 
         SetInteractionIconVisible(false);
+        SetJumpIconVisible(false);
+
+        if (isJumpMove)
+            PlayJumpAnimation();
+        else
+            PlayWalkAnimation();
 
         Vector2Int previousGridPos = _gridPos;
 
-        // 플레이어의 논리 좌표를 먼저 갱신한다.
-        // 이후 높이 판정은 이 _gridPos 기준으로 처리된다.
+        // 현재 위치를 먼저 갱신한다.
+        // 이후 높이 판정은 _gridPos 기준으로 처리된다.
         _gridPos = targetGridPos;
 
         Vector3 startWorldPos = _board.GridToWorld(previousGridPos);
         Vector3 targetWorldPos = _board.GridToWorld(targetGridPos);
 
+        float moveDuration = isJumpMove ? _jumpAnimationFallbackDuration : _moveDuration;
         float elapsed = 0f;
 
-        while (elapsed < _moveDuration)
+        while (elapsed < moveDuration)
         {
             elapsed += Time.deltaTime;
 
-            float t = elapsed / _moveDuration;
+            float t = elapsed / moveDuration;
             transform.position = Vector3.Lerp(startWorldPos, targetWorldPos, t);
 
             yield return null;
         }
 
         transform.position = targetWorldPos;
+
+        // 핵심 변경:
+        // 점프 이동이면 위치 이동이 끝난 뒤에도 Jump 애니메이션이 끝날 때까지 기다린다.
+        if (isJumpMove && _waitJumpAnimationEnd)
+        {
+            yield return WaitForCurrentAnimationEnd(
+                _jumpStateHash,
+                _jumpAnimationFallbackDuration
+            );
+        }
 
         _isMoving = false;
         _moveRoutine = null;
@@ -198,7 +260,46 @@ public class GridPlayerController : MonoBehaviour
         bool continuedMove = TryContinueHeldMove();
 
         if (!continuedMove)
-            UpdateInteractionIconVisibility();
+        {
+            PlayIdleAnimation();
+            UpdateActionIconsVisibility();
+        }
+    }
+
+    private IEnumerator WaitForCurrentAnimationEnd(int stateHash, float fallbackDuration)
+    {
+        if (_animator == null)
+        {
+            yield return new WaitForSeconds(fallbackDuration);
+            yield break;
+        }
+
+        // Animator.Play 직후 같은 프레임에는 상태 정보가 아직 갱신되지 않을 수 있으므로 1프레임 대기
+        yield return null;
+
+        AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+
+        // 상태 이름이 잘못되었거나 Transition 때문에 현재 상태가 Jump가 아니면 fallback 시간만큼 대기
+        if (stateInfo.shortNameHash != stateHash)
+        {
+            yield return new WaitForSeconds(fallbackDuration);
+            yield break;
+        }
+
+        // Jump 애니메이션이 loop면 normalizedTime이 계속 증가하므로,
+        // 점프 애니메이션은 Loop Time을 꺼두는 것을 권장한다.
+        while (true)
+        {
+            stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+
+            if (stateInfo.shortNameHash != stateHash)
+                yield break;
+
+            if (stateInfo.normalizedTime >= 1f)
+                yield break;
+
+            yield return null;
+        }
     }
 
     private bool TryContinueHeldMove()
@@ -215,14 +316,12 @@ public class GridPlayerController : MonoBehaviour
 
     private GridInteractable GetAvailableInteractable()
     {
-        // 1. 현재 밟고 있는 칸
         if (_board.TryGetInteractableAt(_gridPos, out GridInteractable currentInteractable) &&
             IsSameHeightAsPlayer(currentInteractable))
         {
             return currentInteractable;
         }
 
-        // 2. 바라보고 있는 앞 칸 우선
         Vector2Int frontPos = _gridPos + _facingDir;
 
         if (_board.TryGetInteractableAt(frontPos, out GridInteractable frontInteractable) &&
@@ -231,7 +330,6 @@ public class GridPlayerController : MonoBehaviour
             return frontInteractable;
         }
 
-        // 3. 나머지 상하좌우 한 칸
         foreach (Vector2Int dir in AdjacentDirs)
         {
             if (dir == _facingDir)
@@ -251,10 +349,6 @@ public class GridPlayerController : MonoBehaviour
 
     private GridInteractable FindNearbyInteractable()
     {
-        // 키 UI 표시 기준.
-        // 현재 칸 또는 상하좌우 한 칸 안에 있으면서,
-        // 플레이어와 같은 높이인 Interactable만 감지한다.
-
         if (_board.TryGetInteractableAt(_gridPos, out GridInteractable currentInteractable) &&
             IsSameHeightAsPlayer(currentInteractable))
         {
@@ -275,6 +369,30 @@ public class GridPlayerController : MonoBehaviour
         return null;
     }
 
+    private bool HasNearbyJumpableCell()
+    {
+        foreach (Vector2Int dir in AdjacentDirs)
+        {
+            Vector2Int targetPos = _gridPos + dir;
+
+            if (IsJumpableCell(targetPos))
+                return true;
+        }
+
+        return false;
+    }
+
+    private bool IsJumpableCell(Vector2Int targetPos)
+    {
+        if (!_board.IsInsideBoard(targetPos))
+            return false;
+
+        if (!_board.RequiresJump(_gridPos, targetPos))
+            return false;
+
+        return _board.CanMoveTo(_gridPos, targetPos, true);
+    }
+
     private bool IsSameHeightAsPlayer(GridInteractable interactable)
     {
         if (interactable == null)
@@ -286,11 +404,22 @@ public class GridPlayerController : MonoBehaviour
         return playerHeight == interactableHeight;
     }
 
+    private void UpdateActionIconsVisibility()
+    {
+        UpdateInteractionIconVisibility();
+        UpdateJumpIconVisibility();
+    }
+
     private void UpdateInteractionIconVisibility()
     {
         GridInteractable nearbyInteractable = FindNearbyInteractable();
 
         SetInteractionIconVisible(nearbyInteractable != null);
+    }
+
+    private void UpdateJumpIconVisibility()
+    {
+        SetJumpIconVisible(HasNearbyJumpableCell());
     }
 
     private void SetInteractionIconVisible(bool visible)
@@ -302,5 +431,55 @@ public class GridPlayerController : MonoBehaviour
             return;
 
         _interactionIconObject.SetActive(visible);
+    }
+
+    private void SetJumpIconVisible(bool visible)
+    {
+        if (_jumpIconObject == null)
+            return;
+
+        if (_jumpIconObject.activeSelf == visible)
+            return;
+
+        _jumpIconObject.SetActive(visible);
+    }
+
+    private void UpdateSpriteFlip(Vector2Int dir)
+    {
+        if (_spriteRenderer == null)
+            return;
+
+        if (dir == Vector2Int.left)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else if (dir == Vector2Int.right)
+        {
+            _spriteRenderer.flipX = true;
+        }
+    }
+
+    private void PlayIdleAnimation()
+    {
+        if (_animator == null)
+            return;
+
+        _animator.Play(_idleStateHash, 0, 0f);
+    }
+
+    private void PlayWalkAnimation()
+    {
+        if (_animator == null)
+            return;
+
+        _animator.Play(_walkStateHash, 0, 0f);
+    }
+
+    private void PlayJumpAnimation()
+    {
+        if (_animator == null)
+            return;
+
+        _animator.Play(_jumpStateHash, 0, 0f);
     }
 }
