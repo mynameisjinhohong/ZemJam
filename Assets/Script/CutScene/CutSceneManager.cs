@@ -12,6 +12,7 @@ public class CutSceneManager : MonoBehaviour
     public static CutSceneManager Instance { get; private set; }
 
     public enum FrameType { Normal, Choice }
+    public enum FadeStyle { Transparent, BlackScreen }
 
     [Serializable]
     public class CharacterChoice
@@ -53,6 +54,22 @@ public class CutSceneManager : MonoBehaviour
     {
         public Sprite sprite;
         public FrameType frameType;
+        public FadeStyle fadeStyle;
+        
+        [Header("프레임 개별 페이드 시간 설정")]
+        [Tooltip("0이면 하단의 글로벌 기본 페이드 인 시간을 따릅니다.")]
+        public float fadeInDuration = 0f;
+        [Tooltip("0이면 하단의 글로벌 기본 페이드 아웃 시간을 따릅니다.")]
+        public float fadeOutDuration = 0f;
+
+        [Header("특정 UI 띄우기 설정 (선택 사항)")]
+        [Tooltip("등록한 Custom UI의 Key 이름을 적으세요. 비어있으면 띄우지 않습니다.")]
+        public string customUIKey;
+        [Tooltip("체크하면 프리팹 자체 설정을 무시하고 아래의 위치/크기를 강제로 적용합니다.")]
+        public bool overrideUIPosSize = false;
+        public Vector2 customUIPosition;
+        public Vector2 customUISize;
+
         [TextArea] public string[] dialogues;
         public CharacterChoice[] choices;
         public SwayImageData[] swayImages;
@@ -66,28 +83,55 @@ public class CutSceneManager : MonoBehaviour
         public UnityEvent onEndEvent;
     }
 
+    // [새로 추가] 딕셔너리 매핑을 위한 직렬화 클래스
+    [Serializable]
+    public class CustomUIEntry
+    {
+        public string key;
+        public GameObject uiPrefab;
+    }
+
     [Header("UI")]
     [SerializeField] private Image cutSceneImage;
+    [SerializeField] private Image blackScreenImage; 
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private GameObject characterButtonGroup;
     [SerializeField] private Button characterButtonPrefab;
     [SerializeField] private Transform swayImageParent;
     [SerializeField] private GameObject swayImagePrefab;
-
+    
     [Header("컷신 목록 (Key + 프레임 배열)")]
     [SerializeField] private CutSceneEntry[] cutSceneEntries;
 
-    [Header("설정")]
-    [SerializeField] private float fadeDuration = 0.5f;
+    [Header("커스텀 UI 설정")]
+    [SerializeField] private Transform customUIParent; // 커스텀 UI가 생성될 부모 Canvas/오브젝트
+    [SerializeField] private CustomUIEntry[] customUIEntries; // 인스펙터 등록용 배열
+
+    [Header("이동 제어 이벤트")]
+    public UnityEvent onBlockMovement;   // 커스텀 UI가 떴을 때 캐릭터 이동을 막는 이벤트
+    public UnityEvent onUnblockMovement; // 커스텀 UI가 꺼졌을 때 캐릭터 이동을 푸는 이벤트
+
+    [Header("글로벌 기본 설정")]
+    [Tooltip("기본 페이드 인(나타나기) 속도")]
+    [SerializeField] private float defaultFadeInDuration = 0.5f;
+    [Tooltip("기본 페이드 아웃(사라지기) 속도")]
+    [SerializeField] private float defaultFadeOutDuration = 0.5f;
+    [Tooltip("초당 출력할 글자 수")]
+    [SerializeField] private float _typingSpeed = 30f;
 
     private Dictionary<string, CutSceneFrame[]> cutSceneMap;
     private Dictionary<string, UnityEvent> cutSceneEvents;
+    private Dictionary<string, GameObject> customUIMap; // [새로 추가] 런타임 관리용 딕셔너리
+    
     private CutSceneFrame[] currentFrames;
     private int frameIndex = 0;
     private int dialogueIndex = 0;
     private bool isPlaying = false;
     private bool waitingForInput = false;
     private bool waitingForChoice = false;
+    private bool waitingForCustomInput = false; // [새로 추가] 커스텀 UI 입력 대기 플래그
+    private bool _isTyping = false;
+    private bool _skipTyping = false;
     private string _currentKey;
 
 
@@ -108,7 +152,18 @@ public class CutSceneManager : MonoBehaviour
             }
         }
 
+        // [새로 추가] 커스텀 UI 딕셔너리 초기화
+        customUIMap = new Dictionary<string, GameObject>();
+        foreach (var entry in customUIEntries)
+        {
+            if (!string.IsNullOrEmpty(entry.key) && entry.uiPrefab != null)
+            {
+                customUIMap[entry.key] = entry.uiPrefab;
+            }
+        }
+
         cutSceneImage.gameObject.SetActive(false);
+        if (blackScreenImage != null) blackScreenImage.gameObject.SetActive(false);
     }
 
     public void Play(string key)
@@ -138,28 +193,50 @@ public class CutSceneManager : MonoBehaviour
             cutSceneImage.sprite = frame.sprite;
             dialogueIndex = 0;
 
-            yield return StartCoroutine(Fade(0f, 1f));
+            float currentInDuration = frame.fadeInDuration > 0f ? frame.fadeInDuration : defaultFadeInDuration;
+            yield return StartCoroutine(FadeInOut(frame, true, currentInDuration));
 
             List<GameObject> swayObjects = SpawnSwayImages(frame.swayImages);
+
+            // [새로 추가] 커스텀 UI 생성 및 입력 대기 로직
+            if (!string.IsNullOrEmpty(frame.customUIKey))
+            {
+                GameObject spawnedUI = SpawnCustomUI(frame);
+                if (spawnedUI != null)
+                {
+                    onBlockMovement.Invoke(); // 캐릭터 이동 중지 이벤트 호출
+                    waitingForCustomInput = true;
+                    
+                    // 유저가 클릭/스페이스바를 누를 때까지 코루틴 대기
+                    yield return new WaitUntil(() => !waitingForCustomInput);
+                    
+                    onUnblockMovement.Invoke(); // 캐릭터 이동 해제 이벤트 호출
+                    Destroy(spawnedUI); // UI 제거
+                }
+            }
 
             if (frame.frameType == FrameType.Normal)
             {
                 if (frame.dialogues.Length > 0)
                 {
-                    dialogueText.gameObject.SetActive(true);
+                    dialogueText.transform.parent.gameObject.SetActive(true);
                     while (dialogueIndex < frame.dialogues.Length)
                     {
-                        dialogueText.text = frame.dialogues[dialogueIndex];
+                        yield return StartCoroutine(TypeText(frame.dialogues[dialogueIndex]));
                         waitingForInput = true;
                         yield return new WaitUntil(() => !waitingForInput);
                         dialogueIndex++;
                     }
-                    dialogueText.gameObject.SetActive(false);
+                    dialogueText.transform.parent.gameObject.SetActive(false);
                 }
                 else
                 {
-                    waitingForInput = true;
-                    yield return new WaitUntil(() => !waitingForInput);
+                    // 커스텀 UI 대기를 처리한 뒤, 대사가 없다면 일반 입력 대기 수행
+                    if (string.IsNullOrEmpty(frame.customUIKey))
+                    {
+                        waitingForInput = true;
+                        yield return new WaitUntil(() => !waitingForInput);
+                    }
                 }
             }
             else if (frame.frameType == FrameType.Choice)
@@ -169,13 +246,40 @@ public class CutSceneManager : MonoBehaviour
 
             DestroySwayImages(swayObjects);
 
-            yield return StartCoroutine(Fade(1f, 0f));
+            float currentOutDuration = frame.fadeOutDuration > 0f ? frame.fadeOutDuration : defaultFadeOutDuration;
+            yield return StartCoroutine(FadeInOut(frame, false, currentOutDuration));
+            
             frameIndex++;
         }
 
         isPlaying = false;
         cutSceneImage.gameObject.SetActive(false);
         OnCutSceneEnd();
+    }
+
+    // [새로 추가] 커스텀 UI 동적 생성 함수
+    private GameObject SpawnCustomUI(CutSceneFrame frame)
+    {
+        if (!customUIMap.TryGetValue(frame.customUIKey, out GameObject prefab))
+        {
+            Debug.LogWarning($"등록되지 않은 Custom UI Key입니다: {frame.customUIKey}");
+            return null;
+        }
+
+        Transform parent = customUIParent != null ? customUIParent : this.transform;
+        GameObject uiObj = Instantiate(prefab, parent);
+
+        if (frame.overrideUIPosSize)
+        {
+            RectTransform rt = uiObj.GetComponent<RectTransform>();
+            if (rt != null)
+            {
+                rt.anchoredPosition = frame.customUIPosition;
+                rt.sizeDelta = frame.customUISize;
+            }
+        }
+
+        return uiObj;
     }
 
     private List<GameObject> SpawnSwayImages(SwayImageData[] swayImages)
@@ -263,27 +367,104 @@ public class CutSceneManager : MonoBehaviour
         }
     }
 
-    private IEnumerator Fade(float from, float to)
+    private IEnumerator FadeInOut(CutSceneFrame frame, bool isFadeIn, float duration)
     {
         float elapsed = 0f;
-        Color color = cutSceneImage.color;
+        float from = isFadeIn ? 0f : 1f;
+        float to = isFadeIn ? 1f : 0f;
 
-        while (elapsed < fadeDuration)
+        Color imgColor = cutSceneImage.color;
+        
+        if (frame.fadeStyle == FadeStyle.BlackScreen && blackScreenImage != null)
         {
-            elapsed += Time.deltaTime;
-            color.a = Mathf.Lerp(from, to, elapsed / fadeDuration);
-            cutSceneImage.color = color;
-            yield return null;
-        }
+            Color blackColor = blackScreenImage.color;
+            blackScreenImage.gameObject.SetActive(true);
+            
+            imgColor.a = 1f;
+            cutSceneImage.color = imgColor;
 
-        color.a = to;
-        cutSceneImage.color = color;
+            from = isFadeIn ? 1f : 0f;
+            to = isFadeIn ? 0f : 1f;
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                blackColor.a = Mathf.Lerp(from, to, elapsed / duration);
+                blackScreenImage.color = blackColor;
+                yield return null;
+            }
+            blackColor.a = to;
+            blackScreenImage.color = blackColor;
+
+            if (isFadeIn) blackScreenImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (blackScreenImage != null) blackScreenImage.gameObject.SetActive(false);
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                imgColor.a = Mathf.Lerp(from, to, elapsed / duration);
+                cutSceneImage.color = imgColor;
+                yield return null;
+            }
+            imgColor.a = to;
+            cutSceneImage.color = imgColor;
+        }
     }
 
     private void Update()
     {
-        if (isPlaying && waitingForInput && Mouse.current.leftButton.wasPressedThisFrame)
+        if (!isPlaying) return;
+
+        bool inputPressed = Mouse.current.leftButton.wasPressedThisFrame ||
+                            Keyboard.current.spaceKey.wasPressedThisFrame;
+
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            var box = dialogueText.transform.parent.gameObject;
+            box.SetActive(!box.activeSelf);
+        }
+
+        if (!inputPressed) return;
+
+        // [수정] 커스텀 UI가 떠 있다면 최우선적으로 입력을 감지해 꺼트림
+        if (waitingForCustomInput)
+        {
+            waitingForCustomInput = false;
+        }
+        else if (_isTyping)
+        {
+            _skipTyping = true;
+        }
+        else if (waitingForInput)
+        {
             waitingForInput = false;
+        }
+    }
+
+    private IEnumerator TypeText(string text)
+    {
+        _isTyping = true;
+        _skipTyping = false;
+        dialogueText.text = "";
+
+        float delay = _typingSpeed > 0f ? 1f / _typingSpeed : 0f;
+
+        foreach (char c in text)
+        {
+            if (_skipTyping)
+            {
+                dialogueText.text = text;
+                break;
+            }
+
+            dialogueText.text += c;
+            yield return new WaitForSeconds(delay);
+        }
+
+        _isTyping = false;
     }
 
     private void OnCutSceneEnd()

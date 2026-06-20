@@ -301,17 +301,17 @@ MonoBehaviour:
   _autoCollectSceneObjects: 1
   _snapObjectsToGridOnStart: 1
   _player: {fileID: 1662931111}
-  _goal: {fileID: 0}
+  _goal: {fileID: 899956492}
   _walls:
-  - {fileID: 0}
+  - {fileID: 1851559212}
   _pushableObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1471071752}
+  - {fileID: 1130816776}
+  - {fileID: 1573590081}
   _playerSpriteRenderer: {fileID: 1662931112}
   _playerVisualOffset: {x: 0, y: 0.4, z: 0}
   _pushableVisualOffset: {x: 0, y: 0.4, z: 0}
-  _goalVisualOffset: {x: 0, y: 0, z: 0}
+  _goalVisualOffset: {x: 0, y: 0.1, z: 0}
   _playerSpriteFacesRightByDefault: 1
   _flipOnlyWhenMoveSucceeds: 0
   _useKeyboardInput: 1
@@ -593,6 +593,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b02fa037ac2a0443bbb9acabf6cfba9, type: 3}
+--- !u!114 &899956492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4720668522741270385, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+  m_PrefabInstance: {fileID: 1304064311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f154703cc3de54296d95e048a98edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame3Goal
+--- !u!114 &1130816776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6339908211924168894, guid: 3b02fa037ac2a0443bbb9acabf6cfba9, type: 3}
+  m_PrefabInstance: {fileID: 1216483713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ca67bd33173f342970b754b8f86540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame3PushableObject
 --- !u!1001 &1216483713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -654,6 +676,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b02fa037ac2a0443bbb9acabf6cfba9, type: 3}
+--- !u!1001 &1304064311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1452155143378391762, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.26915
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.98816
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727207998354650845, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a1f9dc7a1447c24aaf04e316e79a19a, type: 3}
+--- !u!114 &1471071752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6339908211924168894, guid: 3b02fa037ac2a0443bbb9acabf6cfba9, type: 3}
+  m_PrefabInstance: {fileID: 1471415594}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ca67bd33173f342970b754b8f86540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame3PushableObject
 --- !u!1001 &1471415594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -715,6 +805,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b02fa037ac2a0443bbb9acabf6cfba9, type: 3}
+--- !u!114 &1573590081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6339908211924168894, guid: 3b02fa037ac2a0443bbb9acabf6cfba9, type: 3}
+  m_PrefabInstance: {fileID: 696123744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ca67bd33173f342970b754b8f86540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame3PushableObject
 --- !u!1 &1662931110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1135,17 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &1851559212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1360695247374145229, guid: b470fa96b12deac4aae47286f950f5fd, type: 3}
+  m_PrefabInstance: {fileID: 248983032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9a4f03edd21b14db8a1a8e822c796c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniGame3Wall
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1047,3 +1159,4 @@ SceneRoots:
   - {fileID: 1216483713}
   - {fileID: 696123744}
   - {fileID: 248983032}
+  - {fileID: 1304064311}
