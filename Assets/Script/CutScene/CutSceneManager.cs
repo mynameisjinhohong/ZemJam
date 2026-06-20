@@ -852,7 +852,7 @@ public class CutSceneManager : MonoBehaviour
 
         Color c = blackScreenImage.color;
         float elapsed = 0f;
-
+        Debug.Log("FadeInFromBlackStart");
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
@@ -864,7 +864,7 @@ public class CutSceneManager : MonoBehaviour
         c.a = 0f;
         blackScreenImage.color = c;
         blackScreenImage.gameObject.SetActive(false);
-
+        Debug.Log("FadeInFromBlackEnd");
         onComplete?.Invoke();
     }
 
