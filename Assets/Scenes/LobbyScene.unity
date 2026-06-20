@@ -1173,6 +1173,8 @@ MonoBehaviour:
       fadeStyle: 1
       fadeInDuration: 0
       fadeOutDuration: 2.5
+      fadeOutSfxKey: 
+      fadeOutSfxVolume: 1
       customUIKey: 
       overrideUIPosSize: 0
       customUIPosition: {x: 0, y: 0}
@@ -1211,6 +1213,8 @@ MonoBehaviour:
       fadeStyle: 1
       fadeInDuration: 0
       fadeOutDuration: 2.5
+      fadeOutSfxKey: 
+      fadeOutSfxVolume: 1
       customUIKey: 
       overrideUIPosSize: 0
       customUIPosition: {x: 0, y: 0}
@@ -1245,6 +1249,8 @@ MonoBehaviour:
       fadeStyle: 1
       fadeInDuration: 0
       fadeOutDuration: 2.5
+      fadeOutSfxKey: SFX_Ribbon
+      fadeOutSfxVolume: 1
       customUIKey: 
       overrideUIPosSize: 0
       customUIPosition: {x: 0, y: 0}
@@ -1277,6 +1283,8 @@ MonoBehaviour:
       fadeStyle: 1
       fadeInDuration: 0
       fadeOutDuration: 2.5
+      fadeOutSfxKey: SFX_Bell
+      fadeOutSfxVolume: 1
       customUIKey: 
       overrideUIPosSize: 0
       customUIPosition: {x: 0, y: 0}
@@ -1311,6 +1319,8 @@ MonoBehaviour:
       fadeStyle: 1
       fadeInDuration: 0
       fadeOutDuration: 5
+      fadeOutSfxKey: SFX_Cat
+      fadeOutSfxVolume: 1
       customUIKey: 
       overrideUIPosSize: 0
       customUIPosition: {x: 0, y: 0}
