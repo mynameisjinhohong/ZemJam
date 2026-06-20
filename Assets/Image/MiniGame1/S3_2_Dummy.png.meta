@@ -1,0 +1,1651 @@
+fileFormatVersion: 2
+guid: 0ca73ea7f78ae894cac3b9275d76c987
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -856085111929152664
+    second: S3_2_Dummy_0
+  - first:
+      213: -3712491859955847819
+    second: S3_2_Dummy_1
+  - first:
+      213: -4125332406213172034
+    second: S3_2_Dummy_2
+  - first:
+      213: -8608037561666771259
+    second: S3_2_Dummy_3
+  - first:
+      213: 4859984126663054823
+    second: S3_2_Dummy_4
+  - first:
+      213: -8473363362090322936
+    second: S3_2_Dummy_5
+  - first:
+      213: -1411052548579267773
+    second: S3_2_Dummy_6
+  - first:
+      213: 5537972798601443966
+    second: S3_2_Dummy_7
+  - first:
+      213: -893013844516554879
+    second: S3_2_Dummy_8
+  - first:
+      213: 7964066180475514962
+    second: S3_2_Dummy_9
+  - first:
+      213: -6143790738566849578
+    second: S3_2_Dummy_10
+  - first:
+      213: -2189309319065752433
+    second: S3_2_Dummy_11
+  - first:
+      213: 3089911569655518496
+    second: S3_2_Dummy_12
+  - first:
+      213: 8719317031594296278
+    second: S3_2_Dummy_13
+  - first:
+      213: -469473139411095997
+    second: S3_2_Dummy_14
+  - first:
+      213: -5660871677599995810
+    second: S3_2_Dummy_15
+  - first:
+      213: 6517521428033906340
+    second: S3_2_Dummy_16
+  - first:
+      213: -1790900596415323308
+    second: S3_2_Dummy_17
+  - first:
+      213: -604424703295327566
+    second: S3_2_Dummy_18
+  - first:
+      213: 6689508557435976655
+    second: S3_2_Dummy_19
+  - first:
+      213: -6793472533056932439
+    second: S3_2_Dummy_20
+  - first:
+      213: 4403138540812942856
+    second: S3_2_Dummy_21
+  - first:
+      213: 858999875077439993
+    second: S3_2_Dummy_22
+  - first:
+      213: 2887673883924936786
+    second: S3_2_Dummy_23
+  - first:
+      213: -3794493505165674451
+    second: S3_2_Dummy_24
+  - first:
+      213: 3736796911870103935
+    second: S3_2_Dummy_25
+  - first:
+      213: -2818312737415512013
+    second: S3_2_Dummy_26
+  - first:
+      213: -7698695189264882535
+    second: S3_2_Dummy_27
+  - first:
+      213: 4143010337063388755
+    second: S3_2_Dummy_28
+  - first:
+      213: 7344260740370514858
+    second: S3_2_Dummy_29
+  - first:
+      213: 2030631062939202649
+    second: S3_2_Dummy_30
+  - first:
+      213: 4221173075870916078
+    second: S3_2_Dummy_31
+  - first:
+      213: 1278419093879607412
+    second: S3_2_Dummy_32
+  - first:
+      213: 3483288876885232059
+    second: S3_2_Dummy_33
+  - first:
+      213: 3265660671042077874
+    second: S3_2_Dummy_34
+  - first:
+      213: 7375680202122178886
+    second: S3_2_Dummy_35
+  - first:
+      213: 1570004372391899533
+    second: S3_2_Dummy_36
+  - first:
+      213: 9109338511301675515
+    second: S3_2_Dummy_37
+  - first:
+      213: -2053119484842857939
+    second: S3_2_Dummy_38
+  - first:
+      213: -3870485727626228699
+    second: S3_2_Dummy_39
+  - first:
+      213: 8376768430679815452
+    second: S3_2_Dummy_40
+  - first:
+      213: -1668475787717935263
+    second: S3_2_Dummy_41
+  - first:
+      213: -429788238376189014
+    second: S3_2_Dummy_42
+  - first:
+      213: 4336102188544092259
+    second: S3_2_Dummy_43
+  - first:
+      213: -7904922462561616760
+    second: S3_2_Dummy_44
+  - first:
+      213: -8091449357155588306
+    second: S3_2_Dummy_45
+  - first:
+      213: 2638661289030894658
+    second: S3_2_Dummy_46
+  - first:
+      213: 2124768109108917226
+    second: S3_2_Dummy_47
+  - first:
+      213: 6861848786040973298
+    second: S3_2_Dummy_48
+  - first:
+      213: -1152816088510055868
+    second: S3_2_Dummy_49
+  - first:
+      213: 8783064974811825439
+    second: S3_2_Dummy_50
+  - first:
+      213: -5136129639758190503
+    second: S3_2_Dummy_51
+  - first:
+      213: 9094053811829267719
+    second: S3_2_Dummy_52
+  - first:
+      213: -7429845644034884638
+    second: S3_2_Dummy_53
+  - first:
+      213: -3891778980191132562
+    second: S3_2_Dummy_54
+  - first:
+      213: -4659668311020852382
+    second: S3_2_Dummy_55
+  - first:
+      213: -8836350498383957408
+    second: S3_2_Dummy_56
+  - first:
+      213: -4702230788025835085
+    second: S3_2_Dummy_57
+  - first:
+      213: 6850254090535283313
+    second: S3_2_Dummy_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: S3_2_Dummy_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 829
+        width: 108
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b56fd50239e14f0800000000000000
+      internalID: -856085111929152664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 828
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d6dcfa2549a7cc0800000000000000
+      internalID: -3712491859955847819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 360
+        width: 561
+        height: 664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4a1439800efb6c0800000000000000
+      internalID: -4125332406213172034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 650
+        width: 219
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6e1abe17b1a8880800000000000000
+      internalID: -8608037561666771259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_4
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 229
+        width: 226
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5d9cb50d1227340800000000000000
+      internalID: 4859984126663054823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 416
+        width: 151
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804fbcd7ae0986a80800000000000000
+      internalID: -8473363362090322936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_6
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 617
+        width: 86
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34be582ee2fea6ce0800000000000000
+      internalID: -1411052548579267773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 585
+        width: 55
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a3a6c3be4dadc40800000000000000
+      internalID: 5537972798601443966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_8
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 568
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187b51ac3a06b93f0800000000000000
+      internalID: -893013844516554879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 533
+        width: 52
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250f1f6eefb068e60800000000000000
+      internalID: 7964066180475514962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_10
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 514
+        width: 69
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db536ddfdedcbaa0800000000000000
+      internalID: -6143790738566849578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 395
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c22a516c20e91e0800000000000000
+      internalID: -2189309319065752433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 438
+        width: 74
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025dfa8933291ea20800000000000000
+      internalID: 3089911569655518496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_13
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 352
+        width: 252
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d30130b4ac310970800000000000000
+      internalID: 8719317031594296278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_14
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 358
+        width: 123
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e60d5caa81c79f0800000000000000
+      internalID: -469473139411095997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_15
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 114
+        width: 91
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e582599a33b8071b0800000000000000
+      internalID: -5660871677599995810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_16
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 371
+        width: 89
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a625fd1533e27a50800000000000000
+      internalID: 6517521428033906340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_17
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 360
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45321aa65617527e0800000000000000
+      internalID: -1790900596415323308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_18
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 313
+        width: 121
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b27c9a4fe6ac97f0800000000000000
+      internalID: -604424703295327566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_19
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 303
+        width: 92
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb38e72798e5dc50800000000000000
+      internalID: 6689508557435976655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_20
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 312
+        width: 194
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5b4cb79bcb8b1a0800000000000000
+      internalID: -6793472533056932439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_21
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 262
+        width: 13
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ebcfd8c271b1d30800000000000000
+      internalID: 4403138540812942856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_22
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 290
+        width: 75
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f18810d5d7cbeb00800000000000000
+      internalID: 858999875077439993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_23
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 279
+        width: 65
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258b48e0914131820800000000000000
+      internalID: 2887673883924936786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_24
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 301
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28b21ad240475bc0800000000000000
+      internalID: -3794493505165674451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_25
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 304
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f715bc13ef4cbd330800000000000000
+      internalID: 3736796911870103935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_26
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 304
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330c3645f7753e8d0800000000000000
+      internalID: -2818312737415512013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_27
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 204
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994abd9c38db82590800000000000000
+      internalID: -7698695189264882535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_28
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 262
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3564f6173fdee7930800000000000000
+      internalID: 4143010337063388755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_29
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 219
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3c1a75b3e0ce560800000000000000
+      internalID: 7344260740370514858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_30
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 222
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9547d5861304e2c10800000000000000
+      internalID: 2030631062939202649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_31
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 112
+        width: 148
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed9aba3c8e949a30800000000000000
+      internalID: 4221173075870916078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_32
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 53
+        width: 52
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47055cc746bddb110800000000000000
+      internalID: 1278419093879607412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_33
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 221
+        width: 70
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb940dc37c0275030800000000000000
+      internalID: 3483288876885232059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_34
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 104
+        width: 28
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b44d6ef315f15d20800000000000000
+      internalID: 3265660671042077874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_35
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 105
+        width: 104
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641bf58d01eab5660800000000000000
+      internalID: 7375680202122178886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_36
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 220
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81ba3098a6c9c510800000000000000
+      internalID: 1570004372391899533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_37
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 155
+        width: 11
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf90ce8dc1fda6e70800000000000000
+      internalID: 9109338511301675515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_38
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 40
+        width: 152
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a2288d4bad183e0800000000000000
+      internalID: -2053119484842857939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 140
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c8e98ccb5494ac0800000000000000
+      internalID: -3870485727626228699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_40
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 134
+        width: 71
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1570647182404470800000000000000
+      internalID: 8376768430679815452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_41
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 139
+        width: 21
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f7bbc6c1268d8e0800000000000000
+      internalID: -1668475787717935263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_42
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 88
+        width: 117
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa342f2dfd5190af0800000000000000
+      internalID: -429788238376189014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_43
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 194
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368e6f187fdec2c30800000000000000
+      internalID: 4336102188544092259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c320207e21c4290800000000000000
+      internalID: -7904922462561616760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_45
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 152
+        width: 59
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27ada41ea565bf80800000000000000
+      internalID: -8091449357155588306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_46
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 157
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244c24f46786e9420800000000000000
+      internalID: 2638661289030894658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_47
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 37
+        width: 139
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3f3857651bc7d10800000000000000
+      internalID: 2124768109108917226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_48
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 149
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7ea628d1f2a3f50800000000000000
+      internalID: 6861848786040973298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_49
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 38
+        width: 136
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ab00910ef5000f0800000000000000
+      internalID: -1152816088510055868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_50
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 64
+        width: 125
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1585d65f07b3e970800000000000000
+      internalID: 8783064974811825439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_51
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 42
+        width: 93
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958abd51e4dc8b8b0800000000000000
+      internalID: -5136129639758190503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_52
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 53
+        width: 86
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70dde5e62c1943e70800000000000000
+      internalID: 9094053811829267719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_53
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 112
+        width: 14
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb315370c2e3e890800000000000000
+      internalID: -7429845644034884638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_54
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 238
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64206513af9df9c0800000000000000
+      internalID: -3891778980191132562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_55
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 24
+        width: 368
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b257eeb58855fb0800000000000000
+      internalID: -4659668311020852382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_56
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 72
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0627af8e90afe5580800000000000000
+      internalID: -8836350498383957408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_57
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 40
+        width: 57
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1a0d303025ebeb0800000000000000
+      internalID: -4702230788025835085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3_2_Dummy_58
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 50
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17aa5871dcdf01f50800000000000000
+      internalID: 6850254090535283313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      S3_2_Dummy_0: -856085111929152664
+      S3_2_Dummy_1: -3712491859955847819
+      S3_2_Dummy_10: -6143790738566849578
+      S3_2_Dummy_11: -2189309319065752433
+      S3_2_Dummy_12: 3089911569655518496
+      S3_2_Dummy_13: 8719317031594296278
+      S3_2_Dummy_14: -469473139411095997
+      S3_2_Dummy_15: -5660871677599995810
+      S3_2_Dummy_16: 6517521428033906340
+      S3_2_Dummy_17: -1790900596415323308
+      S3_2_Dummy_18: -604424703295327566
+      S3_2_Dummy_19: 6689508557435976655
+      S3_2_Dummy_2: -4125332406213172034
+      S3_2_Dummy_20: -6793472533056932439
+      S3_2_Dummy_21: 4403138540812942856
+      S3_2_Dummy_22: 858999875077439993
+      S3_2_Dummy_23: 2887673883924936786
+      S3_2_Dummy_24: -3794493505165674451
+      S3_2_Dummy_25: 3736796911870103935
+      S3_2_Dummy_26: -2818312737415512013
+      S3_2_Dummy_27: -7698695189264882535
+      S3_2_Dummy_28: 4143010337063388755
+      S3_2_Dummy_29: 7344260740370514858
+      S3_2_Dummy_3: -8608037561666771259
+      S3_2_Dummy_30: 2030631062939202649
+      S3_2_Dummy_31: 4221173075870916078
+      S3_2_Dummy_32: 1278419093879607412
+      S3_2_Dummy_33: 3483288876885232059
+      S3_2_Dummy_34: 3265660671042077874
+      S3_2_Dummy_35: 7375680202122178886
+      S3_2_Dummy_36: 1570004372391899533
+      S3_2_Dummy_37: 9109338511301675515
+      S3_2_Dummy_38: -2053119484842857939
+      S3_2_Dummy_39: -3870485727626228699
+      S3_2_Dummy_4: 4859984126663054823
+      S3_2_Dummy_40: 8376768430679815452
+      S3_2_Dummy_41: -1668475787717935263
+      S3_2_Dummy_42: -429788238376189014
+      S3_2_Dummy_43: 4336102188544092259
+      S3_2_Dummy_44: -7904922462561616760
+      S3_2_Dummy_45: -8091449357155588306
+      S3_2_Dummy_46: 2638661289030894658
+      S3_2_Dummy_47: 2124768109108917226
+      S3_2_Dummy_48: 6861848786040973298
+      S3_2_Dummy_49: -1152816088510055868
+      S3_2_Dummy_5: -8473363362090322936
+      S3_2_Dummy_50: 8783064974811825439
+      S3_2_Dummy_51: -5136129639758190503
+      S3_2_Dummy_52: 9094053811829267719
+      S3_2_Dummy_53: -7429845644034884638
+      S3_2_Dummy_54: -3891778980191132562
+      S3_2_Dummy_55: -4659668311020852382
+      S3_2_Dummy_56: -8836350498383957408
+      S3_2_Dummy_57: -4702230788025835085
+      S3_2_Dummy_58: 6850254090535283313
+      S3_2_Dummy_6: -1411052548579267773
+      S3_2_Dummy_7: 5537972798601443966
+      S3_2_Dummy_8: -893013844516554879
+      S3_2_Dummy_9: 7964066180475514962
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
