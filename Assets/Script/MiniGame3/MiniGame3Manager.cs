@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public sealed class MiniGame3Manager : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public sealed class MiniGame3Manager : MonoBehaviour
     [SerializeField, Min(1)] private int _width = 8;
     [SerializeField, Min(1)] private int _height = 8;
     [SerializeField, Min(0.01f)] private float _cellSize = 1f;
+
     [Tooltip("타일 세로 비율 (0.5 = 일반 쿼터뷰, 1.0 = 정사각 다이아몬드)")]
     [SerializeField, Range(0.1f, 1f)] private float _cellHeightRatio = 0.5f;
+
     [SerializeField] private Transform _origin;
 
     [Header("Ground")]
@@ -32,10 +35,10 @@ public sealed class MiniGame3Manager : MonoBehaviour
     [SerializeField] private Vector3 _pushableVisualOffset = Vector3.zero;
     [SerializeField] private Vector3 _goalVisualOffset = Vector3.zero;
 
-    [Tooltip("���� �÷��̾� ��������Ʈ�� �������� ���� ������ true, ������ ���� ������ false")]
+    [Tooltip("원본 플레이어 스프라이트가 오른쪽을 보고 있으면 true, 왼쪽을 보고 있으면 false")]
     [SerializeField] private bool _playerSpriteFacesRightByDefault = true;
 
-    [Tooltip("true�� ���� �̵� ���� �ÿ��� ���� ��ȯ, false�� ���� ������ �Է� �������� �ٶ�")]
+    [Tooltip("true면 실제 이동 성공 시에만 방향 전환, false면 벽에 막혀도 입력 방향으로 바라봄")]
     [SerializeField] private bool _flipOnlyWhenMoveSucceeds = false;
 
     [Header("Movement")]
@@ -55,7 +58,7 @@ public sealed class MiniGame3Manager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent _onClear;
 
-    private readonly List<GameObject> _spawnedGroundTiles = new();
+    private readonly List<GameObject> _spawnedGroundTiles = new List<GameObject>();
 
     private readonly HashSet<Vector2Int> _wallPositions = new HashSet<Vector2Int>();
 
@@ -151,6 +154,7 @@ public sealed class MiniGame3Manager : MonoBehaviour
         }
 
         SpawnGroundTiles();
+        ApplyWallSortingOrders();
 
         _isInitialized = true;
 
@@ -336,6 +340,7 @@ public sealed class MiniGame3Manager : MonoBehaviour
                 continue;
 
             wall.SetWorldPosition(GridToWorld(wall.GridPosition));
+            ApplyGroundSortingOrderToObject(wall.gameObject, wall.GridPosition);
         }
 
         foreach (MiniGame3PushableObject pushable in _pushableObjects)
@@ -345,6 +350,17 @@ public sealed class MiniGame3Manager : MonoBehaviour
 
             pushable.SetWorldPosition(PushableGridToWorld(pushable.GridPosition));
         }
+    }
+
+    [ContextMenu("Apply Wall Sorting Orders")]
+    private void ApplyWallSortingOrdersByContextMenu()
+    {
+        if (_autoCollectSceneObjects)
+        {
+            CollectSceneObjects();
+        }
+
+        ApplyWallSortingOrders();
     }
 
     private void InitializePlayerVisual()
@@ -644,33 +660,79 @@ public sealed class MiniGame3Manager : MonoBehaviour
 
     private void ClearGroundTiles()
     {
-        foreach (var tile in _spawnedGroundTiles)
-            if (tile != null) Destroy(tile);
+        foreach (GameObject tile in _spawnedGroundTiles)
+        {
+            if (tile != null)
+            {
+                Destroy(tile);
+            }
+        }
 
         _spawnedGroundTiles.Clear();
     }
 
     private void SpawnGroundTiles()
     {
-        if (_groundPrefab == null) return;
+        if (_groundPrefab == null)
+            return;
 
         for (int y = 0; y < _height; y++)
         {
             for (int x = 0; x < _width; x++)
             {
-                var gridPos = new Vector2Int(x, y);
-                if (_wallPositions.Contains(gridPos)) continue;
+                Vector2Int gridPos = new Vector2Int(x, y);
 
-                Vector3 pos = GridToWorld(gridPos) + _groundOffset;
+                if (_wallPositions.Contains(gridPos))
+                    continue;
+
+                Vector3 pos = GroundGridToWorld(gridPos);
                 GameObject tile = Instantiate(_groundPrefab, pos, Quaternion.identity, transform);
 
-                var sr = tile.GetComponentInChildren<SpriteRenderer>(true);
-                if (sr != null)
-                    sr.sortingOrder = Mathf.RoundToInt(-pos.y * 100f) - 10000;
+                ApplyGroundSortingOrderToObject(tile, gridPos);
 
                 _spawnedGroundTiles.Add(tile);
             }
         }
+    }
+
+    private void ApplyWallSortingOrders()
+    {
+        foreach (MiniGame3Wall wall in _walls)
+        {
+            if (wall == null)
+                continue;
+
+            ApplyGroundSortingOrderToObject(wall.gameObject, wall.GridPosition);
+        }
+    }
+
+    private void ApplyGroundSortingOrderToObject(GameObject target, Vector2Int gridPosition)
+    {
+        if (target == null)
+            return;
+
+        int sortingOrder = GetGroundSortingOrder(gridPosition);
+
+        SpriteRenderer[] renderers = target.GetComponentsInChildren<SpriteRenderer>(true);
+
+        foreach (SpriteRenderer renderer in renderers)
+        {
+            if (renderer == null)
+                continue;
+
+            renderer.sortingOrder = sortingOrder;
+        }
+    }
+
+    private int GetGroundSortingOrder(Vector2Int gridPosition)
+    {
+        Vector3 groundWorldPosition = GroundGridToWorld(gridPosition);
+        return Mathf.RoundToInt(-groundWorldPosition.y * 100f) - 10000;
+    }
+
+    private Vector3 GroundGridToWorld(Vector2Int gridPosition)
+    {
+        return GridToWorld(gridPosition) + _groundOffset;
     }
 
     private void SnapAllObjectsToGrid()
@@ -684,6 +746,7 @@ public sealed class MiniGame3Manager : MonoBehaviour
                 continue;
 
             wall.SetWorldPosition(GridToWorld(wall.GridPosition));
+            ApplyGroundSortingOrderToObject(wall.gameObject, wall.GridPosition);
         }
 
         foreach (MiniGame3PushableObject pushable in _pushableObjects)
@@ -697,6 +760,24 @@ public sealed class MiniGame3Manager : MonoBehaviour
 
     private void ApplyImmediateVisualPosition(MiniGame3GridObject gridObject, Vector2Int position)
     {
+        if (gridObject == _player)
+        {
+            gridObject.SetWorldPosition(PlayerGridToWorld(position));
+            return;
+        }
+
+        if (gridObject is MiniGame3PushableObject)
+        {
+            gridObject.SetWorldPosition(PushableGridToWorld(position));
+            return;
+        }
+
+        if (gridObject == _goal)
+        {
+            gridObject.SetWorldPosition(GoalGridToWorld(position));
+            return;
+        }
+
         gridObject.SetWorldPosition(GridToWorld(position));
     }
 
@@ -861,9 +942,9 @@ public sealed class MiniGame3Manager : MonoBehaviour
         float y = gridPosition.y;
         float half = size * 0.5f;
 
-        Vector3 right  = IsoToWorld(x + half, y);
-        Vector3 top    = IsoToWorld(x, y + half);
-        Vector3 left   = IsoToWorld(x - half, y);
+        Vector3 right = IsoToWorld(x + half, y);
+        Vector3 top = IsoToWorld(x, y + half);
+        Vector3 left = IsoToWorld(x - half, y);
         Vector3 bottom = IsoToWorld(x, y - half);
 
         Gizmos.color = color;
@@ -888,5 +969,10 @@ public sealed class MiniGame3Manager : MonoBehaviour
 #else
         return UnityEngine.Object.FindObjectsOfType<T>(true);
 #endif
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
