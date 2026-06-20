@@ -21,6 +21,8 @@ public class SoundManager : MonoBehaviour
     private Dictionary<string, AudioClip> _bgmDic = new Dictionary<string, AudioClip>();
     private Dictionary<string, AudioClip> _sfxDic = new Dictionary<string, AudioClip>();
 
+    private string _currentBGM;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -47,8 +49,10 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBGM(string clipName, float volume = 1f)
     {
-        if (_bgmDic.TryGetValue(clipName, out AudioClip clip))
+        if (_bgmDic.TryGetValue(clipName, out AudioClip clip) && clipName != _currentBGM)
         {
+            Debug.Log("Play" + clipName);
+            _currentBGM= clipName;
             _bgmSource.clip = clip;
             _bgmSource.volume = volume; // 이건 AudioSource 자체의 기본 볼륨입니다.
             _bgmSource.loop = true;

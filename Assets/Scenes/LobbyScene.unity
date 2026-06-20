@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecc0904642a1c647bbbd41ea2d6bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  _bgmKey: CutSceneBGM
   _isFirstGameSceneEnter: 1
   _currentInteractableIndex: 0
 --- !u!4 &212441877
@@ -1156,6 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bf6ec33ee2dac4387149922e4f8d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutSceneManager
+  _cutSceneBGMKey: CutSceneBGM
   cutSceneImage: {fileID: 1996026358}
   blackScreenImage: {fileID: 1984073168}
   dialogueText: {fileID: 1379014993}
@@ -2809,8 +2811,14 @@ MonoBehaviour:
   _audioMixer: {fileID: 24100000, guid: 59e67f72f4a866747a0be9a46cb850fd, type: 2}
   _bgmSource: {fileID: 1253663870}
   _sfxSource: {fileID: 115866694}
-  bgmClips: []
-  sfxClips: []
+  bgmClips:
+  - {fileID: 8300000, guid: 5d885f64236e2624cbe865dd04fb2ddf, type: 3}
+  - {fileID: 8300000, guid: a5f4ae588a829d743b451bd6d82660e9, type: 3}
+  - {fileID: 8300000, guid: 607464c0f88dee2418a77c2a4164371f, type: 3}
+  sfxClips:
+  - {fileID: 8300000, guid: 739660fb8d3fec4468ad0284c15e53f6, type: 3}
+  - {fileID: 8300000, guid: bae5a4b986403e94bb161c1a32049d5e, type: 3}
+  - {fileID: 8300000, guid: 3353ecef3a6a80843a611e985f774bc4, type: 3}
 --- !u!4 &1868180443
 Transform:
   m_ObjectHideFlags: 0

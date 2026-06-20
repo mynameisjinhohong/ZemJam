@@ -354,6 +354,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354490472}
   m_CullTransparentMesh: 1
+--- !u!1 &385387797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385387799}
+  - component: {fileID: 385387798}
+  m_Layer: 0
+  m_Name: BGMPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &385387798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385387797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543229ccd13dddc47981d6c4c5865513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleSoundPlayer
+  _bgmKey: GameBGM
+  _soundKey: 
+  _playOnStart: 1
+--- !u!4 &385387799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385387797}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 906.56555, y: 592.3095, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410828759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1488,7 @@ MonoBehaviour:
   - GridPos: {x: 13, y: 26}
     Height: 100
   - GridPos: {x: 11, y: 27}
-    Height: 1
+    Height: 2
   - GridPos: {x: 11, y: 15}
     Height: 1
   - GridPos: {x: 11, y: 17}
@@ -1493,51 +1540,51 @@ MonoBehaviour:
   - GridPos: {x: 16, y: 22}
     Height: 2
   - GridPos: {x: 17, y: 22}
-    Height: 100
+    Height: 2
   - GridPos: {x: 17, y: 21}
-    Height: 100
+    Height: 1
   - GridPos: {x: 16, y: 21}
-    Height: 100
+    Height: 1
   - GridPos: {x: 22, y: 22}
     Height: 1
   - GridPos: {x: 22, y: 24}
-    Height: 2
+    Height: 3
   - GridPos: {x: 22, y: 23}
-    Height: 1
+    Height: 2
   - GridPos: {x: 21, y: 24}
-    Height: 2
+    Height: 3
   - GridPos: {x: 20, y: 24}
-    Height: 2
+    Height: 3
   - GridPos: {x: 19, y: 24}
-    Height: 2
+    Height: 3
   - GridPos: {x: 18, y: 24}
-    Height: 2
+    Height: 3
   - GridPos: {x: 17, y: 24}
-    Height: 2
+    Height: 3
   - GridPos: {x: 17, y: 25}
-    Height: 2
+    Height: 3
   - GridPos: {x: 17, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 18, y: 25}
-    Height: 2
+    Height: 3
   - GridPos: {x: 18, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 19, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 20, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 20, y: 25}
-    Height: 2
+    Height: 3
   - GridPos: {x: 21, y: 25}
-    Height: 2
+    Height: 3
   - GridPos: {x: 22, y: 25}
-    Height: 2
+    Height: 3
   - GridPos: {x: 22, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 21, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 19, y: 25}
-    Height: 2
+    Height: 3
   - GridPos: {x: 17, y: 31}
     Height: 100
   - GridPos: {x: 17, y: 30}
@@ -1653,39 +1700,39 @@ MonoBehaviour:
   - GridPos: {x: 16, y: 23}
     Height: 100
   - GridPos: {x: 17, y: 23}
-    Height: 100
+    Height: 2
   - GridPos: {x: 18, y: 23}
-    Height: 100
+    Height: 2
   - GridPos: {x: 19, y: 23}
-    Height: 100
+    Height: 2
   - GridPos: {x: 20, y: 23}
-    Height: 100
+    Height: 2
   - GridPos: {x: 21, y: 23}
-    Height: 100
+    Height: 2
   - GridPos: {x: 25, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 27}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 24}
     Height: 100
   - GridPos: {x: 25, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 25, y: 26}
-    Height: 100
+    Height: 4
   - GridPos: {x: 25, y: 31}
     Height: 100
   - GridPos: {x: 26, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 27, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 31}
     Height: 100
   - GridPos: {x: 27, y: 31}
@@ -1693,27 +1740,27 @@ MonoBehaviour:
   - GridPos: {x: 26, y: 31}
     Height: 100
   - GridPos: {x: 26, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 27, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 27, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 26, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 28, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 31}
     Height: 100
   - GridPos: {x: 30, y: 31}
     Height: 100
   - GridPos: {x: 30, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 31, y: 30}
-    Height: 100
+    Height: 4
   - GridPos: {x: 31, y: 31}
     Height: 100
   - GridPos: {x: 32, y: 31}
@@ -1729,15 +1776,15 @@ MonoBehaviour:
   - GridPos: {x: 31, y: 27}
     Height: 100
   - GridPos: {x: 31, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 31, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 30, y: 29}
-    Height: 100
+    Height: 4
   - GridPos: {x: 30, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 29, y: 28}
-    Height: 100
+    Height: 4
   - GridPos: {x: 30, y: 27}
     Height: 100
   - GridPos: {x: 29, y: 27}
@@ -1887,31 +1934,31 @@ MonoBehaviour:
   - GridPos: {x: 15, y: 7}
     Height: 100
   - GridPos: {x: 10, y: 30}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 29}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 28}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 27}
-    Height: 2
+    Height: 3
   - GridPos: {x: 10, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 30}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 29}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 27}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 28}
-    Height: 2
+    Height: 3
   - GridPos: {x: 9, y: 26}
-    Height: 2
+    Height: 3
   - GridPos: {x: 8, y: 31}
     Height: 100
   - GridPos: {x: 9, y: 31}
-    Height: 100
+    Height: 4
   - GridPos: {x: 10, y: 31}
-    Height: 100
+    Height: 4
   - GridPos: {x: 8, y: 30}
     Height: 100
   - GridPos: {x: 8, y: 29}
@@ -2055,17 +2102,17 @@ MonoBehaviour:
   - GridPos: {x: 26, y: 24}
     Height: 100
   - GridPos: {x: 26, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 27, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 28, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 29, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 30, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 31, y: 25}
-    Height: 100
+    Height: 3
   - GridPos: {x: 30, y: 23}
     Height: 1
   - GridPos: {x: 31, y: 23}
@@ -2281,9 +2328,9 @@ MonoBehaviour:
   - GridPos: {x: 11, y: 32}
     Height: 100
   - GridPos: {x: 10, y: 32}
-    Height: 100
+    Height: 4
   - GridPos: {x: 9, y: 32}
-    Height: 100
+    Height: 4
   - GridPos: {x: 8, y: 32}
     Height: 100
   - GridPos: {x: 7, y: 32}
@@ -2719,7 +2766,7 @@ MonoBehaviour:
   - GridPos: {x: 40, y: 13}
     Height: 100
   - GridPos: {x: 12, y: 28}
-    Height: 1
+    Height: 2
   - GridPos: {x: 10, y: 23}
     Height: 1
   - GridPos: {x: 11, y: 24}
@@ -2730,6 +2777,18 @@ MonoBehaviour:
     Height: 2
   - GridPos: {x: 11, y: 25}
     Height: 2
+  - GridPos: {x: 29, y: 24}
+    Height: 100
+  - GridPos: {x: 11, y: 28}
+    Height: 2
+  - GridPos: {x: 11, y: 26}
+    Height: 100
+  - GridPos: {x: 13, y: 28}
+    Height: 1
+  - GridPos: {x: 12, y: 29}
+    Height: 100
+  - GridPos: {x: 12, y: 30}
+    Height: 100
   _interactables:
   - {fileID: 427221284}
   - {fileID: 726993431}
@@ -3036,7 +3095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06aa024aab85474469f6fcfe37fc23a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
-  _gridPos: {x: 38, y: 33}
+  _gridPos: {x: 27, y: 24}
   _interactableId: 2
   _interactableIndex: 1
   _triggerOnEnter: 0
@@ -3887,7 +3946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06aa024aab85474469f6fcfe37fc23a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridInteractable
-  _gridPos: {x: 9, y: 28}
+  _gridPos: {x: 9, y: 32}
   _interactableId: 4
   _interactableIndex: 3
   _triggerOnEnter: 0
@@ -4067,12 +4126,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7bfb8099c2b1b364687b62fdd80dbb4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7995ad822f939214b922654c722e43fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 17.9, y: 13.42}
+  m_Size: {x: 35.809982, y: 26.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4115,8 +4174,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 17.9, y: 13.42}
-    newSize: {x: 17.9, y: 13.42}
+    oldSize: {x: 17.904991, y: 13.42}
+    newSize: {x: 35.809982, y: 26.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4138,3 +4197,4 @@ SceneRoots:
   - {fileID: 765823880}
   - {fileID: 914840933}
   - {fileID: 231810335}
+  - {fileID: 385387799}

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    [SerializeField] private string _bgmKey;
     [Header("Game Scene State")]
     [SerializeField] private bool _isFirstGameSceneEnter = true;
 
@@ -123,12 +124,13 @@ public class GameManager : MonoBehaviour
             Debug.LogError("MiniGame scene name is null or empty.");
             return;
         }
-
+        SoundManager.Instance.PlayBGM(_bgmKey);
         SceneManager.LoadScene(sceneName);
     }
 
     public void ReturnToGameScene()
     {
+        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene(GameSceneName);
     }
 

@@ -99,10 +99,18 @@ public class GridPlayerController : MonoBehaviour
     {
         Vector2Int dir = GetPressedDirection();
 
-        // ����Ű�� ������ �ִ� ���¿��� ����Ű�� ���� ������ ���� �õ�
+        // 방향키 없이 점프키만 눌렀을 때:
+        // 현재 주변의 점프 가능한 칸을 찾아 자동으로 점프한다.
         if (dir == Vector2Int.zero && Input.GetKeyDown(_jumpKey))
         {
-            dir = GetHeldDirection();
+            Vector2Int jumpDir = GetPreferredJumpDirection();
+
+            if (jumpDir != Vector2Int.zero)
+            {
+                TryMove(jumpDir, true);
+            }
+
+            return;
         }
 
         if (dir == Vector2Int.zero)
@@ -111,6 +119,33 @@ public class GridPlayerController : MonoBehaviour
         bool allowJump = Input.GetKey(_jumpKey);
 
         TryMove(dir, allowJump);
+    }
+
+    private Vector2Int GetPreferredJumpDirection()
+    {
+        // 1순위: 현재 바라보는 방향
+        if (_facingDir != Vector2Int.zero)
+        {
+            Vector2Int facingTargetPos = _gridPos + _facingDir;
+
+            if (IsJumpableCell(facingTargetPos))
+                return _facingDir;
+        }
+
+        // 2순위: 나머지 인접 방향 아무거나
+        // 단, 바라보는 방향은 이미 검사했으므로 제외
+        foreach (Vector2Int dir in AdjacentDirs)
+        {
+            if (dir == _facingDir)
+                continue;
+
+            Vector2Int targetPos = _gridPos + dir;
+
+            if (IsJumpableCell(targetPos))
+                return dir;
+        }
+
+        return Vector2Int.zero;
     }
 
     private void HandleInteractInput()
