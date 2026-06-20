@@ -7,6 +7,7 @@ public class GridInteractable : MonoBehaviour
 
     [Header("Identity")]
     [SerializeField] private string _interactableId;
+    [SerializeField] private int _interactableIndex;
 
     [Header("Interaction")]
     [SerializeField] private bool _triggerOnEnter = false;
@@ -18,27 +19,48 @@ public class GridInteractable : MonoBehaviour
     [SerializeField] private string _targetSceneName;
     [SerializeField] private bool _disappearAfterInteract = true;
 
+    [Header("Progress")]
+    [SerializeField] private bool _useIndexActivation = true;
+    [SerializeField] private bool _advanceIndexOnInteract = true;
+
     private GridBoard _board;
 
     public Vector2Int GridPos => _gridPos;
     public bool TriggerOnEnter => _triggerOnEnter;
     public bool BlocksMovement => _blocksMovement;
     public string InteractableId => _interactableId;
+    public int InteractableIndex => _interactableIndex;
 
     private void Awake()
     {
-        if (GameManager.Instance != null &&
-            _disappearAfterInteract &&
-            GameManager.Instance.IsInteractableCleared(_interactableId))
-        {
-            gameObject.SetActive(false);
-        }
+        RefreshActiveState();
     }
 
     public void Init(GridBoard board)
     {
         _board = board;
         transform.position = _board.GridToWorld(_gridPos);
+    }
+
+    public void RefreshActiveState()
+    {
+        if (GameManager.Instance == null)
+            return;
+
+        if (_disappearAfterInteract &&
+            GameManager.Instance.IsInteractableCleared(_interactableId))
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
+        if (_useIndexActivation)
+        {
+            bool shouldBeActive =
+                _interactableIndex == GameManager.Instance.CurrentInteractableIndex;
+
+            gameObject.SetActive(shouldBeActive);
+        }
     }
 
     public void Interact(GridPlayerController player)
@@ -49,11 +71,19 @@ public class GridInteractable : MonoBehaviour
             return;
         }
 
+        if (!gameObject.activeInHierarchy)
+            return;
+
         _onInteracted?.Invoke();
 
         if (_disappearAfterInteract && GameManager.Instance != null)
         {
             GameManager.Instance.MarkInteractableCleared(_interactableId);
+        }
+
+        if (_advanceIndexOnInteract && GameManager.Instance != null)
+        {
+            GameManager.Instance.AdvanceInteractableIndex();
         }
 
         if (_loadSceneOnInteract)

@@ -43,11 +43,12 @@ public class GridBoard : MonoBehaviour
 
             _heightMap[heightData.GridPos] = heightData.Height;
         }
-
         foreach (GridInteractable interactable in _interactables)
         {
             if (interactable == null)
                 continue;
+
+            interactable.RefreshActiveState();
 
             if (!interactable.gameObject.activeInHierarchy)
                 continue;
