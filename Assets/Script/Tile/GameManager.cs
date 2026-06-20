@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [Header("Game Scene State")]
     [SerializeField] private bool _isFirstGameSceneEnter = true;
 
+    [Header("Interactable Progress")]
+    [SerializeField] private int _currentInteractableIndex = 0;
+
     private Vector2Int _lastPlayerGridPos;
     private bool _hasLastPlayerGridPos;
 
@@ -24,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private bool _canPlayerMove = true;
     public bool CanPlayerMove => _canPlayerMove;
+
+    public int CurrentInteractableIndex => _currentInteractableIndex;
 
     private void Awake()
     {
@@ -98,6 +103,22 @@ public class GameManager : MonoBehaviour
             return false;
 
         return _clearedInteractableIds.Contains(interactableId);
+    }
+
+    public void AdvanceInteractableIndex()
+    {
+        _currentInteractableIndex++;
+    }
+
+    public void SetInteractableIndex(int index)
+    {
+        if (index < 0)
+        {
+            Debug.LogWarning($"Invalid interactable index: {index}");
+            return;
+        }
+
+        _currentInteractableIndex = index;
     }
 
     public void LoadMiniGameScene(string sceneName)
