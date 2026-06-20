@@ -126,6 +126,12 @@ public class MiniGame4DotConnectManager : MonoBehaviour
         InitializeRibbon();
     }
 
+    private void Start()
+    {
+        if(CutSceneManager.Instance != null) 
+            CutSceneManager.Instance.ShowUIOnly("Guide3");
+    }
+
     private void Update()
     {
         if (_isCleared || _isPlayingClearSequence)
@@ -508,7 +514,7 @@ public class MiniGame4DotConnectManager : MonoBehaviour
 
     public void OnClear()
     {
-        CutSceneManager.Instance.Play("MiniGame4_End");
+        CutSceneManager.Instance.Play("MiniGame3_End");
     }
 
 #if UNITY_EDITOR

@@ -48,8 +48,12 @@ public class MiniGame2Controller : MonoBehaviour
             _clockPuzzle.SetAnswer(_answerHour);
             _clockPuzzle.SetInteractable(false);
         }
+    }
+
+    private void Start()
+    {
         if(CutSceneManager.Instance != null) 
-            CutSceneManager.Instance.ShowUIOnly("Guide2");
+            CutSceneManager.Instance.ShowUIOnly("Guide4");
     }
 
     private void OnEnable()
@@ -201,7 +205,7 @@ public class MiniGame2Controller : MonoBehaviour
 
     public void OnClear()
     {
-        CutSceneManager.Instance.Play("MiniGame2_End");
+        GameManager.Instance.GoToEndScene();
     }
 
 #if UNITY_EDITOR
