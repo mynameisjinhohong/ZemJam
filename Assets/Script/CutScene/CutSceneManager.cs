@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using TMPro;
 
 public class CutSceneManager : MonoBehaviour
@@ -62,6 +63,7 @@ public class CutSceneManager : MonoBehaviour
     {
         public string key;
         public CutSceneFrame[] frames;
+        public UnityEvent onEndEvent;
     }
 
     [Header("UI")]
@@ -79,12 +81,15 @@ public class CutSceneManager : MonoBehaviour
     [SerializeField] private float fadeDuration = 0.5f;
 
     private Dictionary<string, CutSceneFrame[]> cutSceneMap;
+    private Dictionary<string, UnityEvent> cutSceneEvents;
     private CutSceneFrame[] currentFrames;
     private int frameIndex = 0;
     private int dialogueIndex = 0;
     private bool isPlaying = false;
     private bool waitingForInput = false;
     private bool waitingForChoice = false;
+    private string _currentKey;
+
 
     private void Awake()
     {
@@ -93,10 +98,14 @@ public class CutSceneManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         cutSceneMap = new Dictionary<string, CutSceneFrame[]>();
+        cutSceneEvents= new Dictionary<string, UnityEvent>();
         foreach (var entry in cutSceneEntries)
         {
             if (!string.IsNullOrEmpty(entry.key))
+            {
                 cutSceneMap[entry.key] = entry.frames;
+                cutSceneEvents[entry.key] = entry.onEndEvent;
+            }
         }
 
         cutSceneImage.gameObject.SetActive(false);
@@ -112,6 +121,7 @@ public class CutSceneManager : MonoBehaviour
 
         if (isPlaying) StopAllCoroutines();
 
+        _currentKey= key;
         currentFrames = frames;
         frameIndex = 0;
         isPlaying = true;
@@ -276,5 +286,8 @@ public class CutSceneManager : MonoBehaviour
             waitingForInput = false;
     }
 
-    private void OnCutSceneEnd() => Debug.Log("CutScene 종료");
+    private void OnCutSceneEnd()
+    {
+        cutSceneEvents[_currentKey].Invoke();
+    }
 }
