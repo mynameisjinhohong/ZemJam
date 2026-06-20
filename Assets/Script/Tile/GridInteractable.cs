@@ -24,6 +24,9 @@ public class GridInteractable : MonoBehaviour
     [SerializeField] private bool _markClearedOnInteract = true;
     [SerializeField] private bool _advanceIndexOnInteract = true;
 
+    [Header("Runtime State")]
+    [SerializeField] private bool _hasInteracted = false;
+
     private GridBoard _board;
 
     public Vector2Int GridPos => _gridPos;
@@ -31,6 +34,7 @@ public class GridInteractable : MonoBehaviour
     public bool BlocksMovement => _blocksMovement;
     public string InteractableId => _interactableId;
     public int InteractableIndex => _interactableIndex;
+    public bool HasInteracted => _hasInteracted;
 
     public void RefreshActiveState()
     {
@@ -43,6 +47,7 @@ public class GridInteractable : MonoBehaviour
         if (_disappearAfterInteract &&
             GameManager.Instance.IsInteractableCleared(_interactableId))
         {
+            _hasInteracted = true;
             gameObject.SetActive(false);
             return;
         }
@@ -76,6 +81,11 @@ public class GridInteractable : MonoBehaviour
         if (!gameObject.activeInHierarchy)
             return;
 
+        if (_hasInteracted)
+            return;
+
+        _hasInteracted = true;
+
         _onInteracted?.Invoke();
 
         if (GameManager.Instance == null)
@@ -98,10 +108,11 @@ public class GridInteractable : MonoBehaviour
         {
             GameManager.Instance.SavePlayerReturnState(player.GridPos);
 
-            CutSceneManager.Instance.FadeOutToBlackScreen(2f, () => 
+            CutSceneManager.Instance.FadeOutToBlackScreen(2f, () =>
             {
                 GameManager.Instance.LoadMiniGameScene(_targetSceneName);
             });
+
             return;
         }
 
@@ -109,5 +120,10 @@ public class GridInteractable : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void ResetInteractedState()
+    {
+        _hasInteracted = false;
     }
 }
