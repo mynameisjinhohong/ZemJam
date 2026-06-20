@@ -110,6 +110,8 @@ public class MiniGame1Manager : MonoBehaviour
 
     private IEnumerator PlayCompletionSequence()
     {
+        foreach (var p in _pieces) p.Interactable = false;
+
         yield return SnapPiecesToCorrectPositions();
 
         ShowResultImagesBehindPieces();

@@ -633,9 +633,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1382231103}
-        m_TargetAssemblyTypeName: EndController, Assembly-CSharp
-        m_MethodName: OnSuccess
+      - m_Target: {fileID: 1407669446}
+        m_TargetAssemblyTypeName: SimpleCutSceneStarter, Assembly-CSharp
+        m_MethodName: StartCutScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f02f6775b6ee2241957422da8f68e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleCutSceneStarter
-  _cutSceneKey: SuccessCutScene
+  _cutSceneKey: Real_Ending
 --- !u!1 &1892139838
 GameObject:
   m_ObjectHideFlags: 0
