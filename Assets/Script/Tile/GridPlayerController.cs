@@ -438,6 +438,18 @@ public class GridPlayerController : MonoBehaviour
         if (_interactionIconObject == null)
             return;
 
+        KeyboardKeyIcon keyIcon = _interactionIconObject.GetComponent<KeyboardKeyIcon>();
+
+        if (keyIcon != null)
+        {
+            if (visible)
+                keyIcon.Show();
+            else
+                keyIcon.Hide();
+
+            return;
+        }
+
         if (_interactionIconObject.activeSelf == visible)
             return;
 
@@ -448,6 +460,18 @@ public class GridPlayerController : MonoBehaviour
     {
         if (_jumpIconObject == null)
             return;
+
+        KeyboardKeyIcon keyIcon = _jumpIconObject.GetComponent<KeyboardKeyIcon>();
+
+        if (keyIcon != null)
+        {
+            if (visible)
+                keyIcon.Show();
+            else
+                keyIcon.Hide();
+
+            return;
+        }
 
         if (_jumpIconObject.activeSelf == visible)
             return;

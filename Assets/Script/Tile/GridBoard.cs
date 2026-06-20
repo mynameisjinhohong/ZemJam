@@ -23,7 +23,12 @@ public class GridBoard : MonoBehaviour
     public Vector2Int BoardSize => _boardSize;
     public float CellSize => _cellSize;
 
-    private void Awake()
+    private void Start()
+    {
+        BuildBoardData();
+    }
+
+    public void RebuildBoardData()
     {
         BuildBoardData();
     }
@@ -43,6 +48,7 @@ public class GridBoard : MonoBehaviour
 
             _heightMap[heightData.GridPos] = heightData.Height;
         }
+
         foreach (GridInteractable interactable in _interactables)
         {
             if (interactable == null)
@@ -120,10 +126,10 @@ public class GridBoard : MonoBehaviour
         int fromHeight = GetHeight(from);
         int toHeight = GetHeight(to);
 
-        if (toHeight >= BlockedHeight)
+        if (fromHeight >= BlockedHeight)
             return false;
 
-        if (fromHeight >= BlockedHeight)
+        if (toHeight >= BlockedHeight)
             return false;
 
         if (_interactableMap.TryGetValue(to, out GridInteractable interactable) &&
@@ -208,7 +214,7 @@ public class GridBoard : MonoBehaviour
                 Gizmos.color = Color.red;
                 Gizmos.DrawCube(worldPos, Vector3.one * _cellSize * 0.8f);
             }
-            else if (heightData.Height > 0)
+            else if (heightData.Height > DefaultHeight)
             {
                 Gizmos.color = Color.yellow;
                 float size = Mathf.Clamp(0.35f + heightData.Height * 0.15f, 0.35f, 0.9f);

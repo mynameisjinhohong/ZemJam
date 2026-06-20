@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     public const string GameSceneName = "GameScene";
     public const string EndSceneName = "EndScene";
 
-
     public static GameManager Instance { get; private set; }
 
     [Header("Game Scene State")]
@@ -19,15 +18,14 @@ public class GameManager : MonoBehaviour
     private Vector2Int _lastPlayerGridPos;
     private bool _hasLastPlayerGridPos;
 
+    private bool _canPlayerMove = true;
+
     private readonly HashSet<string> _clearedInteractableIds = new();
 
     public bool IsFirstGameSceneEnter => _isFirstGameSceneEnter;
     public bool HasLastPlayerGridPos => _hasLastPlayerGridPos;
     public Vector2Int LastPlayerGridPos => _lastPlayerGridPos;
-
-    private bool _canPlayerMove = true;
     public bool CanPlayerMove => _canPlayerMove;
-
     public int CurrentInteractableIndex => _currentInteractableIndex;
 
     private void Awake()
@@ -41,37 +39,34 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        // 씬 로드 이벤트 구독
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
-        // 씬 로드 이벤트 구독 해제 (메모리 누수 방지)
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (Instance == this)
+            SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // 씬이 로드될 때마다 실행되는 함수
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // 로드된 씬이 GameScene인지 확인
-        if (scene.name == GameSceneName)
-        {
-            // 처음 입장한 상태라면
-            if (_isFirstGameSceneEnter)
-            {
-                MarkGameSceneEntered(); // false로 변경
+        _canPlayerMove = true;
 
-                // CutSceneManager를 통해 가이드 UI 출력
-                if (CutSceneManager.Instance != null)
-                {
-                    CutSceneManager.Instance.ShowUIOnly("Guide0");
-                }
-                else
-                {
-                    Debug.LogWarning("CutSceneManager 인스턴스를 찾을 수 없습니다.");
-                }
-            }
+        if (scene.name != GameSceneName)
+            return;
+
+        if (!_isFirstGameSceneEnter)
+            return;
+
+        MarkGameSceneEntered();
+
+        if (CutSceneManager.Instance != null)
+        {
+            CutSceneManager.Instance.ShowUIOnly("Guide0");
+        }
+        else
+        {
+            Debug.LogWarning("CutSceneManager 인스턴스를 찾을 수 없습니다.");
         }
     }
 
@@ -136,6 +131,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(GameSceneName);
     }
+
     public void GoToEndScene()
     {
         SceneManager.LoadScene(EndSceneName);
@@ -156,6 +152,7 @@ public class GameManager : MonoBehaviour
     {
         _canPlayerMove = false;
     }
+
     public void EnablePlayerMovement()
     {
         _canPlayerMove = true;
