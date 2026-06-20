@@ -14,4 +14,13 @@ public class SimpleSceneChanger : MonoBehaviour
 
         GameManager.Instance.ReturnToGameScene();
     }
+
+    public void GoToStartScene()
+    {
+        if (GameManager.Instance == null)
+        {
+            return;
+        }
+        GameManager.Instance.GoToStartScene();
+    }
 }

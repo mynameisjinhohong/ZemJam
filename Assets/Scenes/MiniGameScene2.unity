@@ -153,7 +153,7 @@ MonoBehaviour:
   _nightBGGroup: {fileID: 1895323981}
   _clockPuzzle: {fileID: 1878071779}
   _answerHour: 4
-  _transitionDuration: 1.5
+  _transitionDuration: 3
   _sunStartPosition: {x: -420, y: 400}
   _sunEndPosition: {x: -50, y: 640}
   _sunArcHeight: 200

@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public const string GameSceneName = "GameScene";
     public const string EndSceneName = "EndScene";
+    public const string StartSceneName = "LobbyScene";
+    public const string CreditSceneName = "CreditScene";
 
     public static GameManager Instance { get; private set; }
 
@@ -137,6 +139,16 @@ public class GameManager : MonoBehaviour
     public void GoToEndScene()
     {
         SceneManager.LoadScene(EndSceneName);
+    }
+
+    public void GoToStartScene()
+    {
+        SceneManager.LoadScene(StartSceneName);
+    }
+
+    public void GoToCreditScene()
+    {
+        SceneManager.LoadScene(CreditSceneName);
     }
 
     public bool IsCurrentSceneGameScene()
