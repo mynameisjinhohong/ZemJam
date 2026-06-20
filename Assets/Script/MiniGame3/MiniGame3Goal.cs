@@ -7,6 +7,6 @@ public class MiniGame3Goal : MiniGame3GridObject
     public void OnClear()
     {
         _button.SetActive(false);
-        CutSceneManager.Instance.Play("MiniGame2t_End");
+        CutSceneManager.Instance.Play("MiniGame2_End");
     }
 }
