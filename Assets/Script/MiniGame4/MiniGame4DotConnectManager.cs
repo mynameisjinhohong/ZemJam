@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -58,51 +59,60 @@ public class MiniGame4DotConnectManager : MonoBehaviour
     [Header("Node")]
     [SerializeField] private Camera _camera;
     [SerializeField] private LayerMask _nodeLayer;
-    [SerializeField] private MiniGame4DotNode _startNode;
     [SerializeField] private List<MiniGame4DotNode> _nodes = new();
 
     [Header("Answer")]
     [SerializeField] private List<ConnectionRule> _clearRules = new();
 
     [Header("Line")]
-    [SerializeField] private LineRenderer _linePrefab;
+    [SerializeField] private MiniGame4Line _linePrefab;
     [SerializeField] private Transform _lineRoot;
     [SerializeField] private float _lineZ = 0f;
 
     [Header("Drag")]
     [SerializeField] private float _nodeDetectRadius = 0.25f;
 
-    [Tooltip("true면 정답에 포함된 연결만 허용합니다. false면 오답 연결도 그려지고, 최종 비교에서 실패합니다.")]
-    [SerializeField] private bool _connectOnlyAnswerEdges = true;
-
     [Tooltip("true면 이미 지나간 점을 다시 방문할 수 있습니다.")]
     [SerializeField] private bool _allowRevisitNode = true;
 
-    [Tooltip("true면 클리어 순간 선을 유지합니다. false면 클리어해도 선을 지웁니다.")]
-    [SerializeField] private bool _keepLinesOnClear = true;
+    [Header("Clear Sequence")]
+    [SerializeField] private SpriteRenderer _ribbonRenderer;
+
+    [Tooltip("성공 후 라인이 사라지는 시간입니다.")]
+    [SerializeField] private float _lineFadeOutDuration = 0.35f;
+
+    [Tooltip("라인이 사라진 뒤 리본이 나타나는 시간입니다.")]
+    [SerializeField] private float _ribbonFadeInDuration = 0.35f;
+
+    [Tooltip("리본 페이드인이 끝난 뒤 GameEndEvent 실행 전 대기 시간입니다.")]
+    [SerializeField] private float _delayBeforeGameEndEvent = 0.2f;
+
+    [Tooltip("성공 연출 후 라인 오브젝트를 Destroy할지 여부입니다.")]
+    [SerializeField] private bool _destroyLinesAfterFadeOut = true;
 
     [Header("Gizmo")]
     [SerializeField] private bool _drawAnswerGizmos = true;
 
-    [Tooltip("true면 Play 중에도 정답 기즈모를 그립니다. Game View에서 선이 2개로 보이면 false로 두십시오.")]
+    [Tooltip("true면 Play 중에도 정답 기즈모를 그립니다.")]
     [SerializeField] private bool _drawAnswerGizmosInPlayMode = false;
 
-    [SerializeField] private float _startNodeGizmoRadius = 0.35f;
-
     [Header("Event")]
-    [SerializeField] private UnityEvent _onClear;
+    [SerializeField] private UnityEvent _gameEndEvent;
 
     private readonly HashSet<EdgeKey> _answerEdges = new();
     private readonly HashSet<EdgeKey> _currentEdges = new();
     private readonly HashSet<int> _visitedNodeIds = new();
 
-    private readonly Dictionary<EdgeKey, LineRenderer> _createdLineByEdge = new();
+    private readonly Dictionary<EdgeKey, MiniGame4Line> _createdLineByEdge = new();
 
     private MiniGame4DotNode _lastNode;
-    private LineRenderer _previewLine;
+    private MiniGame4Line _previewLine;
 
     private bool _isDragging;
     private bool _isCleared;
+    private bool _isPlayingClearSequence;
+
+    private Coroutine _clearSequenceCoroutine;
 
     private void Awake()
     {
@@ -113,11 +123,12 @@ public class MiniGame4DotConnectManager : MonoBehaviour
 
         BuildAnswerEdges();
         ValidateNodeIds();
+        InitializeRibbon();
     }
 
     private void Update()
     {
-        if (_isCleared)
+        if (_isCleared || _isPlayingClearSequence)
             return;
 
         if (Input.GetMouseButtonDown(0))
@@ -139,12 +150,6 @@ public class MiniGame4DotConnectManager : MonoBehaviour
 
     private void TryBeginDrag()
     {
-        if (_startNode == null)
-        {
-            Debug.LogError("[MiniGame4] StartNode가 설정되지 않았습니다.");
-            return;
-        }
-
         if (_linePrefab == null)
         {
             Debug.LogError("[MiniGame4] LinePrefab이 설정되지 않았습니다.");
@@ -154,17 +159,15 @@ public class MiniGame4DotConnectManager : MonoBehaviour
         if (!TryGetNodeUnderPointer(out MiniGame4DotNode node))
             return;
 
-        if (node != _startNode)
-            return;
-
         ResetCurrentState();
 
         _isDragging = true;
-        _lastNode = _startNode;
-        _visitedNodeIds.Add(_startNode.Id);
+        _lastNode = node;
+        _visitedNodeIds.Add(node.Id);
 
         _previewLine = CreateLine("MiniGame4 Preview Line");
         SetLinePosition(_previewLine, _lastNode.Position, GetMouseWorldPosition());
+        _previewLine.SetAlpha(1f);
     }
 
     private void TryConnectNodeUnderPointer()
@@ -186,24 +189,19 @@ public class MiniGame4DotConnectManager : MonoBehaviour
         if (_createdLineByEdge.ContainsKey(edge))
             return;
 
-        if (_connectOnlyAnswerEdges && !_answerEdges.Contains(edge))
-            return;
-
         MiniGame4DotNode previousNode = _lastNode;
 
         _currentEdges.Add(edge);
         _visitedNodeIds.Add(node.Id);
 
-        LineRenderer fixedLine = CreateLine($"MiniGame4 Line {edge}");
+        MiniGame4Line fixedLine = CreateLine($"MiniGame4 Line {edge}");
         SetLinePosition(fixedLine, previousNode.Position, node.Position);
+        fixedLine.SetAlpha(1f);
 
         _createdLineByEdge.Add(edge, fixedLine);
 
         _lastNode = node;
 
-        // 중요:
-        // 점에 닿은 바로 그 프레임에 Preview Line이 방금 생성된 Fixed Line과 겹쳐 보일 수 있으므로,
-        // Preview Line을 현재 점 위치로 즉시 접어둔다.
         if (_previewLine != null)
         {
             SetLinePosition(_previewLine, node.Position, node.Position);
@@ -245,17 +243,124 @@ public class MiniGame4DotConnectManager : MonoBehaviour
 
     private void CompleteClear()
     {
+        if (_isCleared || _isPlayingClearSequence)
+            return;
+
         _isDragging = false;
         _isCleared = true;
+        _isPlayingClearSequence = true;
 
         DestroyPreviewLine();
 
-        if (!_keepLinesOnClear)
+        if (_clearSequenceCoroutine != null)
+        {
+            StopCoroutine(_clearSequenceCoroutine);
+        }
+
+        _clearSequenceCoroutine = StartCoroutine(CoPlayClearSequence());
+    }
+
+    private IEnumerator CoPlayClearSequence()
+    {
+        yield return CoFadeOutLinesAndFadeInRibbon();
+
+        if (_destroyLinesAfterFadeOut)
         {
             ClearCreatedLines();
         }
 
-        _onClear?.Invoke();
+        if (_delayBeforeGameEndEvent > 0f)
+        {
+            yield return new WaitForSeconds(_delayBeforeGameEndEvent);
+        }
+
+        _gameEndEvent?.Invoke();
+
+        _isPlayingClearSequence = false;
+    }
+
+    private IEnumerator CoFadeOutLinesAndFadeInRibbon()
+    {
+        if (_ribbonRenderer != null)
+        {
+            _ribbonRenderer.gameObject.SetActive(true);
+            SetRibbonAlpha(0f);
+        }
+
+        float lineDuration = Mathf.Max(0f, _lineFadeOutDuration);
+        float ribbonDuration = Mathf.Max(0f, _ribbonFadeInDuration);
+        float totalDuration = Mathf.Max(lineDuration, ribbonDuration);
+
+        if (totalDuration <= 0f)
+        {
+            SetAllLineAlpha(0f);
+            SetRibbonAlpha(1f);
+            yield break;
+        }
+
+        float elapsed = 0f;
+
+        while (elapsed < totalDuration)
+        {
+            elapsed += Time.deltaTime;
+
+            if (lineDuration > 0f)
+            {
+                float lineT = Mathf.Clamp01(elapsed / lineDuration);
+                float lineAlpha = Mathf.Lerp(1f, 0f, lineT);
+                SetAllLineAlpha(lineAlpha);
+            }
+            else
+            {
+                SetAllLineAlpha(0f);
+            }
+
+            if (ribbonDuration > 0f)
+            {
+                float ribbonT = Mathf.Clamp01(elapsed / ribbonDuration);
+                float ribbonAlpha = Mathf.Lerp(0f, 1f, ribbonT);
+                SetRibbonAlpha(ribbonAlpha);
+            }
+            else
+            {
+                SetRibbonAlpha(1f);
+            }
+
+            yield return null;
+        }
+
+        SetAllLineAlpha(0f);
+        SetRibbonAlpha(1f);
+    }
+
+    private void SetAllLineAlpha(float alpha)
+    {
+        foreach (MiniGame4Line line in _createdLineByEdge.Values)
+        {
+            if (line != null)
+            {
+                line.SetAlpha(alpha);
+            }
+        }
+    }
+
+    private void InitializeRibbon()
+    {
+        if (_ribbonRenderer == null)
+            return;
+
+        _ribbonRenderer.gameObject.SetActive(true);
+        SetRibbonAlpha(0f);
+    }
+
+    private void SetRibbonAlpha(float alpha)
+    {
+        if (_ribbonRenderer == null)
+            return;
+
+        Color color = _ribbonRenderer.color;
+        color.a = Mathf.Clamp01(alpha);
+        _ribbonRenderer.color = color;
     }
 
     private void ResetCurrentState()
@@ -268,6 +373,11 @@ public class MiniGame4DotConnectManager : MonoBehaviour
 
         DestroyPreviewLine();
         ClearCreatedLines();
+
+        if (!_isCleared)
+        {
+            InitializeRibbon();
+        }
     }
 
     private void BuildAnswerEdges()
@@ -344,19 +454,18 @@ public class MiniGame4DotConnectManager : MonoBehaviour
         return worldPos;
     }
 
-    private LineRenderer CreateLine(string lineName)
+    private MiniGame4Line CreateLine(string lineName)
     {
         Transform parent = _lineRoot != null ? _lineRoot : transform;
 
-        LineRenderer line = Instantiate(_linePrefab, parent);
+        MiniGame4Line line = Instantiate(_linePrefab, parent);
         line.name = lineName;
-        line.useWorldSpace = true;
-        line.positionCount = 2;
+        line.SetCamera(_camera);
 
         return line;
     }
 
-    private void SetLinePosition(LineRenderer line, Vector3 from, Vector3 to)
+    private void SetLinePosition(MiniGame4Line line, Vector3 from, Vector3 to)
     {
         if (line == null)
             return;
@@ -364,8 +473,7 @@ public class MiniGame4DotConnectManager : MonoBehaviour
         from.z = _lineZ;
         to.z = _lineZ;
 
-        line.SetPosition(0, from);
-        line.SetPosition(1, to);
+        line.SetPosition(from, to);
     }
 
     private void UpdatePreviewLine()
@@ -387,7 +495,7 @@ public class MiniGame4DotConnectManager : MonoBehaviour
 
     private void ClearCreatedLines()
     {
-        foreach (LineRenderer line in _createdLineByEdge.Values)
+        foreach (MiniGame4Line line in _createdLineByEdge.Values)
         {
             if (line != null)
             {
@@ -415,12 +523,6 @@ public class MiniGame4DotConnectManager : MonoBehaviour
                 continue;
 
             Gizmos.DrawLine(rule.from.Position, rule.to.Position);
-        }
-
-        if (_startNode != null)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(_startNode.Position, _startNodeGizmoRadius);
         }
     }
 #endif

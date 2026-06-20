@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: d2a00dfc9d1a82d49a41673e06e448da
+guid: 9376f7a237556bd4c884eb1a87d0fa92
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5215997393310531135
-    second: Cat_jump_0
+      213: -6381605330626397364
+    second: Star 1_0
   - first:
-      213: -2976846565807322115
-    second: Cat_jump_1
+      213: -7363754113931319595
+    second: Star 1_1
   - first:
-      213: -1386434273439873855
-    second: Cat_jump_2
-  - first:
-      213: 995232364185346459
-    second: Cat_jump_3
+      213: 5037867458688285534
+    second: Star 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,89 +106,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat_jump_0
+      name: Star 1_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 24
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b364353cbff67a0800000000000000
+      internalID: -6381605330626397364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star 1_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 24
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d66dc1f5a0bec990800000000000000
+      internalID: -7363754113931319595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star 1_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 24
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b7d9c03c91ae540800000000000000
+      internalID: 5037867458688285534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star 1_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 24
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40996679ba5e4ee429b717319f7241a0
+      internalID: 643820404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star 1_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4f69a697ee7a64383ad72954f1974e
+      internalID: -414654160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star 1_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7c7d38492dadf45a0a4fca7ecd7874
+      internalID: -1766801516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star 1_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 43
-        height: 41
+        width: 22
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 680e4147fb08e9b46b4e2939083f2cd1
-      internalID: 5215997393310531135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_jump_1
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 0
-        width: 41
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31ccc0bf9d1d39541a3fcffaf6da9da8
-      internalID: -2976846565807322115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_jump_2
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 0
-        width: 51
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81a90efb712fcf24da4ff9913dad378c
-      internalID: -1386434273439873855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_jump_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 802a0636319781846b3e4266603d4af5
-      internalID: 995232364185346459
+      spriteID: 997d466c89ac62c4e8e458412833bf91
+      internalID: -75646775
       vertices: []
       indices: 
       edges: []
@@ -200,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3bc7216107efc8642b0349c092b28e70
+    spriteID: ef9ddfe4a5b05db4db9e9c975e1ef88b
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +271,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":36.0,"y":41.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Cat_jump_0: 5215997393310531135
-      Cat_jump_1: -2976846565807322115
-      Cat_jump_2: -1386434273439873855
-      Cat_jump_3: 995232364185346459
+      Star 1_0: -6381605330626397364
+      Star 1_1: -7363754113931319595
+      Star 1_2: 5037867458688285534
+      Star 1_3: 643820404
+      Star 1_4: -414654160
+      Star 1_5: -1766801516
+      Star 1_6: -75646775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

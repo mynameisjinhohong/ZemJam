@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: d2a00dfc9d1a82d49a41673e06e448da
+guid: 2d0969a436e1c6c41bc517e387c636d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5215997393310531135
-    second: Cat_jump_0
-  - first:
-      213: -2976846565807322115
-    second: Cat_jump_1
-  - first:
-      213: -1386434273439873855
-    second: Cat_jump_2
-  - first:
-      213: 995232364185346459
-    second: Cat_jump_3
+      213: 2656188516557027509
+    second: Ribborn_A_for_anchor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat_jump_0
+      name: Ribborn_A_for_anchor_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 43
-        height: 41
+        width: 363
+        height: 204
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 680e4147fb08e9b46b4e2939083f2cd1
-      internalID: 5215997393310531135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_jump_1
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 0
-        width: 41
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31ccc0bf9d1d39541a3fcffaf6da9da8
-      internalID: -2976846565807322115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_jump_2
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 0
-        width: 51
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81a90efb712fcf24da4ff9913dad378c
-      internalID: -1386434273439873855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_jump_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 802a0636319781846b3e4266603d4af5
-      internalID: 995232364185346459
+      spriteID: 5b87ad9f16dacd420800000000000000
+      internalID: 2656188516557027509
       vertices: []
       indices: 
       edges: []
@@ -200,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3bc7216107efc8642b0349c092b28e70
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":36.0,"y":41.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Cat_jump_0: 5215997393310531135
-      Cat_jump_1: -2976846565807322115
-      Cat_jump_2: -1386434273439873855
-      Cat_jump_3: 995232364185346459
+      Ribborn_A_for_anchor_0: 2656188516557027509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
