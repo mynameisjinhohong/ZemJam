@@ -5,7 +5,7 @@ public class SimpleCutSceneStarter : MonoBehaviour
 {
     [SerializeField] private string _cutSceneKey;
 
-    public void StartCutScene(string cutSceneKey)
+    public void StartCutScene()
     {
         if(CutSceneManager.Instance != null)
         {
